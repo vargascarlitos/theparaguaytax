@@ -1,0 +1,31 @@
+---
+import { getLangFromUrl, getTranslations } from '../i18n/utils';
+
+const currentLang = getLangFromUrl(Astro.url);
+const t = getTranslations(currentLang);
+
+// Try alternative ways to get query params
+const url = new URL(Astro.request.url);
+const params = Astro.url.searchParams;
+const requestParams = url.searchParams;
+
+const langFromUrl = params.get('lang');
+const langFromRequest = requestParams.get('lang');
+---
+
+<html>
+  <head>
+    <title>Debug i18n</title>
+  </head>
+  <body>
+    <h1>Debug Información</h1>
+    <p><strong>Astro.url:</strong> {Astro.url.toString()}</p>
+    <p><strong>Astro.request.url:</strong> {Astro.request.url}</p>
+    <p><strong>lang from Astro.url.searchParams:</strong> {langFromUrl || 'null'}</p>
+    <p><strong>lang from Astro.request.url:</strong> {langFromRequest || 'null'}</p>
+    <p><strong>Idioma detectado:</strong> {currentLang}</p>
+    <p><strong>Título de meta:</strong> {t.meta.title}</p>
+    <p><strong>Descripción de meta:</strong> {t.meta.description}</p>
+    <p><strong>Título del hero:</strong> {t.hero.title}</p>
+  </body>
+</html>

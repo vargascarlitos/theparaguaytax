@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "title": "TheParaguayTax | Residencia Fiscal en Paraguay - Fácil, Rápido y Legal",
+    "description": "Obtén tu residencia fiscal paraguaya — rápida, legal y sin esfuerzo. Proceso fácil de residencia, bajos impuestos, buena vida. Sin burocracia, sin español, sin estrés."
+  },
+  "nav": {
+    "residency": "Residencia",
+    "accounting": "Contabilidad e Impuestos",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Crea tu futuro. Asegura tu Residencia Fiscal en Paraguay.",
+    "easyResidency": {
+      "title": "Residencia Fácil",
+      "desc1": "Proceso legal simple manejado por expertos",
+      "desc2": "Sin requisitos de estadía física",
+      "desc3": "Rápido acceso a tu ID paraguayo",
+      "desc4": "100% conforme y transparente"
+    },
+    "lowTaxes": {
+      "title": "Impuestos Bajos",
+      "desc1": "Sistema territorial — paga solo por ingresos locales",
+      "desc2": "Sin impuestos a la riqueza, herencia o mundiales",
+      "desc3": "Marco fiscal estable",
+      "desc4": "Ideal para emprendedores y nómadas digitales",
+      "desc5": "IVA 10% // IRP (Impuesto a la Renta) 10%",
+      "desc6": "Podría ser Cero dependiendo de tu caso"
+    },
+    "save": {
+      "title": "Ahorra",
+      "desc1": "Reduce legalmente tu exposición fiscal global",
+      "desc2": "Accede a opciones bancarias sin CRS",
+      "desc3": "Disfruta de bajo costo de vida",
+      "desc4": "Planifica mejor, invierte mejor",
+      "desc5": "Obtén cashback en comida o gasolina con tarjetas de crédito de bancos locales"
+    },
+    "goodLife": {
+      "title": "Buena Vida",
+      "desc1": "Estilo de vida seguro, relajado y asequible",
+      "desc2": "Verano y vida al aire libre todo el año",
+      "desc3": "Comunidad amigable y acogedora",
+      "desc4": "Espacio, privacidad y oportunidad"
+    }
+  },
+  "pricing": {
+    "whatsapp": "WhatsApp",
+    "prices": "999 USD // 1400 USD // 1600 USD",
+    "priceCorrection": "*CORRIJO LOS PRECIOS DE LOS PLANES",
+    "whatIncluded": "¿QUÉ INCLUYE?",
+    "standard": "STANDARD ($ 999)",
+    "vip": "VIP ($ 1400)",
+    "hyperfast": "HYPERFAST ($ 1600)",
+    "mandatory": "Obligatorio",
+    "extra": "Extra",
+    "residency": "Residencia",
+    "cedula": "Cédula (ID Paraguayo)",
+    "superfast": "Aplicación Super Rápida (~2 horas)",
+    "govFees": "Tarifas Gubernamentales y costos relacionados",
+    "localAddress": "Domicilio Local",
+    "proofAddress": "Prueba de domicilio firmada por Policía Nacional",
+    "waitingTime": "Tiempo total de espera (desde día 1 hasta obtener ID)",
+    "months": "MESES",
+    "month": "MES",
+    "tripsNeeded": "Viajes necesarios",
+    "shortTrips": "VIAJES CORTOS",
+    "shortTrip": "VIAJE CORTO",
+    "rucTaxId": "RUC (ID fiscal)",
+    "taxResidencyCert": "Certificado de Residencia Fiscal",
+    "rucMaintenance": "Mantenimiento RUC",
+    "rentalContract": "Contrato de Alquiler (+Servicio de Correo)",
+    "perMonth": "/ MES",
+    "perYear": "/ AÑO",
+    "bankAccount": "Cuenta Bancaria",
+    "free": "GRATIS",
+    "translations": "Traducciones",
+    "from": "DESDE",
+    "perPage": "/ PÁGINA",
+    "localPhone": "Factura de Teléfono Local",
+    "paymentsAccepted": "MÉTODOS DE PAGO ACEPTADOS:",
+    "cashUsdPyg": "EFECTIVO (USD O PYG)",
+    "wiseBank": "WISE/TRANSFERENCIA BANCARIA",
+    "crypto": "BITCOIN/CRYPTO/USDT",
+    "yes": "SÍ"
+  },
+  "team": {
+    "title": "El Equipo",
+    "osvaldo": "Osvaldo",
+    "brenda": "Brenda",
+    "romina": "Romina",
+    "comingSoon": "Próximamente - App Móvil Tax",
+    "appDescription": "Simplifica la liquidación de tus impuestos con nuestra app intuitiva y fácil de usar para contribuyentes.",
+    "appDetails": "Descubre una forma rápida y sin complicaciones de gestionar tus impuestos, diseñada especialmente para que los contribuyentes ahorren tiempo y eviten errores.",
+    "visitApp": "Visitar DASE App",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "process": {
+    "title": "3 PASOS SIMPLES",
+    "step1": "Consigue tus documentos",
+    "step2": "Vuela a Paraguay",
+    "step3": "Obtén la Cédula Paraguaya",
+    "benefitsTitle": "QUÉ PUEDES HACER CON UN ID PARAGUAYO",
+    "liveFreely": {
+      "title": "Vive Libremente",
+      "desc1": "Obtén derechos completos de residencia — sin límites de tiempo",
+      "desc2": "Entra y sal sin sellos de pasaporte",
+      "desc3": "Accede a salud pública y servicios locales"
+    },
+    "bankPrivately": {
+      "title": "Banca Privada",
+      "desc1": "Abre cuentas locales sin CRS",
+      "desc2": "Usa tu ID paraguayo para banca global y configuración de empresas",
+      "desc3": "Disfruta de privacidad y flexibilidad financiera"
+    },
+    "doBusiness": {
+      "title": "Haz Negocios",
+      "desc1": "Inicia una empresa en días",
+      "desc2": "Impuesto plano alrededor del 10%",
+      "desc3": "Compra propiedades, invierte y accede a préstamos locales"
+    },
+    "growSmart": {
+      "title": "Crece Inteligente",
+      "desc1": "Mueve tu residencia fiscal legalmente",
+      "desc2": "Paga cero impuestos sobre ingresos de fuente extranjera",
+      "desc3": "Opera con crypto bajo un marco regulatorio relajado"
+    }
+  },
+  "contact": {
+    "title": "Sin Burocracia. Sin Español. Sin Estrés.",
+    "subtitle": "Obtén tu residencia paraguaya hecha — rápido, legal y sin esfuerzo.",
+    "processText": "Nuestro equipo se encarga de todo, desde los documentos hasta la entrega.",
+    "allYouNeed": "Todo lo que necesitas:",
+    "passport": "Pasaporte",
+    "birthCert": "Partida de nacimiento apostillada",
+    "criminalRecord": "Antecedentes penales apostillados",
+    "twoDays": "Dos días en Asunción — eso es todo.",
+    "weHandle": "Nosotros manejamos el proceso. Tú manejas tu libertad.",
+    "companyName": "DASE GROUP E.A.S.",
+    "ruc": "80124544-3",
+    "address": "Avda. Moises 1986 - Capiatá",
+    "phone": "+595 985 777252",
+    "instagram": "@ParaguayTaxes",
+    "email": "dasegrouppyy@gmail.com",
+    "formTitle": "Contáctanos",
+    "formName": "Nombre",
+    "formEmail": "Email",
+    "formPhone": "Teléfono (opcional)",
+    "formMessage": "Mensaje",
+    "formSend": "Enviar",
+    "formSending": "Enviando...",
+    "formSuccess": "¡Mensaje enviado! Nos pondremos en contacto pronto.",
+    "formError": "Hubo un error. Por favor intenta de nuevo.",
+    "whatsappButton": "Contáctanos por WhatsApp",
+    "whatsappMessage": "Hola%2C%20estoy%20interesado%20en%20la%20residencia%20paraguaya"
+  }
+}
+

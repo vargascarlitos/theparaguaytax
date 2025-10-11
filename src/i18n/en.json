@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "title": "TheParaguayTax | Tax Residency in Paraguay - Easy, Fast & Legal",
+    "description": "Get your Paraguayan tax residency — fast, legal, and effortless. Easy residency process, low taxes, good life. No bureaucracy, no Spanish, no stress."
+  },
+  "nav": {
+    "residency": "Residency",
+    "accounting": "Accounting & Tax",
+    "about": "About Us",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "Create your future. Secure your Tax Residency in Paraguay.",
+    "easyResidency": {
+      "title": "Easy Residency",
+      "desc1": "Simple legal process handled by experts",
+      "desc2": "No physical stay requirements",
+      "desc3": "Fast-track to your Paraguayan ID",
+      "desc4": "100% compliant and transparent"
+    },
+    "lowTaxes": {
+      "title": "Low Taxes",
+      "desc1": "Territorial tax system — pay only on local income",
+      "desc2": "No wealth, inheritance or worldwide taxes",
+      "desc3": "Stable fiscal framework",
+      "desc4": "Ideal for entrepreneurs and digital nomads",
+      "desc5": "IVA (VAT) 10% // IRP (Income Tax) 10%",
+      "desc6": "Might be Zero in depend of your case"
+    },
+    "save": {
+      "title": "Save",
+      "desc1": "Legally reduce global tax exposure",
+      "desc2": "Access non-CRS banking options",
+      "desc3": "Enjoy low cost of living",
+      "desc4": "Plan smarter, invest better",
+      "desc5": "Get cashback on food or gasoline with local credit card Banks"
+    },
+    "goodLife": {
+      "title": "Good Life",
+      "desc1": "Safe, relaxed, and affordable lifestyle",
+      "desc2": "Year-round summer and outdoor living",
+      "desc3": "Friendly, welcoming community",
+      "desc4": "Space, privacy, and opportunity"
+    }
+  },
+  "pricing": {
+    "whatsapp": "WhatsApp",
+    "prices": "999 USD // 1400 USD // 1600 USD",
+    "priceCorrection": "*CORRIJO LOS PRECIOS DE LOS PLANES",
+    "whatIncluded": "WHAT IS INCLUDED?",
+    "standard": "STANDARD ($ 999)",
+    "vip": "VIP ($ 1400)",
+    "hyperfast": "HYPERFAST ($ 1600)",
+    "mandatory": "Mandatory",
+    "extra": "Extra",
+    "residency": "Residency",
+    "cedula": "Cedula (Paraguayan ID)",
+    "superfast": "Super Fast Application (~2 hours)",
+    "govFees": "Govt Fees and Related costs",
+    "localAddress": "Local Address",
+    "proofAddress": "Proof of Address signed by National Police",
+    "waitingTime": "Total waiting time (from day 1 until getting ID)",
+    "months": "MONTHS",
+    "month": "MONTH",
+    "tripsNeeded": "Trips needed",
+    "shortTrips": "SHORT TRIPS",
+    "shortTrip": "SHORT TRIP",
+    "rucTaxId": "RUC (tax ID)",
+    "taxResidencyCert": "Tax Residency Certificate",
+    "rucMaintenance": "RUC Maintenance",
+    "rentalContract": "Rental Contract (+Mail Service)",
+    "perMonth": "/ MONTH",
+    "perYear": "/ YEAR",
+    "bankAccount": "Bank Account",
+    "free": "FREE",
+    "translations": "Translations",
+    "from": "FROM",
+    "perPage": "/ PAGE",
+    "localPhone": "Local Phone Bill",
+    "paymentsAccepted": "PAYMENTS ACCEPTED:",
+    "cashUsdPyg": "CASH (USD OR PYG)",
+    "wiseBank": "WISE/BANK TRANSFER",
+    "crypto": "BITCOIN/CRYPTO/USDT",
+    "yes": "YES"
+  },
+  "team": {
+    "title": "The Team",
+    "osvaldo": "Osvaldo",
+    "brenda": "Brenda",
+    "romina": "Romina",
+    "comingSoon": "Coming Soon - Tax Mobile App",
+    "appDescription": "Simplify your tax filing with our intuitive and easy-to-use app for taxpayers.",
+    "appDetails": "Discover a fast and hassle-free way to manage your taxes, designed specifically so taxpayers can save time and avoid mistakes.",
+    "visitApp": "Visit DASE App",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "process": {
+    "title": "3 SIMPLE STEPS",
+    "step1": "Get your documents",
+    "step2": "Fly to Paraguay",
+    "step3": "Get the Paraguayan Cédula",
+    "benefitsTitle": "WHAT CAN YOU DO WITH A PARAGUAYAN ID",
+    "liveFreely": {
+      "title": "Live Freely",
+      "desc1": "Get full residency rights — no time limits",
+      "desc2": "Come and go without passport stamps",
+      "desc3": "Access public healthcare and local services"
+    },
+    "bankPrivately": {
+      "title": "Bank Privately",
+      "desc1": "Open local non-CRS accounts",
+      "desc2": "Use your Paraguayan ID for global banking and company setups",
+      "desc3": "Enjoy financial privacy and flexibility"
+    },
+    "doBusiness": {
+      "title": "Do Business",
+      "desc1": "Start a company in days",
+      "desc2": "Flat tax around 10%",
+      "desc3": "Buy property, invest, and access local loans"
+    },
+    "growSmart": {
+      "title": "Grow Smart",
+      "desc1": "Move your tax residency legally",
+      "desc2": "Pay zero tax on foreign-source income",
+      "desc3": "Operate with crypto under a relaxed regulatory framework"
+    }
+  },
+  "contact": {
+    "title": "No Bureaucracy. No Spanish. No Stress.",
+    "subtitle": "Get your Paraguayan residency done — fast, legal, and effortless.",
+    "processText": "Our team takes care of everything from documents to delivery.",
+    "allYouNeed": "All you need:",
+    "passport": "Passport",
+    "birthCert": "Apostilled birth certificate",
+    "criminalRecord": "Apostilled criminal record",
+    "twoDays": "Two days in Asunción — that's it.",
+    "weHandle": "We handle the process. You handle your freedom.",
+    "companyName": "DASE GROUP E.A.S.",
+    "ruc": "80124544-3",
+    "address": "Avda. Moises 1986 - Capiatá",
+    "phone": "+595 985 777252",
+    "instagram": "@ParaguayTaxes",
+    "email": "dasegrouppyy@gmail.com",
+    "formTitle": "Contact Us",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formPhone": "Phone (optional)",
+    "formMessage": "Message",
+    "formSend": "Send",
+    "formSending": "Sending...",
+    "formSuccess": "Message sent! We'll be in touch soon.",
+    "formError": "There was an error. Please try again.",
+    "whatsappButton": "Contact us on WhatsApp",
+    "whatsappMessage": "Hello%2C%20I%20am%20interested%20in%20Paraguayan%20residency"
+  }
+}
+

@@ -1,0 +1,161 @@
+---
+import '../styles/global.css';
+import { getLangFromUrl, getTranslations } from '../i18n/utils';
+import LanguageSelector from '../components/LanguageSelector';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  lang: 'en' | 'es';
+}
+
+const { title, description = "Get your Paraguayan tax residency — fast, legal, and effortless. Easy process, low taxes, good life.", lang } = Astro.props;
+const t = getTranslations(lang);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex items-center gap-4">
+            <a href="/" class="flex items-center">
+              <h1 class="text-xl sm:text-2xl font-bold text-dark">TheParaguayTax.com</h1>
+            </a>
+            <div class="hidden sm:flex items-center gap-2 text-sm text-gray-600">
+              <span class="font-medium">Provided by:</span>
+              <span class="font-bold text-primary">DASE GROUP</span>
+              <span class="text-2xl">🇵🇾</span>
+            </div>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden lg:flex items-center gap-8">
+            <a href="#residency" class="text-gray-700 hover:text-primary transition-colors font-medium">
+              {t.nav.residency}
+            </a>
+            <span class="text-gray-300">//</span>
+            <a href="#accounting" class="text-gray-700 hover:text-primary transition-colors font-medium">
+              {t.nav.accounting}
+            </a>
+            <span class="text-gray-300">//</span>
+            <a href="#about" class="text-gray-700 hover:text-primary transition-colors font-medium">
+              {t.nav.about}
+            </a>
+            <span class="text-gray-300">//</span>
+            <a href="#contact" class="text-gray-700 hover:text-primary transition-colors font-medium">
+              {t.nav.contact}
+            </a>
+          </div>
+
+          <!-- Language Selector -->
+          <div class="flex items-center">
+            <LanguageSelector client:load />
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-button"
+            class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+            aria-label="Toggle menu"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 bg-white">
+        <div class="px-4 py-4 space-y-3">
+          <a href="#residency" class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium">
+            {t.nav.residency}
+          </a>
+          <a href="#accounting" class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium">
+            {t.nav.accounting}
+          </a>
+          <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium">
+            {t.nav.about}
+          </a>
+          <a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium">
+            {t.nav.contact}
+          </a>
+          <div class="pt-2 border-t border-gray-200">
+            <span class="text-sm text-gray-600">Provided by: <span class="font-bold text-primary">DASE GROUP</span> 🇵🇾</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- WhatsApp Button -->
+    <WhatsAppButton />
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuButton?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+      });
+
+      // Close mobile menu when clicking a link
+      const mobileLinks = mobileMenu?.querySelectorAll('a');
+      mobileLinks?.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu?.classList.add('hidden');
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e: Event) {
+          e.preventDefault();
+          const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
+          const target = document.querySelector(href || '');
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+

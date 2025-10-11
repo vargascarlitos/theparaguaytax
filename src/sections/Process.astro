@@ -1,0 +1,184 @@
+---
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = getTranslations(lang);
+
+// Importar imágenes del proceso
+import processRoad from '../assets/images/process-road.png';
+import processLandscape from '../assets/images/process-landscape.png';
+---
+
+<section class="relative bg-gradient-to-b from-gray-50 to-white py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <!-- Left Column - 3 Simple Steps -->
+      <div>
+        <h2 class="text-4xl font-extrabold text-dark mb-12">{t.process.title}</h2>
+        
+        <div class="space-y-8 mb-12">
+          <div class="flex items-start gap-6">
+            <div class="flex-shrink-0 w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg">
+              1
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold text-dark mb-2">{t.process.step1}</h3>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6">
+            <div class="flex-shrink-0 w-16 h-16 bg-secondary text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg">
+              2
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold text-dark mb-2">{t.process.step2}</h3>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg">
+              3
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold text-dark mb-2">{t.process.step3}</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Images -->
+        <div class="space-y-4">
+          <div class="relative h-48 rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src={processRoad.src}
+              alt="Carretera en Paraguay"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+          </div>
+          <div class="relative h-48 rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src={processLandscape.src}
+              alt="Paisaje paraguayo"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - What You Can Do -->
+      <div>
+        <h2 class="text-3xl font-extrabold text-dark mb-12">{t.process.benefitsTitle}</h2>
+        
+        <div class="space-y-8">
+          <!-- Live Freely -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+            <h3 class="text-2xl font-bold text-primary mb-4">{t.process.liveFreely.title}</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.liveFreely.desc1}</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.liveFreely.desc2}</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.liveFreely.desc3}</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bank Privately -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+            <h3 class="text-2xl font-bold text-secondary mb-4">{t.process.bankPrivately.title}</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.bankPrivately.desc1}</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.bankPrivately.desc2}</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.bankPrivately.desc3}</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Do Business -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+            <h3 class="text-2xl font-bold text-accent mb-4">{t.process.doBusiness.title}</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-accent mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.doBusiness.desc1}</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-accent mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.doBusiness.desc2}</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-accent mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.doBusiness.desc3}</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Grow Smart -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+            <h3 class="text-2xl font-bold text-primary mb-4">{t.process.growSmart.title}</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.growSmart.desc1}</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.growSmart.desc2}</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>{t.process.growSmart.desc3}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

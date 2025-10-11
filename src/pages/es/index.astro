@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../sections/Hero.astro';
+import Pricing from '../../sections/Pricing.astro';
+import Team from '../../sections/Team.astro';
+import Process from '../../sections/Process.astro';
+import Contact from '../../sections/Contact.astro';
+import { getTranslations } from '../../i18n/utils';
+
+const currentLang = 'es';
+const t = getTranslations(currentLang);
+---
+
+<Layout
+  title={t.meta.title}
+  description={t.meta.description}
+  lang={currentLang}
+>
+  <Hero lang={currentLang} />
+  <Pricing lang={currentLang} />
+  <Team lang={currentLang} />
+  <Process lang={currentLang} />
+  <Contact lang={currentLang} />
+</Layout>
