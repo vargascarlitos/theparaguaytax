@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "TheParaguayTax | Residencia Fiscal en Paraguay - Fácil, Rápido y Legal",
-    "description": "Obtén tu residencia fiscal paraguaya — rápida, legal y sin esfuerzo. Proceso fácil de residencia, bajos impuestos, buena vida. Sin burocracia, sin español, sin estrés."
+    "description": "Obtén tu residencia fiscal paraguaya - rápida, legal y sin esfuerzo. Proceso fácil de residencia, bajos impuestos, buena vida. Sin burocracia, sin español, sin estrés."
   },
   "nav": {
     "residency": "Residencia",
@@ -20,7 +20,7 @@
     },
     "lowTaxes": {
       "title": "Impuestos Bajos",
-      "desc1": "Sistema territorial — paga solo por ingresos locales",
+      "desc1": "Sistema territorial - paga solo por ingresos locales",
       "desc2": "Sin impuestos a la riqueza, herencia o mundiales",
       "desc3": "Marco fiscal estable",
       "desc4": "Ideal para emprendedores y nómadas digitales",
@@ -86,8 +86,11 @@
   "team": {
     "title": "El Equipo",
     "osvaldo": "Osvaldo",
-    "brenda": "Brenda",
+    "beatriz": "Beatriz",
     "romina": "Romina",
+    "placeholder1": "Carlos",
+    "placeholder2": "Brenda",
+    "placeholder3": "Luna",
     "comingSoon": "Próximamente - App Móvil Tax",
     "appDescription": "Simplifica la liquidación de tus impuestos con nuestra app intuitiva y fácil de usar para contribuyentes.",
     "appDetails": "Descubre una forma rápida y sin complicaciones de gestionar tus impuestos, diseñada especialmente para que los contribuyentes ahorren tiempo y eviten errores.",
@@ -103,7 +106,7 @@
     "benefitsTitle": "QUÉ PUEDES HACER CON UN ID PARAGUAYO",
     "liveFreely": {
       "title": "Vive Libremente",
-      "desc1": "Obtén derechos completos de residencia — sin límites de tiempo",
+      "desc1": "Obtén derechos completos de residencia - sin límites de tiempo",
       "desc2": "Entra y sal sin sellos de pasaporte",
       "desc3": "Accede a salud pública y servicios locales"
     },
@@ -128,13 +131,13 @@
   },
   "contact": {
     "title": "Sin Burocracia. Sin Español. Sin Estrés.",
-    "subtitle": "Obtén tu residencia paraguaya hecha — rápido, legal y sin esfuerzo.",
+    "subtitle": "Obtén tu residencia paraguaya hecha - rápido, legal y sin esfuerzo.",
     "processText": "Nuestro equipo se encarga de todo, desde los documentos hasta la entrega.",
     "allYouNeed": "Todo lo que necesitas:",
     "passport": "Pasaporte",
     "birthCert": "Partida de nacimiento apostillada",
     "criminalRecord": "Antecedentes penales apostillados",
-    "twoDays": "Dos días en Asunción — eso es todo.",
+    "twoDays": "Dos días en Asunción - eso es todo.",
     "weHandle": "Nosotros manejamos el proceso. Tú manejas tu libertad.",
     "companyName": "DASE GROUP E.A.S.",
     "ruc": "80124544-3",
@@ -153,6 +156,262 @@
     "formError": "Hubo un error. Por favor intenta de nuevo.",
     "whatsappButton": "Contáctanos por WhatsApp",
     "whatsappMessage": "Hola%2C%20estoy%20interesado%20en%20la%20residencia%20paraguaya"
+  },
+  "slider": {
+    "slide1": {
+      "title": "¿Quieres ahorrar dinero con impuestos más bajos?",
+      "subtitle": "Solicita una Residencia Paraguaya",
+      "ctaText": "¡Ver los requisitos!"
+    },
+    "slide2": {
+      "title": "¿Quieres exportar servicios mundialmente con un ID Fiscal Paraguayo?",
+      "subtitle": "Los nómadas digitales podrían calificar para Cero Impuestos. Ver detalles abajo.",
+      "ctaText": "Solicita una Residencia Paraguaya"
+    },
+    "slide3": {
+      "title": "¿Quieres vender tu crypto y declararlo en Paraguay?",
+      "subtitle": "El IVA es 0%, y el impuesto a la renta (IRE) solo 10%",
+      "ctaText": "Obtén tu ID Fiscal (RUC) con una residencia paraguaya."
+    },
+    "slide4": {
+      "title": "Configuramos tu empresa EAS en solo tres días.",
+      "subtitle": "¡Revisa los requisitos para aplicar!",
+      "ctaText": "Inicia Tu Solicitud"
+    },
+    "slide5": {
+      "title": "¿Quieres vivir una vida tranquila?",
+      "subtitle": "Obtén derechos completos de residencia, accede a salud pública y disfruta de un estilo de vida relajado.",
+      "ctaText": "Comienza Hoy"
+    }
+  },
+  "taxWizard": {
+    "title": "¿Cómo funcionan los impuestos en Paraguay?",
+    "subtitle": "Guía interactiva para descubrir tus obligaciones fiscales según tu estructura empresarial y actividad",
+    "progressLabel": "Paso {current} de {total}",
+    "buttons": {
+      "next": "Siguiente",
+      "back": "Atrás",
+      "startOver": "Empezar de Nuevo",
+      "getStarted": "Comenzar"
+    },
+    "step1": {
+      "title": "¿Qué tipo de actividad realizas?",
+      "subtitle": "Elige la opción que mejor describe tu negocio",
+      "options": {
+        "services": {
+          "title": "Servicios",
+          "description": "Servicios profesionales, consultoría, trabajo digital, etc."
+        },
+        "merchandise": {
+          "title": "Mercancía o Crypto",
+          "description": "Compra y venta de productos, trading de criptomonedas"
+        },
+        "both": {
+          "title": "Servicios + Mercancía",
+          "description": "Combinación de ambas actividades"
+        }
+      }
+    },
+    "step2": {
+      "title": "¿Qué estructura legal prefieres?",
+      "subtitle": "Selecciona el tipo de entidad para tu negocio",
+      "options": {
+        "ruc": {
+          "title": "RUC Unipersonal",
+          "description": "ID Fiscal Individual - Más simple y económico"
+        },
+        "eas": {
+          "title": "Entidad Jurídica (EAS/LLC)",
+          "description": "Empresa con personería jurídica - Más formalidades"
+        }
+      }
+    },
+    "step3": {
+      "titleServices": "¿Dónde prestarás tus servicios?",
+      "titleMerchandise": "¿Qué tipo de mercancía manejas?",
+      "titleBoth": "¿Cuál es tu actividad principal?",
+      "subtitle": "Esto determina exenciones fiscales específicas",
+      "optionsServices": {
+        "local": {
+          "title": "Local (Paraguay)",
+          "description": "Servicios prestados a clientes dentro de Paraguay"
+        },
+        "export": {
+          "title": "Exportación (Mundial)",
+          "description": "Servicios a clientes o empresas extranjeras"
+        }
+      },
+      "optionsMerchandise": {
+        "localForeign": {
+          "title": "Productos Locales/Extranjeros",
+          "description": "Mercancía física o bienes"
+        },
+        "crypto": {
+          "title": "Criptomonedas",
+          "description": "Trading y transacciones con crypto"
+        }
+      },
+      "optionsBoth": {
+        "servicesMain": {
+          "title": "Principalmente Servicios",
+          "description": "Los servicios son tu actividad principal"
+        },
+        "merchandiseMain": {
+          "title": "Principalmente Mercancía",
+          "description": "Las ventas son tu actividad principal"
+        }
+      }
+    },
+    "result": {
+      "title": "Tu Estructura Fiscal en Paraguay",
+      "yourStructure": "Tu Estructura",
+      "applicableTaxes": "Impuestos Aplicables",
+      "otherObligations": "Otras Obligaciones",
+      "specialNotes": "Notas Especiales",
+      "frequency": {
+        "monthly": "Mensual",
+        "annually": "Anual",
+        "onDistribution": "Al distribuir utilidades"
+      },
+      "structures": {
+        "rucServicesLocal": "RUC Unipersonal - Servicios Locales",
+        "rucServicesExport": "RUC Unipersonal - Servicios de Exportación",
+        "rucMerchandiseLocal": "RUC Unipersonal - Mercancía Local/Extranjera",
+        "rucMerchandiseCrypto": "RUC Unipersonal - Criptomonedas",
+        "easEntity": "Entidad Jurídica EAS (LLC)"
+      },
+      "taxes": {
+        "iva": {
+          "name": "IVA",
+          "rate": "10%",
+          "frequency": "Mensual",
+          "description": "Impuesto al Valor Agregado sobre ventas"
+        },
+        "ivaExempt": {
+          "name": "IVA",
+          "rate": "0% (EXENTO)",
+          "frequency": "Mensual",
+          "description": "Exento para exportaciones y crypto"
+        },
+        "irp": {
+          "name": "IRP (Impuesto a la Renta)",
+          "rate": "8%, 9% y 10%",
+          "frequency": "Anual",
+          "description": "Impuesto a la renta progresivo",
+          "details": "Tasas progresivas: 8% (hasta 50M GS), 9% (50M-150M GS), 10% (>150M GS)",
+          "note": "Si tus ingresos superan 80 millones GS, debes registrarte para el Impuesto a la Renta (IRP). Tiene tasas progresivas."
+        },
+        "irpExempt": {
+          "name": "IRP (Impuesto a la Renta)",
+          "rate": "EXENTO",
+          "frequency": "N/A",
+          "description": "Exento al trabajar para empresas extranjeras",
+          "note": "Si trabajas fuera de Paraguay para una empresa extranjera, el impuesto a la renta (IRP) ESTÁ EXENTO"
+        },
+        "ireSimple": {
+          "name": "IRE Simple (Impuesto a la Renta)",
+          "rate": "10%",
+          "frequency": "Anual",
+          "description": "Impuesto a la renta simplificado para empresas",
+          "note": "Si los ingresos superan 2 mil millones GS, se requieren estados financieros (IRE)"
+        },
+        "idu": {
+          "name": "IDU (Impuesto a Dividendos)",
+          "rate": "8%",
+          "frequency": "Anual",
+          "description": "Impuesto cuando los accionistas retiran utilidades",
+          "note": "Cuando cada accionista retira sus utilidades. No importa si es física o jurídica."
+        }
+      },
+      "obligations": {
+        "electronicInvoice": "Emitir Facturas Electrónicas (GS o USD)",
+        "monthlyVAT": "Declaración mensual de IVA",
+        "annualIncome": "Declaración anual de impuesto a la renta",
+        "balanceSheet": "Balance General Anual",
+        "assembly": "Asamblea Ordinaria Anual",
+        "dgpeyjbf": "Actualizar DGPEYJBF",
+        "renewalMipymes": "Renovación de Cédula MiPymes",
+        "financialStatements": "Estados financieros si ingreso > 2 mil millones GS",
+        "purchases": "Registrar compras relacionadas al negocio"
+      },
+      "notes": {
+        "exportExempt": "Si trabajas fuera de Paraguay y aún trabajas para una empresa extranjera, el IMPUESTO A LA RENTA (IRP) TAMBIÉN ESTÁ EXENTO.",
+        "cryptoVATExempt": "Las criptomonedas están exentas de IVA (0%)",
+        "iduOnlyDistribution": "IDU: Cuando cada accionista retira sus utilidades. No importa si es física o jurídica.",
+        "easRequirements": "Para Establecer la EAS: Puede ser un socio único o más, El Representante Legal debe tener cédula, Necesitas un Sello de Empresa, No hay capital mínimo, El capital no debe ser declarado",
+        "ireSwitchThreshold": "Si los ingresos superan 2 mil millones GS en un año fiscal, debes pagar mediante el IRE General (Se requieren estados financieros)",
+        "capitalNotDeclared": "El capital no debe ser declarado en la EAS"
+      }
+    }
+  },
+  "services": {
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Hola, estoy interesado en tus servicios fiscales",
+    "rucInscription": {
+      "price": "15 USD",
+      "title": "Inscripción RUC (ID Fiscal)",
+      "payment": "Un pago"
+    },
+    "taxCertificate": {
+      "price": "75 USD",
+      "title": "Certificado Fiscal de Paraguay",
+      "payment": "Un pago"
+    },
+    "monthlyIVA": {
+      "price": "25 USD",
+      "title": "Declaración Mensual de IVA",
+      "payment": "Pago Mensual"
+    },
+    "specialIVA": {
+      "badge": "¡Especial!",
+      "price": "250 USD",
+      "title": "Declaración de IVA por Un Año",
+      "payment": "Un Pago"
+    }
+  },
+  "blog": {
+    "title": "Últimos Artículos",
+    "subtitle": "Mantente informado sobre residencia fiscal, configuración de negocios y vida en Paraguay",
+    "readMore": "Leer Más",
+    "readTime": "{minutes} min de lectura",
+    "articles": {
+      "article1": {
+        "title": "Guía Completa de Residencia Fiscal Paraguaya",
+        "excerpt": "Todo lo que necesitas saber sobre obtener y mantener tu estatus de residencia fiscal paraguaya.",
+        "category": "Residencia Fiscal",
+        "readTime": 8
+      },
+      "article2": {
+        "title": "Configurando tu Empresa EAS en Paraguay",
+        "excerpt": "Guía paso a paso para establecer tu entidad empresarial en Paraguay en solo tres días.",
+        "category": "Configuración de Negocios",
+        "readTime": 6
+      },
+      "article3": {
+        "title": "Entendiendo el Sistema Fiscal de Paraguay",
+        "excerpt": "Aprende sobre los impuestos IVA, IRP, IRE Simple e IDU. Conoce qué aplica a tu estructura empresarial.",
+        "category": "Impuestos",
+        "readTime": 10
+      },
+      "article4": {
+        "title": "Banca en Paraguay: Cuentas Sin CRS",
+        "excerpt": "Cómo abrir cuentas bancarias locales y acceder a privacidad financiera con tu ID paraguayo.",
+        "category": "Banca",
+        "readTime": 7
+      },
+      "article5": {
+        "title": "Vivir en Paraguay: Guía de Costo de Vida",
+        "excerpt": "Descubre el estilo de vida asequible, salud y oportunidades que Paraguay ofrece a los residentes.",
+        "category": "Estilo de Vida",
+        "readTime": 5
+      },
+      "article6": {
+        "title": "Trading de Crypto y Obligaciones Fiscales en Paraguay",
+        "excerpt": "Todo sobre trading de criptomonedas, exenciones de IVA e impuesto a la renta para negocios crypto.",
+        "category": "Criptomonedas",
+        "readTime": 9
+      }
+    }
   }
 }
 
