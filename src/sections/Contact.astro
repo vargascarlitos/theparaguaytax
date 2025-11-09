@@ -1,5 +1,6 @@
 ---
 import { getTranslations } from '../i18n/utils';
+import { Image } from 'astro:assets';
 
 interface Props {
   lang: 'en' | 'es';
@@ -19,29 +20,41 @@ import contactCulture from '../assets/images/contact-culture.png';
     <!-- Image Gallery -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
       <div class="relative h-64 rounded-2xl overflow-hidden shadow-xl">
-        <img
-          src={contactSunset.src}
+        <Image
+          src={contactSunset}
           alt="Paisaje paraguayo"
+          width={800}
+          height={539}
           class="w-full h-full object-cover"
           loading="lazy"
+          format="webp"
+          quality={85}
         />
         <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
       </div>
       <div class="relative h-64 rounded-2xl overflow-hidden shadow-xl">
-        <img
-          src={contactFood.src}
+        <Image
+          src={contactFood}
           alt="Comida paraguaya"
+          width={800}
+          height={539}
           class="w-full h-full object-cover"
           loading="lazy"
+          format="webp"
+          quality={85}
         />
         <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
       </div>
       <div class="relative h-64 rounded-2xl overflow-hidden shadow-xl">
-        <img
-          src={contactCulture.src}
+        <Image
+          src={contactCulture}
           alt="Cultura paraguaya"
+          width={800}
+          height={539}
           class="w-full h-full object-cover"
           loading="lazy"
+          format="webp"
+          quality={85}
         />
         <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
       </div>
@@ -82,7 +95,7 @@ import contactCulture from '../assets/images/contact-culture.png';
         </div>
       </div>
 
-      <p class="text-2xl font-bold text-primary mb-16">
+      <p class="text-2xl font-bold text-primary-700 mb-16">
         {t.contact.weHandle}
       </p>
     </div>

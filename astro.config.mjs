@@ -10,5 +10,16 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [react()]
+  integrations: [react()],
+  
+  // Optimización de performance
+  build: {
+    inlineStylesheets: 'auto',
+  },
+  
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp'
+    }
+  }
 });

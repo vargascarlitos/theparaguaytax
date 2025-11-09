@@ -1,6 +1,7 @@
 ---
 import { Check } from 'lucide-react';
 import { getTranslations } from '../i18n/utils';
+import { Image } from 'astro:assets';
 
 interface Props {
   lang: 'en' | 'es';
@@ -26,29 +27,42 @@ import heroAsado from '../assets/images/hero-asado.png';
       <!-- Hero Images Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <div class="relative h-64 rounded-2xl overflow-hidden shadow-xl group">
-          <img
-            src={heroTerere.src}
+          <Image
+            src={heroTerere}
             alt="Tereré tradicional paraguayo"
+            width={800}
+            height={539}
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
+            format="webp"
+            quality={85}
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
         </div>
         <div class="relative h-64 rounded-2xl overflow-hidden shadow-xl group">
-          <img
-            src={heroAsuncion.src}
+          <Image
+            src={heroAsuncion}
             alt="Ciudad de Asunción, Paraguay"
+            width={800}
+            height={539}
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             loading="lazy"
+            format="webp"
+            quality={85}
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
         </div>
         <div class="relative h-64 rounded-2xl overflow-hidden shadow-xl group">
-          <img
-            src={heroAsado.src}
+          <Image
+            src={heroAsado}
             alt="Asado paraguayo"
+            width={800}
+            height={539}
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             loading="lazy"
+            format="webp"
+            quality={85}
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
         </div>

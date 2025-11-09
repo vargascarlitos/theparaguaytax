@@ -1,5 +1,6 @@
 ---
 import { getTranslations } from '../i18n/utils';
+import { Image } from 'astro:assets';
 
 interface Props {
   lang: 'en' | 'es';
@@ -23,10 +24,15 @@ import teamLuna from '../assets/images/team-luna.png';
       <div class="flex flex-wrap justify-center gap-12">
         <div class="text-center">
           <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden mx-auto mb-4 shadow-xl ring-4 ring-primary/20">
-            <img 
-              src={teamCarlos.src} 
+            <Image 
+              src={teamCarlos}
               alt="Carlos - TheParaguayTax Team"
+              width={320}
+              height={320}
               class="w-full h-full object-cover"
+              loading="lazy"
+              format="webp"
+              quality={85}
             />
           </div>
           <h3 class="text-xl font-bold text-dark">{t.team.osvaldo}</h3>
@@ -34,10 +40,15 @@ import teamLuna from '../assets/images/team-luna.png';
 
         <div class="text-center">
           <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden mx-auto mb-4 shadow-xl ring-4 ring-secondary/20">
-            <img 
-              src={teamBrenda.src} 
+            <Image 
+              src={teamBrenda}
               alt="Brenda - TheParaguayTax Team"
+              width={320}
+              height={320}
               class="w-full h-full object-cover"
+              loading="lazy"
+              format="webp"
+              quality={85}
             />
           </div>
           <h3 class="text-xl font-bold text-dark">{t.team.brenda}</h3>
@@ -45,10 +56,15 @@ import teamLuna from '../assets/images/team-luna.png';
 
         <div class="text-center">
           <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden mx-auto mb-4 shadow-xl ring-4 ring-accent/20">
-            <img 
-              src={teamLuna.src} 
+            <Image 
+              src={teamLuna}
               alt="Luna - TheParaguayTax Team"
+              width={320}
+              height={320}
               class="w-full h-full object-cover"
+              loading="lazy"
+              format="webp"
+              quality={85}
             />
           </div>
           <h3 class="text-xl font-bold text-dark">{t.team.romina}</h3>
@@ -69,7 +85,7 @@ import teamLuna from '../assets/images/team-luna.png';
             {t.team.appDescription}
           </p>
           
-          <p class="text-white/90 mb-8">
+          <p class="text-white mb-8">
             {t.team.appDetails}
           </p>
           

@@ -35,10 +35,11 @@ const t = getTranslations(lang);
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
-    <!-- Google Fonts - Inter -->
+    <!-- Google Fonts - Inter (Optimized) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   </head>
   <body class="font-sans antialiased">
     <!-- Navbar -->
@@ -78,7 +79,7 @@ const t = getTranslations(lang);
 
           <!-- Language Selector -->
           <div class="flex items-center">
-            <LanguageSelector client:load />
+            <LanguageSelector client:idle />
           </div>
 
           <!-- Mobile Menu Button -->
