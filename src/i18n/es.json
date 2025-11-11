@@ -10,6 +10,7 @@
     "accountingPricing": "Precios Contabilidad",
     "residencyPricing": "Precios Residencia",
     "about": "Nosotros",
+    "testimonials": "Testimonios",
     "process": "Proceso",
     "contact": "Contacto",
     "blog": "Blog"
@@ -56,6 +57,7 @@
     "standard": "STANDARD ($ 999)",
     "vip": "VIP ($ 1400)",
     "hyperfast": "HYPERFAST ($ 1600)",
+    "mostPopular": "MÁS POPULAR",
     "mandatory": "Obligatorio",
     "extra": "Extra",
     "residency": "Residencia",
@@ -203,7 +205,7 @@
     "address": "Avda. Moises 1986 - Capiatá",
     "phone": "+595 985 777252",
     "instagram": "@ParaguayTaxes",
-    "email": "dasegrouppyy@gmail.com",
+    "email": "dasegrouppy@gmail.com",
     "formTitle": "Contáctanos",
     "formName": "Nombre",
     "formEmail": "Email",
@@ -458,6 +460,13 @@
       "title": "Declaración de IVA por Un Año",
       "payment": "Un Pago"
     }
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "subtitle": "Experiencias reales de personas reales que eligieron Paraguay",
+    "ctaTitle": "Únete a Nuestra Comunidad Creciente",
+    "ctaText": "¿Listo para comenzar tu viaje de residencia fiscal paraguaya? Únete a cientos de clientes satisfechos que han simplificado sus vidas.",
+    "ctaButton": "Comienza Tu Viaje"
   },
   "blog": {
     "title": "Últimos Artículos",

@@ -10,6 +10,7 @@
     "accountingPricing": "Accounting Pricing",
     "residencyPricing": "Residency Pricing",
     "about": "About Us",
+    "testimonials": "Testimonials",
     "process": "Process",
     "contact": "Contact Us",
     "blog": "Blog"
@@ -56,6 +57,7 @@
     "standard": "STANDARD ($ 999)",
     "vip": "VIP ($ 1400)",
     "hyperfast": "HYPERFAST ($ 1600)",
+    "mostPopular": "MOST POPULAR",
     "mandatory": "Mandatory",
     "extra": "Extra",
     "residency": "Residency",
@@ -203,7 +205,7 @@
     "address": "Avda. Moises 1986 - Capiatá",
     "phone": "+595 985 777252",
     "instagram": "@ParaguayTaxes",
-    "email": "dasegrouppyy@gmail.com",
+    "email": "dasegrouppy@gmail.com",
     "formTitle": "Contact Us",
     "formName": "Name",
     "formEmail": "Email",
@@ -457,6 +459,13 @@
       "title": "IVA Tax Submission for One Year",
       "payment": "One Payment"
     }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real experiences from real people who chose Paraguay",
+    "ctaTitle": "Join Our Growing Community",
+    "ctaText": "Ready to start your Paraguayan tax residency journey? Join hundreds of satisfied clients who have simplified their lives.",
+    "ctaButton": "Start Your Journey"
   },
   "blog": {
     "title": "Latest Articles",
