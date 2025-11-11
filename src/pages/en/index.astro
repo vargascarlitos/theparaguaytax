@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import HeroSlider from '../../components/HeroSlider.astro';
 import TaxWizard from '../../sections/TaxWizard.astro';
-import Services from '../../sections/Services.astro';
+import Accounting from '../../sections/Accounting.astro';
 import Pricing from '../../sections/Pricing.astro';
 import Team from '../../sections/Team.astro';
 import Process from '../../sections/Process.astro';
@@ -28,7 +28,7 @@ const slides = [
     title: t.slider.slide1.title,
     subtitle: t.slider.slide1.subtitle,
     ctaText: t.slider.slide1.ctaText,
-    ctaLink: '#residency',
+    ctaLink: '#pricing',
     ctaColor: 'yellow' as const,
   },
   {
@@ -37,7 +37,7 @@ const slides = [
     title: t.slider.slide2.title,
     subtitle: t.slider.slide2.subtitle,
     ctaText: t.slider.slide2.ctaText,
-    ctaLink: '#residency',
+    ctaLink: '#pricing',
     ctaColor: 'yellow' as const,
   },
   {
@@ -55,7 +55,7 @@ const slides = [
     title: t.slider.slide4.title,
     subtitle: t.slider.slide4.subtitle,
     ctaText: t.slider.slide4.ctaText,
-    ctaLink: '#residency',
+    ctaLink: '#pricing',
     ctaColor: 'yellow' as const,
   },
   {
@@ -64,7 +64,7 @@ const slides = [
     title: t.slider.slide5.title,
     subtitle: t.slider.slide5.subtitle,
     ctaText: t.slider.slide5.ctaText,
-    ctaLink: '#residency',
+    ctaLink: '#pricing',
     ctaColor: 'yellow' as const,
   },
 ];
@@ -77,7 +77,7 @@ const slides = [
 >
   <HeroSlider lang={currentLang} slides={slides} autoplay={true} />
   <TaxWizard lang={currentLang} />
-  <Services lang={currentLang} />
+  <Accounting lang={currentLang} />
   <Pricing lang={currentLang} />
   <Team lang={currentLang} />
   <Process lang={currentLang} />

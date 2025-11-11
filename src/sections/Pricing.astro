@@ -11,114 +11,277 @@ const t = getTranslations(lang);
 const whatsappUrl = `https://wa.me/595985777252?text=${t.contact.whatsappMessage}`;
 ---
 
-<section id="accounting" class="relative bg-gray-50 py-20">
+<section id="pricing" class="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 py-20 sm:py-24 lg:py-28">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- WhatsApp CTA -->
-    <div class="text-center mb-12">
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="relative whatsapp-pulse inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20BD5C] text-white text-2xl sm:text-3xl font-bold px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-      >
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-        </svg>
-        {t.pricing.whatsapp} +595 985 777252
-      </a>
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark mb-6 leading-tight">
+        {t.pricing.plansTitle}
+      </h2>
+      <p class="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto">
+        {t.pricing.plansSubtitle}
+      </p>
     </div>
 
-    <!-- Pricing Tables -->
-    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-12">
-      <!-- Mandatory Services -->
-      <div class="p-8 border-b border-gray-200">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="bg-primary text-white px-4 py-2 rounded-lg font-bold text-lg">
-            {t.pricing.mandatory}
+    <!-- Pricing Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 xl:gap-8 mb-16">
+      <!-- Standard Plan -->
+      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300">
+        <div class="p-8">
+          <!-- Plan Header -->
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-dark mb-2">{t.pricing.standard.split('(')[0].trim()}</h3>
+            <div class="text-5xl font-extrabold text-primary mb-2">$999</div>
+            <p class="text-gray-600">{t.pricing.standardDesc}</p>
           </div>
-          <h3 class="text-2xl font-bold text-dark">{t.pricing.whatIncluded}</h3>
+
+          <!-- Key Features -->
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.fullResidency}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.paraguayanId}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.localAddressProof}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.govFeesIncluded}</span>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="bg-gray-50 rounded-xl p-4 mb-8">
+            <div class="flex items-center justify-between text-sm">
+              <span class="font-medium text-gray-700">{t.pricing.processingTime}</span>
+              <span class="font-bold text-primary">6 {t.pricing.months.toLowerCase()}</span>
+            </div>
+            <div class="flex items-center justify-between text-sm mt-1">
+              <span class="font-medium text-gray-700">{t.pricing.tripsNeededLabel}</span>
+              <span class="font-bold text-secondary">2 {t.pricing.shortTrips.toLowerCase()}</span>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-4 px-6 rounded-xl text-center transition-colors duration-300"
+          >
+            {t.pricing.getStarted}
+          </a>
+        </div>
+      </div>
+
+      <!-- VIP Plan (Most Popular) -->
+      <div class="relative bg-white rounded-3xl shadow-2xl border-2 border-primary overflow-hidden transform hover:scale-105 transition-all duration-300">
+        <!-- Popular Badge -->
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div class="bg-gradient-to-r from-primary to-primary-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+            MOST POPULAR
+          </div>
         </div>
 
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="border-b-2 border-gray-300">
-                <th class="text-left py-4 px-4 font-bold text-dark"></th>
-                <th class="text-center py-4 px-4 font-bold text-dark bg-gray-50">{t.pricing.standard}</th>
-                <th class="text-center py-4 px-4 font-bold text-white bg-primary">{t.pricing.vip}</th>
-                <th class="text-center py-4 px-4 font-bold text-dark bg-gray-50">{t.pricing.hyperfast}</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200">
-              <tr>
-                <td class="py-3 px-4 font-medium">{t.pricing.residency}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-primary/5">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 font-medium">{t.pricing.cedula}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-primary/5">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 font-medium">{t.pricing.superfast}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-primary/5">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 font-medium">{t.pricing.govFees}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-primary/5">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 font-medium">{t.pricing.localAddress}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-primary/5">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 font-medium">{t.pricing.proofAddress}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-primary/5">{t.pricing.yes}</td>
-                <td class="text-center py-3 px-4 bg-gray-50">{t.pricing.yes}</td>
-              </tr>
-              <tr class="bg-secondary/10 font-bold">
-                <td class="py-3 px-4">{t.pricing.waitingTime}</td>
-                <td class="text-center py-3 px-4">6 {t.pricing.months}</td>
-                <td class="text-center py-3 px-4">4 {t.pricing.months}</td>
-                <td class="text-center py-3 px-4">2 {t.pricing.months}</td>
-              </tr>
-              <tr class="bg-accent/10 font-bold">
-                <td class="py-3 px-4">{t.pricing.tripsNeeded}</td>
-                <td class="text-center py-3 px-4">2 {t.pricing.shortTrips}</td>
-                <td class="text-center py-3 px-4">1 {t.pricing.shortTrip}</td>
-                <td class="text-center py-3 px-4">1 {t.pricing.shortTrip}</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="p-8 pt-12">
+          <!-- Plan Header -->
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-dark mb-2">{t.pricing.vip.split('(')[0].trim()}</h3>
+            <div class="text-5xl font-extrabold text-primary mb-2">$1400</div>
+            <p class="text-gray-600">{t.pricing.vipDesc}</p>
+          </div>
+
+          <!-- Key Features -->
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.everythingStandard}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.priorityProcessing}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.dedicatedSupport}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.expressAppointments}</span>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="bg-primary/5 rounded-xl p-4 mb-8 border border-primary/10">
+            <div class="flex items-center justify-between text-sm">
+              <span class="font-medium text-gray-700">{t.pricing.processingTime}</span>
+              <span class="font-bold text-primary">4 {t.pricing.months.toLowerCase()}</span>
+            </div>
+            <div class="flex items-center justify-between text-sm mt-1">
+              <span class="font-medium text-gray-700">{t.pricing.tripsNeededLabel}</span>
+              <span class="font-bold text-secondary">1 {t.pricing.shortTrip.toLowerCase()}</span>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-full bg-primary hover:bg-primary-600 text-white font-bold py-4 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
+            {t.pricing.chooseVip}
+          </a>
+        </div>
+      </div>
+
+      <!-- Hyperfast Plan -->
+      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300">
+        <div class="p-8">
+          <!-- Plan Header -->
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-dark mb-2">{t.pricing.hyperfast.split('(')[0].trim()}</h3>
+            <div class="text-5xl font-extrabold text-accent mb-2">$1600</div>
+            <p class="text-gray-600">{t.pricing.hyperfastDesc}</p>
+          </div>
+
+          <!-- Key Features -->
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center">
+                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.everythingVip}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center">
+                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.ultraFastProcessing}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center">
+                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.premiumConcierge}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center">
+                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <span class="font-medium">{t.pricing.prioritySupport}</span>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="bg-accent/5 rounded-xl p-4 mb-8 border border-accent/10">
+            <div class="flex items-center justify-between text-sm">
+              <span class="font-medium text-gray-700">{t.pricing.processingTime}</span>
+              <span class="font-bold text-accent">2 {t.pricing.months.toLowerCase()}</span>
+            </div>
+            <div class="flex items-center justify-between text-sm mt-1">
+              <span class="font-medium text-gray-700">{t.pricing.tripsNeededLabel}</span>
+              <span class="font-bold text-secondary">1 {t.pricing.shortTrip.toLowerCase()}</span>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-full bg-accent hover:bg-accent-600 text-white font-bold py-4 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
+            {t.pricing.chooseHyperfast}
+          </a>
         </div>
       </div>
     </div>
 
+    <!-- WhatsApp CTA -->
+    <div class="text-center mb-16">
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="relative whatsapp-pulse inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20BD5C] text-white text-xl sm:text-2xl lg:text-3xl font-bold px-8 py-5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+      >
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+        {t.pricing.contactWhatsapp}
+      </a>
+    </div>
+
     <!-- Payment Methods -->
-    <div class="text-center bg-white rounded-2xl shadow-xl p-8">
-      <h3 class="text-2xl font-bold text-dark mb-6">{t.pricing.paymentsAccepted}</h3>
-      <div class="flex flex-wrap justify-center gap-6 text-lg font-semibold">
-        <div class="flex items-center gap-2">
-          <span class="text-3xl">💵</span>
-          <span>{t.pricing.cashUsdPyg}</span>
+    <div class="bg-white rounded-3xl shadow-xl p-8 lg:p-12">
+      <div class="text-center mb-8">
+        <h3 class="text-3xl font-bold text-dark mb-4">{t.pricing.acceptedPaymentsTitle}</h3>
+        <p class="text-lg text-gray-600">{t.pricing.paymentsSubtitle}</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 border border-green-200">
+          <div class="text-6xl mb-4">💵</div>
+          <h4 class="text-xl font-bold text-dark mb-2">{t.pricing.cash}</h4>
+          <p class="text-gray-600">{t.pricing.usdOrPyg}</p>
         </div>
-        <div class="flex items-center gap-2">
-          <span class="text-3xl">🏦</span>
-          <span>{t.pricing.wiseBank}</span>
+
+        <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200">
+          <div class="text-6xl mb-4">🏦</div>
+          <h4 class="text-xl font-bold text-dark mb-2">{t.pricing.bankTransfer}</h4>
+          <p class="text-gray-600">{t.pricing.wiseOrBank}</p>
         </div>
-        <div class="flex items-center gap-2">
-          <span class="text-3xl">₿</span>
-          <span>{t.pricing.crypto}</span>
+
+        <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200">
+          <div class="text-6xl mb-4">₿</div>
+          <h4 class="text-xl font-bold text-dark mb-2">{t.pricing.cryptocurrency}</h4>
+          <p class="text-gray-600">{t.pricing.bitcoinUsdt}</p>
         </div>
       </div>
     </div>
