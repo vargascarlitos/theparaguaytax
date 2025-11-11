@@ -298,6 +298,10 @@
         "export": {
           "title": "Exportación (Mundial)",
           "description": "Servicios a clientes o empresas extranjeras"
+        },
+        "foreign": {
+          "title": "Ingresos de fuente extranjera",
+          "description": "Dinero ganado y previamente gravado en el extranjero"
         }
       },
       "optionsMerchandise": {
@@ -335,9 +339,28 @@
       "structures": {
         "rucServicesLocal": "RUC Unipersonal - Servicios Locales",
         "rucServicesExport": "RUC Unipersonal - Servicios de Exportación",
+        "rucServicesForeign": "RUC Unipersonal - Ingresos de Fuente Extranjera",
         "rucMerchandiseLocal": "RUC Unipersonal - Mercancía Local/Extranjera",
         "rucMerchandiseCrypto": "RUC Unipersonal - Criptomonedas",
         "easEntity": "Entidad Jurídica EAS (LLC)"
+      },
+      "specificTexts": {
+        "irpWorkingInsideParaguay": {
+          "name": "IRP (Impuesto a la Renta) - Trabajando dentro de Paraguay",
+          "description": "Impuesto a la renta progresivo trabajando dentro de Paraguay",
+          "note": "Si trabajas fuera de Paraguay para una empresa extranjera, el impuesto a la renta (IRP) ESTÁ EXENTO"
+        },
+        "irpWorkingOutsideParaguay": {
+          "name": "IRP (Impuesto a la Renta) - Trabajando fuera de Paraguay",
+          "description": "Los ingresos obtenidos del trabajo realizado fuera de Paraguay para una empresa extranjera están exentos de IRP (no gravables en Paraguay)",
+          "note": "Si trabajas fuera de Paraguay para una empresa extranjera, el impuesto a la renta (IRP) ESTÁ EXENTO"
+        },
+        "foreignSourceIncome": {
+          "ivaDescription": "Los ingresos de fuente extranjera están exentos",
+          "irpDescription": "Los ingresos de fuente extranjera están exentos",
+          "noObligations": "No hay obligaciones fiscales en Paraguay para ingresos de fuente extranjera",
+          "note": "Los ingresos que se generaron y ya fueron gravados en el extranjero están exentos en Paraguay. Cuando traes ese dinero a Paraguay, pagas 0% de impuestos - se considera ingreso de fuente extranjera bajo la legislación tributaria paraguaya."
+        }
       },
       "taxes": {
         "iva": {
@@ -358,7 +381,7 @@
           "frequency": "Anual",
           "description": "Impuesto a la renta progresivo",
           "details": "Tasas progresivas: 8% (hasta 50M GS), 9% (50M-150M GS), 10% (>150M GS)",
-          "note": "Si tus ingresos superan 80 millones GS, debes registrarte para el Impuesto a la Renta (IRP). Tiene tasas progresivas."
+          "note": "Si tus ingresos anuales superan 80 millones PYG, debes registrarte para el IRP."
         },
         "irpExempt": {
           "name": "IRP (Impuesto a la Renta)",
@@ -374,17 +397,24 @@
           "description": "Impuesto a la renta simplificado para empresas",
           "note": "Si los ingresos superan 2 mil millones GS, se requieren estados financieros (IRE)"
         },
-        "idu": {
-          "name": "IDU (Impuesto a Dividendos)",
+        "iduResident": {
+          "name": "IDU (Impuesto a Dividendos) - Residentes",
           "rate": "8%",
           "frequency": "Anual",
           "description": "Impuesto cuando los accionistas retiran utilidades",
+          "note": "Cuando cada accionista retira sus utilidades. No importa si es física o jurídica."
+        },
+        "iduNonResident": {
+          "name": "IDU (Impuesto a Dividendos) - No Residentes",
+          "rate": "15%",
+          "frequency": "Anual",
+          "description": "Impuesto cuando los accionistas no residentes retiran utilidades",
           "note": "Cuando cada accionista retira sus utilidades. No importa si es física o jurídica."
         }
       },
       "obligations": {
         "electronicInvoice": "Emitir Facturas Electrónicas (GS o USD)",
-        "monthlyVAT": "Declaración mensual de IVA",
+        "monthlyVAT": "Declaración de IVA",
         "annualIncome": "Declaración anual de impuesto a la renta",
         "balanceSheet": "Balance General Anual",
         "assembly": "Asamblea Ordinaria Anual",
@@ -395,12 +425,13 @@
       },
       "notes": {
         "exportExempt": "Si trabajas fuera de Paraguay y aún trabajas para una empresa extranjera, el IMPUESTO A LA RENTA (IRP) TAMBIÉN ESTÁ EXENTO.",
-        "cryptoVATExempt": "Las criptomonedas están exentas de IVA (0%)",
+        "cryptoVATExempt": "Las ventas de crypto están exentas de IVA.",
         "iduOnlyDistribution": "IDU: Cuando cada accionista retira sus utilidades. No importa si es física o jurídica.",
         "easRequirements": "Para Establecer la EAS: Puede ser un socio único o más, El Representante Legal debe tener cédula, Necesitas un Sello de Empresa, No hay capital mínimo, El capital no debe ser declarado",
         "ireSwitchThreshold": "Si los ingresos superan 2 mil millones GS en un año fiscal, debes pagar mediante el IRE General (Se requieren estados financieros)",
         "capitalNotDeclared": "El capital no debe ser declarado en la EAS"
-      }
+      },
+      "disclaimer": "*Descargo de responsabilidad: Las situaciones fiscales pueden variar según circunstancias individuales. Para asesoramiento personalizado, por favor consulte con un contador profesional."
     }
   },
   "services": {

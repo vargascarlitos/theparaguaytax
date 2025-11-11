@@ -285,21 +285,24 @@
         }
       }
     },
-    "step3": {
-      "titleServices": "Where will you provide your services?",
-      "titleMerchandise": "What type of merchandise do you handle?",
-      "titleBoth": "What is your primary activity?",
-      "subtitle": "This determines specific tax exemptions",
-      "optionsServices": {
-        "local": {
-          "title": "Local (Paraguay)",
-          "description": "Services provided to clients within Paraguay"
-        },
-        "export": {
-          "title": "Export (Worldwide)",
-          "description": "Services to foreign clients or companies"
-        }
-      },
+         "step3": {
+           "titleServices": "Where will you provide your services?",
+           "titleMerchandise": "What type of merchandise do you handle?",
+           "subtitle": "This determines specific tax exemptions",
+           "optionsServices": {
+             "local": {
+               "title": "Local (Paraguay)",
+               "description": "Services provided to clients within Paraguay"
+             },
+             "export": {
+               "title": "Export (Worldwide)",
+               "description": "Services to foreign clients or companies"
+             },
+             "foreign": {
+               "title": "Foreign-source income",
+               "description": "Money earned and previously taxed abroad"
+             }
+           },
       "optionsMerchandise": {
         "localForeign": {
           "title": "Local/Foreign Products",
@@ -335,9 +338,28 @@
       "structures": {
         "rucServicesLocal": "RUC Unipersonal - Local Services",
         "rucServicesExport": "RUC Unipersonal - Export Services",
+        "rucServicesForeign": "RUC Unipersonal - Foreign-source Income",
         "rucMerchandiseLocal": "RUC Unipersonal - Local/Foreign Merchandise",
         "rucMerchandiseCrypto": "RUC Unipersonal - Cryptocurrency",
         "easEntity": "Legal Entity EAS (LLC)"
+      },
+      "specificTexts": {
+        "irpWorkingInsideParaguay": {
+          "name": "IRP (Income Tax) - Working inside Paraguay",
+          "description": "Progressive income tax working inside Paraguay",
+          "note": "If you work outside Paraguay for a foreign company, income tax (IRP) IS EXEMPT"
+        },
+        "irpWorkingOutsideParaguay": {
+          "name": "IRP (Income Tax) - Working outside Paraguay",
+          "description": "Income earned from work performed outside Paraguay for a foreign company is exempt from IRP (not taxable in Paraguay)",
+          "note": "If you work outside Paraguay for a foreign company, income tax (IRP) IS EXEMPT"
+        },
+        "foreignSourceIncome": {
+          "ivaDescription": "Foreign-source income is exempt",
+          "irpDescription": "Foreign-source income is exempt",
+          "noObligations": "No tax obligations in Paraguay for foreign-source income",
+          "note": "Income that was generated and already taxed abroad is exempt in Paraguay. When you bring that money into Paraguay, you pay 0% tax - it's considered foreign-source income under Paraguayan tax law."
+        }
       },
       "taxes": {
         "iva": {
@@ -358,7 +380,7 @@
           "frequency": "Annually",
           "description": "Progressive income tax",
           "details": "Progressive rates: 8% (up to 50M GS), 9% (50M-150M GS), 10% (>150M GS)",
-          "note": "If your income exceeds 80 million GS, you must register for the Income Tax (IRP). It has progressive rates."
+          "note": "If your annual income exceeds 80 million PYG, you must register for the IRP."
         },
         "irpExempt": {
           "name": "IRP (Income Tax)",
@@ -374,17 +396,24 @@
           "description": "Simplified income tax for businesses",
           "note": "If income exceeds 2 billion GS, financial statements (IRE) are required"
         },
-        "idu": {
-          "name": "IDU (Dividend Tax)",
+        "iduResident": {
+          "name": "IDU (Dividend Tax) - Residents",
           "rate": "8%",
           "frequency": "Annually",
           "description": "Tax when shareholders withdraw profits",
+          "note": "When each shareholder withdraws their profits. It doesn't matter if it's physical or legal."
+        },
+        "iduNonResident": {
+          "name": "IDU (Dividend Tax) - Non-Residents",
+          "rate": "15%",
+          "frequency": "Annually",
+          "description": "Tax when non-resident shareholders withdraw profits",
           "note": "When each shareholder withdraws their profits. It doesn't matter if it's physical or legal."
         }
       },
       "obligations": {
         "electronicInvoice": "Issue Electronic Invoices (GS or USD)",
-        "monthlyVAT": "Monthly VAT declaration",
+        "monthlyVAT": "IVA declaration",
         "annualIncome": "Annual income tax return",
         "balanceSheet": "Annual Balance Sheet",
         "assembly": "Annual Ordinary Assembly",
@@ -395,12 +424,13 @@
       },
       "notes": {
         "exportExempt": "If you are working outside Paraguay and you still working for a Foreign Company the INCOME TAX (IRP) IS EXEMPT TOO.",
-        "cryptoVATExempt": "Cryptocurrency is VAT exempt (0%)",
+        "cryptoVATExempt": "Crypto sales are exempt from VAT.",
         "iduOnlyDistribution": "IDU: When each shareholder withdraws their profits. It doesn't matter if it's physical or legal.",
         "easRequirements": "To Establish the EAS: It can be a single partner or more, Legal Representative must have an ID, You need a Company Seal, There is no minimum capital, Capital should not be declared",
         "ireSwitchThreshold": "If income exceeds 2 billion GS in a fiscal year, you must pay through the General IRE (Financial statements are required)",
         "capitalNotDeclared": "Capital should not be declared in the EAS"
-      }
+      },
+      "disclaimer": "*Disclaimer: Tax situations can vary based on individual circumstances. For personalized advice, please consult with a tax professional."
     }
   },
   "services": {
