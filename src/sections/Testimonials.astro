@@ -1,5 +1,6 @@
 ---
 import { getTranslations } from '../i18n/utils';
+import { Image } from 'astro:assets';
 
 interface Props {
   lang: 'en' | 'es';
@@ -8,21 +9,24 @@ interface Props {
 const { lang } = Astro.props;
 const t = getTranslations(lang);
 
+// Importar imagen del testimonio
+const hassanImage = await import('../assets/images/testimonials/hassan.png');
+
 // Testimonios reales (estructura para agregar más fácilmente)
 const testimonials = [
   {
     id: 'mohamed',
-    name: 'Mohamed Al-Rashid',
-    role: 'Software Developer',
-    location: 'Dubai, UAE',
-    image: '/testimonials/mohamed.jpg', // Placeholder path
+    name: 'Hassan Mohamed',
+    role: 'Client',
+    location: 'Asunción, Paraguay',
+    image: hassanImage.default,
     rating: 5,
     text: {
-      en: "I moved to Paraguay through TheParaguayTax and it was the best decision for my business. The process was smooth, the team was incredibly helpful, and now I pay zero taxes on my international income. The lifestyle here is amazing too - great food, friendly people, and modern amenities. Highly recommend!",
-      es: "Me mudé a Paraguay a través de TheParaguayTax y fue la mejor decisión para mi negocio. El proceso fue fluido, el equipo fue increíblemente útil, y ahora pago cero impuestos sobre mis ingresos internacionales. El estilo de vida aquí es increíble también - excelente comida, gente amable y comodidades modernas. ¡Altamente recomendado!"
+      en: "Osvaldo is absolutely wonderful and super helpful. I definitely recommend them if you need anything tax-related. Looking for a, English speaking tax accountant in Asuncion or Paraguay, then look no further",
+      es: "Osvaldo es absolutamente maravilloso y súper servicial. Definitivamente los recomiendo si necesitan algo relacionado con impuestos. Si buscan un contador de impuestos que hable inglés en Asunción o Paraguay, no busquen más"
     },
     verified: true,
-    date: '2024-10-15'
+    date: '2025-11-07'
   },
   // Aquí se pueden agregar más testimonios fácilmente
   // {
@@ -30,7 +34,7 @@ const testimonials = [
   //   name: 'Nombre del Cliente',
   //   role: 'Profesión',
   //   location: 'Ciudad, País',
-  //   image: '/testimonials/cliente2.jpg',
+  //   image: cliente2Image.default, // Importada dinámicamente
   //   rating: 5,
   //   text: {
   //     en: "Texto en inglés",
@@ -72,7 +76,7 @@ const testimonials = [
             <!-- Rating -->
             <div class="flex items-center gap-1 mb-4">
               {Array.from({ length: testimonial.rating }).map((_, i) => (
-                <svg key={i} class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                <svg class="w-5 h-5 text-yellow-400 fill-current inline-block" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               ))}
@@ -87,11 +91,20 @@ const testimonials = [
             <div class="flex items-center gap-4">
               <!-- Avatar -->
               <div class="relative">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                  {testimonial.name.split(' ').map(n => n[0]).join('').substring(0, 2)}
-                </div>
-                <!-- Online indicator -->
-                <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 border-2 border-white rounded-full"></div>
+                {testimonial.image ? (
+                  <Image
+                    src={testimonial.image}
+                    alt={`${testimonial.name} avatar`}
+                    class="w-12 h-12 rounded-full object-cover shadow-lg"
+                    width={48}
+                    height={48}
+                    loading="lazy"
+                  />
+                ) : (
+                  <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                    {testimonial.name.split(' ').map(n => n[0]).join('').substring(0, 2)}
+                  </div>
+                )}
               </div>
 
               <!-- Details -->

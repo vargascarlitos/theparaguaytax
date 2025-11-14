@@ -26,8 +26,8 @@ const whatsappUrl = `https://wa.me/595985777252?text=${encodeURIComponent(t.cont
     <!-- Services Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8 mb-16">
       <!-- Service 1: RUC Inscription -->
-      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300 group">
-        <div class="p-8">
+      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300 group flex flex-col min-h-[500px]">
+        <div class="p-8 flex-1 flex flex-col">
           <!-- Icon -->
           <div class="flex justify-center mb-6">
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg">
@@ -70,16 +70,24 @@ const whatsappUrl = `https://wa.me/595985777252?text=${encodeURIComponent(t.cont
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="block w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl"
+            class="block w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl mb-4"
           >
             {t.accounting.getStarted}
+          </a>
+
+          <!-- See More Button -->
+          <a
+            href="/ruc-registration"
+            class="block w-full border-2 border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-600 font-semibold py-2 px-4 rounded-lg text-center transition-colors duration-300"
+          >
+            {t.accounting.seeMore}
           </a>
         </div>
       </div>
 
       <!-- Service 2: Tax Certificate -->
-      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300 group">
-        <div class="p-8">
+      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300 group flex flex-col min-h-[500px]">
+        <div class="p-8 flex-1 flex flex-col">
           <!-- Icon -->
           <div class="flex justify-center mb-6">
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg">
@@ -122,16 +130,24 @@ const whatsappUrl = `https://wa.me/595985777252?text=${encodeURIComponent(t.cont
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl"
+            class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl mb-4"
           >
             {t.accounting.getCertificate}
+          </a>
+
+          <!-- See More Button -->
+          <a
+            href="/tax-certificate"
+            class="block w-full border-2 border-gray-300 hover:border-green-500 text-gray-700 hover:text-green-600 font-semibold py-2 px-4 rounded-lg text-center transition-colors duration-300"
+          >
+            {t.accounting.seeMore}
           </a>
         </div>
       </div>
 
       <!-- Service 3: Monthly IVA -->
-      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300 group">
-        <div class="p-8">
+      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300 group flex flex-col min-h-[500px]">
+        <div class="p-8 flex-1 flex flex-col">
           <!-- Icon -->
           <div class="flex justify-center mb-6">
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg">
@@ -174,15 +190,23 @@ const whatsappUrl = `https://wa.me/595985777252?text=${encodeURIComponent(t.cont
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="block w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl"
+            class="block w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl mb-4"
           >
             {t.accounting.startMonthly}
+          </a>
+
+          <!-- See More Button -->
+          <a
+            href="/monthly-iva-service"
+            class="block w-full border-2 border-gray-300 hover:border-purple-500 text-gray-700 hover:text-purple-600 font-semibold py-2 px-4 rounded-lg text-center transition-colors duration-300"
+          >
+            {t.accounting.seeMore}
           </a>
         </div>
       </div>
 
       <!-- Service 4: Special IVA One Year -->
-      <div class="relative bg-white rounded-3xl shadow-2xl border-2 border-yellow-400 overflow-hidden transform hover:scale-105 transition-all duration-300 group">
+      <div class="relative bg-white rounded-3xl shadow-2xl border-2 border-yellow-400 overflow-hidden transform hover:scale-105 transition-all duration-300 group flex flex-col min-h-[500px]">
         <!-- Popular Badge -->
         <div class="absolute -top-1 left-1/2 transform -translate-x-1/2 z-10">
           <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-dark px-4 py-1.5 rounded-full text-xs font-bold shadow-lg border-2 border-white">
@@ -190,7 +214,7 @@ const whatsappUrl = `https://wa.me/595985777252?text=${encodeURIComponent(t.cont
           </div>
         </div>
 
-        <div class="p-8 pt-12">
+        <div class="p-8 pt-12 flex-1 flex flex-col">
           <!-- Icon -->
           <div class="flex justify-center mb-6">
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center shadow-lg">
@@ -233,9 +257,17 @@ const whatsappUrl = `https://wa.me/595985777252?text=${encodeURIComponent(t.cont
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="block w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-dark font-bold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            class="block w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-dark font-bold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4"
           >
             {t.accounting.chooseAnnual}
+          </a>
+
+          <!-- See More Button -->
+          <a
+            href="/annual-iva-service"
+            class="block w-full border-2 border-gray-300 hover:border-yellow-400 text-gray-700 hover:text-yellow-600 font-semibold py-2 px-4 rounded-lg text-center transition-colors duration-300"
+          >
+            {t.accounting.seeMore}
           </a>
         </div>
       </div>

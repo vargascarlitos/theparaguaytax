@@ -131,17 +131,18 @@
     "title": "Accounting & Tax Services",
     "subtitle": "Professional accounting services to keep your Paraguayan business compliant. From RUC registration to ongoing tax submissions.",
     "rucDesc": "Register your Tax ID (RUC) for business operations in Paraguay. Required for all business activities.",
-    "rucFeatures": ["Complete registration", "Legal documentation"],
+    "rucFeatures": ["Complete Registration", "Just Paraguayan cedula and photo selfie needed"],
     "certDesc": "Official tax residency certificate required for banking and international transactions.",
-    "certFeatures": ["Official certificate", "Banking compliant"],
-    "ivaDesc": "Monthly VAT tax declaration and submission service to keep your business compliant.",
-    "ivaFeatures": ["Monthly filing", "Compliance guarantee"],
+    "certFeatures": ["Official certificate", "You can apply with just one day of RUC registration"],
+    "ivaDesc": "Monthly IVA (VAT) tax declaration and submission service to keep your RUC (Tax ID) compliant.",
+    "ivaFeatures": ["Monthly filing", "We send a monthly PDF report", "We'll notify you if you owe taxes."],
     "specialDesc": "Complete year of IVA tax submissions. Save with our annual package and get priority processing.",
     "specialFeatures": ["12 months coverage", "Priority processing", "Save 25% vs monthly"],
     "getStarted": "Get Started",
     "getCertificate": "Get Certificate",
     "startMonthly": "Start Monthly",
     "chooseAnnual": "Choose Annual Plan",
+    "seeMore": "See More",
     "contactWhatsapp": "Contact Us on WhatsApp +595 985 777252"
   },
   "team": {
@@ -267,9 +268,9 @@
           "title": "Merchandise or Crypto",
           "description": "Buy and sell products, cryptocurrency trading"
         },
-        "both": {
-          "title": "Services + Merchandise",
-          "description": "Combination of both activities"
+        "foreign": {
+          "title": "Foreign-source income",
+          "description": "Money earned and previously taxed abroad"
         }
       }
     },
@@ -291,20 +292,16 @@
            "titleServices": "Where will you provide your services?",
            "titleMerchandise": "What type of merchandise do you handle?",
            "subtitle": "This determines specific tax exemptions",
-           "optionsServices": {
-             "local": {
-               "title": "Local (Paraguay)",
-               "description": "Services provided to clients within Paraguay"
-             },
-             "export": {
-               "title": "Export (Worldwide)",
-               "description": "Services to foreign clients or companies"
-             },
-             "foreign": {
-               "title": "Foreign-source income",
-               "description": "Money earned and previously taxed abroad"
-             }
-           },
+          "optionsServices": {
+            "local": {
+              "title": "Local (Paraguay)",
+              "description": "Services provided to clients within Paraguay"
+            },
+            "export": {
+              "title": "Export (Worldwide)",
+              "description": "Services to foreign clients or companies"
+            }
+          },
       "optionsMerchandise": {
         "localForeign": {
           "title": "Local/Foreign Products",

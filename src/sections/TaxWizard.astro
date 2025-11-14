@@ -59,7 +59,7 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <!-- Services Option -->
           <button
             class="wizard-option group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary focus:outline-none focus:ring-4 focus:ring-primary/20 cursor-pointer"
@@ -106,6 +106,31 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
               <div>
                 <h4 class="text-xl font-bold text-dark mb-2">{t.taxWizard.step1.options.merchandise.title}</h4>
                 <p class="text-sm text-gray-600">{t.taxWizard.step1.options.merchandise.description}</p>
+              </div>
+            </div>
+          </button>
+
+          <!-- Foreign-source income Option -->
+          <button
+            class="wizard-option group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-accent focus:outline-none focus:ring-4 focus:ring-accent/20 cursor-pointer"
+            data-choice="foreign"
+            data-step="1"
+          >
+            <!-- Touch Indicator for Mobile -->
+            <div class="md:hidden absolute -top-2 -right-2 w-8 h-8 bg-accent rounded-full flex items-center justify-center shadow-lg animate-pulse">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+              </svg>
+            </div>
+            <div class="flex flex-col items-center text-center space-y-4">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 sm:w-10 sm:h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-dark mb-2">{t.taxWizard.step1.options.foreign.title}</h4>
+                <p class="text-sm text-gray-600">{t.taxWizard.step1.options.foreign.description}</p>
               </div>
             </div>
           </button>
@@ -188,7 +213,7 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
         </div>
         
         <!-- Services Options -->
-        <div class="wizard-step3-services grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
+        <div class="wizard-step3-services grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
           <button
             class="wizard-option group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary focus:outline-none focus:ring-4 focus:ring-primary/20"
             data-choice="local"
@@ -226,23 +251,6 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
             </div>
           </button>
 
-          <button
-            class="wizard-option group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-accent focus:outline-none focus:ring-4 focus:ring-accent/20"
-            data-choice="foreign"
-            data-step="3"
-          >
-            <div class="flex flex-col items-center text-center space-y-4">
-              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <svg class="w-8 h-8 sm:w-10 sm:h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-lg sm:text-xl font-bold text-dark mb-2">{t.taxWizard.step3.optionsServices.foreign.title}</h4>
-                <p class="text-xs sm:text-sm text-gray-600">{t.taxWizard.step3.optionsServices.foreign.description}</p>
-              </div>
-            </div>
-          </button>
         </div>
 
         <!-- Merchandise Options -->
@@ -371,8 +379,16 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
 
         if (step === 1) {
           state.selections.activity = choice;
-          updateStep3ForActivity();
-          nextStep();
+          // For foreign-source income, skip steps 2 & 3
+          if (choice === 'foreign') {
+            state.selections.structure = 'none';
+            state.selections.scenario = 'foreign';
+            showResults();
+            showStep(4);
+          } else {
+            updateStep3ForActivity();
+            nextStep();
+          }
         } else if (step === 2) {
           state.selections.structure = choice;
           // For EAS, skip step 3
@@ -484,7 +500,7 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
           t.taxWizard.result.obligations.purchases
         ];
         notes = [];
-      } else if (activity === 'services' && scenario === 'foreign') {
+      } else if (activity === 'foreign') {
         structureKey = 'rucServicesForeign';
         taxes = [
           { name: 'IVA (VAT)', rate: '0% (EXEMPT)', frequency: 'N/A', description: t.taxWizard.result.specificTexts.foreignSourceIncome.ivaDescription },

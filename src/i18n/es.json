@@ -131,17 +131,18 @@
     "title": "Servicios de Contabilidad e Impuestos",
     "subtitle": "Servicios profesionales de contabilidad para mantener su empresa paraguaya en cumplimiento. Desde el registro de RUC hasta las declaraciones fiscales continuas.",
     "rucDesc": "Registre su ID Fiscal (RUC) para operaciones comerciales en Paraguay. Requerido para todas las actividades comerciales.",
-    "rucFeatures": ["Registro completo", "Documentación legal"],
+    "rucFeatures": ["Registro completo", "Solo se necesita cédula paraguaya y selfie con foto"],
     "certDesc": "Certificado oficial de residencia fiscal requerido para banca y transacciones internacionales.",
-    "certFeatures": ["Certificado oficial", "Compatible con banca"],
-    "ivaDesc": "Servicio mensual de declaración y presentación de IVA para mantener su negocio en cumplimiento.",
-    "ivaFeatures": ["Presentación mensual", "Garantía de cumplimiento"],
+    "certFeatures": ["Certificado oficial", "Puede aplicar con solo un día de registro de RUC"],
+    "ivaDesc": "Servicio mensual de declaración y presentación de IVA (VAT) para mantener su RUC (ID Fiscal) en cumplimiento.",
+    "ivaFeatures": ["Presentación mensual", "Enviamos un reporte PDF mensual", "Le notificaremos si debe impuestos."],
     "specialDesc": "Año completo de presentaciones de IVA. Ahorre con nuestro paquete anual y obtenga procesamiento prioritario.",
     "specialFeatures": ["Cobertura de 12 meses", "Procesamiento prioritario", "Ahorre 25% vs mensual"],
     "getStarted": "Comenzar",
     "getCertificate": "Obtener Certificado",
     "startMonthly": "Comenzar Mensual",
     "chooseAnnual": "Elegir Plan Anual",
+    "seeMore": "Ver Más",
     "contactWhatsapp": "Contáctanos en WhatsApp +595 985 777252"
   },
   "team": {
@@ -267,9 +268,9 @@
           "title": "Mercancía o Crypto",
           "description": "Compra y venta de productos, trading de criptomonedas"
         },
-        "both": {
-          "title": "Servicios + Mercancía",
-          "description": "Combinación de ambas actividades"
+        "foreign": {
+          "title": "Ingresos de fuente extranjera",
+          "description": "Dinero ganado y previamente gravado en el extranjero"
         }
       }
     },
@@ -300,10 +301,6 @@
         "export": {
           "title": "Exportación (Mundial)",
           "description": "Servicios a clientes o empresas extranjeras"
-        },
-        "foreign": {
-          "title": "Ingresos de fuente extranjera",
-          "description": "Dinero ganado y previamente gravado en el extranjero"
         }
       },
       "optionsMerchandise": {
