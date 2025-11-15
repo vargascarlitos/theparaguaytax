@@ -9,8 +9,8 @@
     "pricing": "Pricing",
     "accountingPricing": "Accounting Pricing",
     "residencyPricing": "Residency Pricing",
-    "about": "About Us",
     "testimonials": "Testimonials",
+    "about": "About Us",
     "process": "Process",
     "contact": "Contact Us",
     "blog": "Blog"
@@ -152,11 +152,10 @@
   "team": {
     "title": "The Team",
     "osvaldo": "Osvaldo",
-    "beatriz": "Beatriz",
     "romina": "Romina",
-    "placeholder1": "Carlos",
-    "placeholder2": "Brenda",
-    "placeholder3": "Luna",
+    "carlos": "Carlos",
+    "beatriz": "Beatriz",
+    "brenda": "Brenda",
     "comingSoon": "Coming Soon - Tax Mobile App",
     "appDescription": "Simplify your tax filing with our intuitive and easy-to-use app for taxpayers.",
     "appDetails": "Discover a fast and hassle-free way to manage your taxes, designed specifically so taxpayers can save time and avoid mistakes.",
@@ -467,6 +466,25 @@
     "ctaTitle": "Join Our Growing Community",
     "ctaText": "Ready to start your Paraguayan tax residency journey? Join hundreds of satisfied clients who have simplified their lives.",
     "ctaButton": "Start Your Journey"
+  },
+  "socialMedia": {
+    "title": "Follow Us on Social Media",
+    "subtitle": "Discover practical tips about taxes, tax residency, and life in Paraguay through our short videos.",
+    "followUs": "Follow us for more tips and updates!",
+    "videos": {
+      "residency": {
+        "title": "Tax Residency in Paraguay",
+        "description": "Everything you need to know about getting your tax residency."
+      },
+      "iva": {
+        "title": "IVA Declaration Process",
+        "description": "Step-by-step guide to declare IVA in Paraguay."
+      },
+      "banking": {
+        "title": "Banking in Paraguay",
+        "description": "How to open bank accounts without CRS restrictions."
+      }
+    }
   },
   "blog": {
     "title": "Latest Articles",

@@ -9,8 +9,8 @@
     "pricing": "Precios",
     "accountingPricing": "Precios Contabilidad",
     "residencyPricing": "Precios Residencia",
-    "about": "Nosotros",
     "testimonials": "Testimonios",
+    "about": "Nosotros",
     "process": "Proceso",
     "contact": "Contacto",
     "blog": "Blog"
@@ -152,11 +152,10 @@
   "team": {
     "title": "El Equipo",
     "osvaldo": "Osvaldo",
-    "beatriz": "Beatriz",
     "romina": "Romina",
-    "placeholder1": "Carlos",
-    "placeholder2": "Brenda",
-    "placeholder3": "Luna",
+    "carlos": "Carlos",
+    "beatriz": "Beatriz",
+    "brenda": "Brenda",
     "comingSoon": "Próximamente - App Móvil Tax",
     "appDescription": "Simplifica la liquidación de tus impuestos con nuestra app intuitiva y fácil de usar para contribuyentes.",
     "appDetails": "Descubre una forma rápida y sin complicaciones de gestionar tus impuestos, diseñada especialmente para que los contribuyentes ahorren tiempo y eviten errores.",
@@ -468,6 +467,25 @@
     "ctaTitle": "Únete a Nuestra Comunidad Creciente",
     "ctaText": "¿Listo para comenzar tu viaje de residencia fiscal paraguaya? Únete a cientos de clientes satisfechos que han simplificado sus vidas.",
     "ctaButton": "Comienza Tu Viaje"
+  },
+  "socialMedia": {
+    "title": "Síguenos en Redes Sociales",
+    "subtitle": "Descubre consejos prácticos sobre impuestos, residencia fiscal y vida en Paraguay a través de nuestros videos cortos.",
+    "followUs": "¡Síguenos para más consejos y actualizaciones!",
+    "videos": {
+      "residency": {
+        "title": "Residencia Fiscal en Paraguay",
+        "description": "Todo lo que necesitas saber sobre obtener tu residencia fiscal."
+      },
+      "iva": {
+        "title": "Proceso de Declaración IVA",
+        "description": "Guía paso a paso para declarar IVA en Paraguay."
+      },
+      "banking": {
+        "title": "Banca en Paraguay",
+        "description": "Cómo abrir cuentas bancarias sin restricciones CRS."
+      }
+    }
   },
   "blog": {
     "title": "Últimos Artículos",
