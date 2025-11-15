@@ -1,5 +1,6 @@
 ---
 import { getTranslations } from '../i18n/utils';
+import ResidencyAccordion from '../components/ResidencyAccordion';
 
 interface Props {
   lang: 'en' | 'es';
@@ -23,225 +24,41 @@ const whatsappUrl = `https://wa.me/595985777252?text=${t.contact.whatsappMessage
       </p>
     </div>
 
-    <!-- Pricing Cards -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 xl:gap-8 mb-16">
-      <!-- Standard Plan -->
-      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300">
-        <div class="p-8">
-          <!-- Plan Header -->
-          <div class="text-center mb-8">
-            <h3 class="text-2xl font-bold text-dark mb-2">{t.pricing.standard.split('(')[0].trim()}</h3>
-            <div class="text-5xl font-extrabold text-primary mb-2">$999</div>
-            <p class="text-gray-600">{t.pricing.standardDesc}</p>
-          </div>
-
-          <!-- Key Features -->
-          <div class="space-y-4 mb-8">
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
-                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.fullResidency}</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
-                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.paraguayanId}</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
-                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.localAddressProof}</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
-                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.govFeesIncluded}</span>
-            </div>
-          </div>
-
-          <!-- Timeline -->
-          <div class="bg-gray-50 rounded-xl p-4 mb-8">
-            <div class="flex items-center justify-between text-sm">
-              <span class="font-medium text-gray-700">{t.pricing.processingTime}</span>
-              <span class="font-bold text-primary">6 {t.pricing.months.toLowerCase()}</span>
-            </div>
-            <div class="flex items-center justify-between text-sm mt-1">
-              <span class="font-medium text-gray-700">{t.pricing.tripsNeededLabel}</span>
-              <span class="font-bold text-secondary">2 {t.pricing.shortTrips.toLowerCase()}</span>
-            </div>
-          </div>
-
-          <!-- CTA Button -->
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-4 px-6 rounded-xl text-center transition-colors duration-300"
-          >
-            {t.pricing.getStarted}
-          </a>
-        </div>
-      </div>
-
-      <!-- VIP Plan (Most Popular) -->
-      <div class="relative bg-white rounded-3xl shadow-2xl border-2 border-primary overflow-hidden transform hover:scale-105 transition-all duration-300">
-        <!-- Popular Badge -->
-        <div class="absolute -top-1 left-1/2 transform -translate-x-1/2 z-10">
-          <div class="bg-gradient-to-r from-primary to-primary-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg border-2 border-white">
-            {t.pricing.mostPopular}
-          </div>
-        </div>
-
-        <div class="p-8 pt-12">
-          <!-- Plan Header -->
-          <div class="text-center mb-8">
-            <h3 class="text-2xl font-bold text-dark mb-2">{t.pricing.vip.split('(')[0].trim()}</h3>
-            <div class="text-5xl font-extrabold text-primary mb-2">$1400</div>
-            <p class="text-gray-600">{t.pricing.vipDesc}</p>
-          </div>
-
-          <!-- Key Features -->
-          <div class="space-y-4 mb-8">
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.everythingStandard}</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.priorityProcessing}</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.dedicatedSupport}</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.expressAppointments}</span>
-            </div>
-          </div>
-
-          <!-- Timeline -->
-          <div class="bg-primary/5 rounded-xl p-4 mb-8 border border-primary/10">
-            <div class="flex items-center justify-between text-sm">
-              <span class="font-medium text-gray-700">{t.pricing.processingTime}</span>
-              <span class="font-bold text-primary">4 {t.pricing.months.toLowerCase()}</span>
-            </div>
-            <div class="flex items-center justify-between text-sm mt-1">
-              <span class="font-medium text-gray-700">{t.pricing.tripsNeededLabel}</span>
-              <span class="font-bold text-secondary">1 {t.pricing.shortTrip.toLowerCase()}</span>
-            </div>
-          </div>
-
-          <!-- CTA Button -->
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-full bg-primary hover:bg-primary-600 text-white font-bold py-4 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl"
-          >
-            {t.pricing.chooseVip}
-          </a>
-        </div>
-      </div>
-
-      <!-- Hyperfast Plan -->
-      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300">
-        <div class="p-8">
-          <!-- Plan Header -->
-          <div class="text-center mb-8">
-            <h3 class="text-2xl font-bold text-dark mb-2">{t.pricing.hyperfast.split('(')[0].trim()}</h3>
-            <div class="text-5xl font-extrabold text-accent mb-2">$1600</div>
-            <p class="text-gray-600">{t.pricing.hyperfastDesc}</p>
-          </div>
-
-          <!-- Key Features -->
-          <div class="space-y-4 mb-8">
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center">
-                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.everythingVip}</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center">
-                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.ultraFastProcessing}</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center">
-                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.premiumConcierge}</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center">
-                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <span class="font-medium">{t.pricing.prioritySupport}</span>
-            </div>
-          </div>
-
-          <!-- Timeline -->
-          <div class="bg-accent/5 rounded-xl p-4 mb-8 border border-accent/10">
-            <div class="flex items-center justify-between text-sm">
-              <span class="font-medium text-gray-700">{t.pricing.processingTime}</span>
-              <span class="font-bold text-accent">2 {t.pricing.months.toLowerCase()}</span>
-            </div>
-            <div class="flex items-center justify-between text-sm mt-1">
-              <span class="font-medium text-gray-700">{t.pricing.tripsNeededLabel}</span>
-              <span class="font-bold text-secondary">1 {t.pricing.shortTrip.toLowerCase()}</span>
-            </div>
-          </div>
-
-          <!-- CTA Button -->
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-full bg-accent hover:bg-accent-600 text-white font-bold py-4 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl"
-          >
-            {t.pricing.chooseHyperfast}
-          </a>
-        </div>
-      </div>
-    </div>
+    <!-- Pricing Cards with Accordion -->
+    <ResidencyAccordion
+      client:load
+      lang={lang}
+      translations={{
+        standard: t.pricing.standard,
+        vip: t.pricing.vip,
+        hyperfast: t.pricing.hyperfast,
+        mostPopular: t.pricing.mostPopular,
+        standardDesc: t.pricing.standardDesc,
+        vipDesc: t.pricing.vipDesc,
+        hyperfastDesc: t.pricing.hyperfastDesc,
+        viewDetails: t.pricing.viewDetails,
+        hideDetails: t.pricing.hideDetails,
+        comparisonTable: t.pricing.comparisonTable,
+        whatIncluded: t.pricing.whatIncluded,
+        residency: t.pricing.residency,
+        cedula: t.pricing.cedula,
+        superfast: t.pricing.superfast,
+        govFees: t.pricing.govFees,
+        localAddress: t.pricing.localAddress,
+        proofAddress: t.pricing.proofAddress,
+        waitingTime: t.pricing.waitingTime,
+        tripsNeeded: t.pricing.tripsNeeded,
+        yes: t.pricing.yes,
+        months: t.pricing.months,
+        month: t.pricing.month,
+        shortTrips: t.pricing.shortTrips,
+        shortTrip: t.pricing.shortTrip,
+        getStarted: t.pricing.getStarted,
+        chooseVip: t.pricing.chooseVip,
+        chooseHyperfast: t.pricing.chooseHyperfast,
+      }}
+      whatsappUrl={whatsappUrl}
+    />
 
     <!-- WhatsApp CTA -->
     <div class="text-center mb-16">
