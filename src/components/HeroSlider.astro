@@ -26,7 +26,7 @@ const t = getTranslations(lang);
 const sliderId = `hero-slider-${Math.random().toString(36).slice(2, 11)}`;
 ---
 
-<section class="hero-slider relative w-full h-[650px] sm:h-[750px] lg:h-[800px] xl:h-[850px] overflow-hidden" id={sliderId}>
+<section class="hero-slider relative w-full max-w-full h-[650px] sm:h-[750px] lg:h-[800px] xl:h-[850px] overflow-hidden" id={sliderId}>
   <div class="slider-container relative w-full h-full">
     {slides.map((slide, index) => (
       <div
@@ -51,24 +51,24 @@ const sliderId = `hero-slider-${Math.random().toString(36).slice(2, 11)}`;
           />
         </div>
 
-        <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30"></div>
+        <!-- Light Overlay for better text readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
 
         <!-- Content -->
         <div class="relative z-10 h-full flex items-end justify-start">
-          <div class="px-6 sm:px-8 lg:px-12 w-full pb-16 sm:pb-20 lg:pb-24">
+          <div class="px-4 sm:px-6 lg:px-8 xl:px-12 w-full pb-16 sm:pb-20 lg:pb-24 max-w-full">
             <div class="max-w-2xl">
               <!-- Title with Transparent Background -->
-              <div class="inline-block mb-4 sm:mb-6">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white leading-tight drop-shadow-lg px-3 py-1 bg-black/40 rounded-lg">
+              <div class="mb-4 sm:mb-6">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold text-white leading-tight drop-shadow-2xl px-3 sm:px-4 py-2 bg-black/60 backdrop-blur-sm rounded-xl break-words">
                   {slide.title}
                 </h2>
               </div>
 
               <!-- Subtitle with Transparent Background -->
               {slide.subtitle && (
-                <div class="inline-block mb-12 sm:mb-16 lg:mb-20">
-                  <p class="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed drop-shadow-md px-3 py-1 bg-black/30 rounded-lg">
+                <div class="mb-8 sm:mb-12 lg:mb-16 xl:mb-20">
+                  <p class="text-base sm:text-lg lg:text-xl xl:text-2xl text-white/95 leading-relaxed drop-shadow-xl px-3 sm:px-4 py-2 bg-black/50 backdrop-blur-sm rounded-xl break-words">
                     {slide.subtitle}
                   </p>
                 </div>
@@ -77,12 +77,12 @@ const sliderId = `hero-slider-${Math.random().toString(36).slice(2, 11)}`;
               <!-- CTA Button -->
               <a
                 href={slide.ctaLink}
-                class={`inline-block px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-xl font-bold text-base sm:text-lg lg:text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl bg-black/50 border border-white/30 ${
+                class={`inline-block px-4 sm:px-6 lg:px-8 xl:px-10 py-2 sm:py-3 lg:py-4 xl:py-5 rounded-xl font-bold text-sm sm:text-base lg:text-lg xl:text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl backdrop-blur-sm ${
                   slide.ctaColor === 'primary'
-                    ? 'bg-primary/90 text-white hover:bg-primary border-primary/50'
+                    ? 'bg-primary/90 text-white hover:bg-primary border border-primary/60 shadow-primary/20'
                     : slide.ctaColor === 'secondary'
-                    ? 'bg-secondary/90 text-white hover:bg-secondary border-secondary/50'
-                    : 'bg-yellow-400/90 text-dark hover:bg-yellow-500 border-yellow-400/50'
+                    ? 'bg-secondary/90 text-white hover:bg-secondary border border-secondary/60 shadow-secondary/20'
+                    : 'bg-yellow-400/95 text-dark hover:bg-yellow-500 border border-yellow-400/80 shadow-yellow-400/30'
                 }`}
               >
                 {slide.ctaText}
@@ -98,7 +98,7 @@ const sliderId = `hero-slider-${Math.random().toString(36).slice(2, 11)}`;
   {slides.length > 1 && (
     <>
       <button
-        class="slider-nav-btn slider-nav-prev absolute left-6 sm:left-8 top-1/2 -translate-y-1/2 z-20 rounded-full p-2 sm:p-3 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 opacity-60 hover:opacity-100"
+        class="slider-nav-btn slider-nav-prev absolute left-6 sm:left-8 top-1/2 -translate-y-1/2 z-20 rounded-full p-2 sm:p-3 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 opacity-60 hover:opacity-100 hidden sm:flex"
         aria-label="Previous slide"
         data-action="prev"
       >
@@ -108,7 +108,7 @@ const sliderId = `hero-slider-${Math.random().toString(36).slice(2, 11)}`;
       </button>
 
       <button
-        class="slider-nav-btn slider-nav-next absolute right-6 sm:right-8 top-1/2 -translate-y-1/2 z-20 rounded-full p-2 sm:p-3 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 opacity-60 hover:opacity-100"
+        class="slider-nav-btn slider-nav-next absolute right-6 sm:right-8 top-1/2 -translate-y-1/2 z-20 rounded-full p-2 sm:p-3 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 opacity-60 hover:opacity-100 hidden sm:flex"
         aria-label="Next slide"
         data-action="next"
       >
@@ -335,12 +335,25 @@ const sliderId = `hero-slider-${Math.random().toString(36).slice(2, 11)}`;
   @media (max-width: 640px) {
     .hero-slider {
       height: 700px;
+      /* Ensure no horizontal overflow */
+      overflow-x: hidden;
+      width: 100vw;
+      max-width: 100vw;
     }
 
+    .slider-container {
+      width: 100vw;
+      max-width: 100vw;
+    }
+
+    .slide {
+      width: 100vw;
+      max-width: 100vw;
+    }
+
+    /* Navigation buttons are hidden on mobile, using swipe/tap instead */
     .slider-nav-btn {
-      padding: 1rem;
-      left: 1rem;
-      right: 1rem;
+      display: none !important;
     }
 
     .slider-nav-btn svg {
