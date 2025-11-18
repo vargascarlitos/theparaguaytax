@@ -59,6 +59,7 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
       id: 'standard' as const,
       name: t.standard.split('(')[0].trim(),
       price: '$999',
+      timeAndTrips: `6 ${t.months} / 2 ${t.shortTrips}`,
       description: t.standardDesc,
       color: 'gray',
       ctaText: t.getStarted,
@@ -68,6 +69,7 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
       id: 'vip' as const,
       name: t.vip.split('(')[0].trim(),
       price: '$1400',
+      timeAndTrips: `4 ${t.months} / 1 ${t.shortTrip}`,
       description: t.vipDesc,
       color: 'primary',
       ctaText: t.chooseVip,
@@ -77,6 +79,7 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
       id: 'hyperfast' as const,
       name: t.hyperfast.split('(')[0].trim(),
       price: '$1600',
+      timeAndTrips: `2 ${t.months} / 1 ${t.shortTrip}`,
       description: t.hyperfastDesc,
       color: 'accent',
       ctaText: t.chooseHyperfast,
@@ -114,7 +117,8 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
               {/* Plan Header */}
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-[#1A1A1A] mb-2">{plan.name}</h3>
-                <div className={`text-5xl font-extrabold ${priceColor} mb-2`}>{plan.price}</div>
+                <div className={`text-5xl font-extrabold ${priceColor} mb-1`}>{plan.price}</div>
+                <div className="text-sm font-medium text-gray-700 mb-3">{plan.timeAndTrips}</div>
                 <p className="text-gray-600">{plan.description}</p>
               </div>
 

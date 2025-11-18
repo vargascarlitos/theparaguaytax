@@ -39,6 +39,31 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
       <!-- Progress Bar -->
       <div class="mb-8 sm:mb-12">
         <div class="flex justify-between items-center mb-3">
+          <!-- Top Navigation (Back/Start Over buttons) -->
+          <div class="wizard-top-nav flex items-center space-x-3">
+            <!-- Back button for steps 2-4 -->
+            <button
+              class="wizard-step-back-btn hidden px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-colors duration-200 flex items-center space-x-2 text-sm"
+              style="display: none;"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+              <span>{t.taxWizard.buttons.return}</span>
+            </button>
+
+            <!-- Start Over button for results step -->
+            <button
+              class="wizard-start-over-btn hidden px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary font-medium rounded-lg transition-colors duration-200 flex items-center space-x-2 text-sm"
+              style="display: none;"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              <span>{t.taxWizard.buttons.startOver}</span>
+            </button>
+          </div>
+
           <span class="text-sm font-medium text-gray-600 wizard-progress-label">
             {t.taxWizard.progressLabel.replace('{current}', '1').replace('{total}', '4')}
           </span>
@@ -106,6 +131,31 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
               <div>
                 <h4 class="text-xl font-bold text-dark mb-2">{t.taxWizard.step1.options.merchandise.title}</h4>
                 <p class="text-sm text-gray-600">{t.taxWizard.step1.options.merchandise.description}</p>
+              </div>
+            </div>
+          </button>
+
+          <!-- Real Estate Option -->
+          <button
+            class="wizard-option group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary focus:outline-none focus:ring-4 focus:ring-primary/20 cursor-pointer"
+            data-choice="realEstate"
+            data-step="1"
+          >
+            <!-- Touch Indicator for Mobile -->
+            <div class="md:hidden absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-lg animate-pulse">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div class="flex flex-col items-center text-center space-y-4">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 sm:w-10 sm:h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-dark mb-2">{t.taxWizard.step1.options.realEstate.title}</h4>
+                <p class="text-sm text-gray-600">{t.taxWizard.step1.options.realEstate.description}</p>
               </div>
             </div>
           </button>
@@ -292,6 +342,45 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
           </button>
         </div>
 
+        <!-- Real Estate Options -->
+        <div class="wizard-step3-realEstate hidden grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <button
+            class="wizard-option group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary focus:outline-none focus:ring-4 focus:ring-primary/20"
+            data-choice="buy"
+            data-step="3"
+          >
+            <div class="flex flex-col items-center text-center space-y-4">
+              <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-dark mb-2">{t.taxWizard.step3.optionsRealEstate.buy.title}</h4>
+                <p class="text-sm text-gray-600">{t.taxWizard.step3.optionsRealEstate.buy.description}</p>
+              </div>
+            </div>
+          </button>
+
+          <button
+            class="wizard-option group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-secondary focus:outline-none focus:ring-4 focus:ring-secondary/20"
+            data-choice="rent"
+            data-step="3"
+          >
+            <div class="flex flex-col items-center text-center space-y-4">
+              <div class="w-20 h-20 rounded-full bg-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-dark mb-2">{t.taxWizard.step3.optionsRealEstate.rent.title}</h4>
+                <p class="text-sm text-gray-600">{t.taxWizard.step3.optionsRealEstate.rent.description}</p>
+              </div>
+            </div>
+          </button>
+        </div>
+
         <!-- Back Button -->
         <div class="flex justify-center mt-8">
           <button
@@ -336,6 +425,8 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
     const progressLabel = wizard.querySelector('.wizard-progress-label');
     const options = wizard.querySelectorAll('.wizard-option');
     const backButtons = wizard.querySelectorAll('.wizard-back-btn');
+    const topBackBtn = wizard.querySelector('.wizard-step-back-btn');
+    const topStartOverBtn = wizard.querySelector('.wizard-start-over-btn');
 
     // Navigation Functions
     function showStep(stepNumber) {
@@ -356,6 +447,9 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
         .replace('{current}', stepNumber.toString())
         .replace('{total}', '4');
 
+      // Update top navigation buttons
+      updateTopNavigation(stepNumber);
+
       state.currentStep = stepNumber;
     }
 
@@ -371,6 +465,23 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
       }
     }
 
+    // Update top navigation visibility
+    function updateTopNavigation(stepNumber) {
+      // Hide both buttons by default
+      topBackBtn.style.display = 'none';
+      topStartOverBtn.style.display = 'none';
+
+      // Show back button for steps 2-3
+      if (stepNumber >= 2 && stepNumber <= 3) {
+        topBackBtn.style.display = 'flex';
+      }
+
+      // Show start over button for results step (step 4 with results)
+      if (stepNumber === 4 && wizard.querySelector('.wizard-results').innerHTML.trim() !== '') {
+        topStartOverBtn.style.display = 'flex';
+      }
+    }
+
     // Handle option selection
     options.forEach(option => {
       option.addEventListener('click', () => {
@@ -379,12 +490,16 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
 
         if (step === 1) {
           state.selections.activity = choice;
-          // For foreign-source income, skip steps 2 & 3
+          // For foreign-source income and real estate, skip step 2 and go to step 3
           if (choice === 'foreign') {
             state.selections.structure = 'none';
             state.selections.scenario = 'foreign';
             showResults();
             showStep(4);
+          } else if (choice === 'realEstate') {
+            state.selections.structure = 'ruc';
+            updateStep3ForActivity();
+            showStep(3);
           } else {
             updateStep3ForActivity();
             nextStep();
@@ -412,24 +527,39 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
       btn.addEventListener('click', prevStep);
     });
 
+    // Top navigation button handlers
+    if (topBackBtn) {
+      topBackBtn.addEventListener('click', prevStep);
+    }
+
+    if (topStartOverBtn) {
+      topStartOverBtn.addEventListener('click', restartWizard);
+    }
+
     // Update Step 3 based on activity selection
     function updateStep3ForActivity() {
       const step3Title = wizard.querySelector('.wizard-step3-title');
       const servicesOptions = wizard.querySelector('.wizard-step3-services');
       const merchandiseOptions = wizard.querySelector('.wizard-step3-merchandise');
+      const realEstateOptions = wizard.querySelector('.wizard-step3-realEstate');
+
+      // Hide all option groups first
+      servicesOptions.classList.add('hidden');
+      merchandiseOptions.classList.add('hidden');
+      realEstateOptions.classList.add('hidden');
 
       if (state.selections.activity === 'services') {
         step3Title.textContent = t.taxWizard.step3.titleServices;
         servicesOptions.classList.remove('hidden');
-        merchandiseOptions.classList.add('hidden');
       } else if (state.selections.activity === 'merchandise') {
         step3Title.textContent = t.taxWizard.step3.titleMerchandise;
-        servicesOptions.classList.add('hidden');
         merchandiseOptions.classList.remove('hidden');
+      } else if (state.selections.activity === 'realEstate') {
+        step3Title.textContent = '¿Qué tipo de actividad inmobiliaria realizarás?';
+        realEstateOptions.classList.remove('hidden');
       } else {
         step3Title.textContent = t.taxWizard.step3.titleBoth;
         servicesOptions.classList.remove('hidden');
-        merchandiseOptions.classList.add('hidden');
       }
     }
 
@@ -542,6 +672,40 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
         notes = [
           t.taxWizard.result.notes.cryptoVATExempt
         ];
+      } else if (activity === 'realEstate' && scenario === 'buy') {
+        structureKey = 'rucRealEstateBuy';
+        taxes = [
+          {
+            name: 'IVA (VAT)',
+            rate: '30% IVA & 70% EXEMPT',
+            frequency: 'One Time Only',
+            description: 'The seller issues an invoice where 30% of the price is subject to IVA and 70% is IVA-exempt. You may choose between presumed income (30% of the sale value) or actual income (sale price minus acquisition cost according to the deed).'
+          }
+        ];
+        obligations = [
+          'No additional obligations required.'
+        ];
+        notes = [];
+      } else if (activity === 'realEstate' && scenario === 'rent') {
+        structureKey = 'rucRealEstateRent';
+        taxes = [
+          {
+            name: 'IVA (VAT)',
+            rate: '5%',
+            frequency: 'Monthly',
+            description: 'Applicable when you rent out properties that are used as residential housing.'
+          },
+          {
+            name: 'IRP (Income and Capital Gains Taxes)',
+            rate: '8%',
+            frequency: 'Annually',
+            description: 'Applied on all the net profit you earned during the year from renting out your properties.'
+          }
+        ];
+        obligations = [
+          'No additional obligations required.'
+        ];
+        notes = [];
       } else {
         // Default for 'both' activity
         structureKey = 'rucServicesLocal';
@@ -644,12 +808,12 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
           </p>
         </div>
 
-        <!-- Start Over Button -->
-        <div class="text-center">
+        <!-- Start Over Button (secondary) -->
+        <div class="text-center mt-6">
           <button
-            class="wizard-restart-btn inline-flex items-center px-8 py-4 bg-primary hover:bg-primary-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+            class="wizard-restart-btn inline-flex items-center px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-all duration-200 text-sm"
           >
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
             </svg>
             ${t.taxWizard.buttons.startOver}
@@ -711,6 +875,20 @@ const wizardId = `tax-wizard-${Math.random().toString(36).slice(2, 11)}`;
 
     .wizard-option:active {
       transform: scale(0.96);
+    }
+
+    /* Top navigation buttons on mobile */
+    .wizard-top-nav {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .wizard-step-back-btn,
+    .wizard-start-over-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
     }
 
     /* Pulse animation for touch indicators */

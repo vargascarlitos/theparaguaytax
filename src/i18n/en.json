@@ -146,7 +146,6 @@
     "getCertificate": "Get Certificate",
     "startMonthly": "Start Monthly",
     "chooseAnnual": "Choose Annual Plan",
-    "seeMore": "See More",
     "contactWhatsapp": "Contact Us on WhatsApp +595 985 777252"
   },
   "team": {
@@ -257,6 +256,7 @@
       "next": "Next",
       "back": "Back",
       "startOver": "Start Over",
+      "return": "Return",
       "getStarted": "Get Started"
     },
     "step1": {
@@ -267,14 +267,18 @@
           "title": "Services",
           "description": "Professional services, consulting, digital work, etc."
         },
-        "merchandise": {
-          "title": "Merchandise or Crypto",
-          "description": "Buy and sell products, cryptocurrency trading"
-        },
-        "foreign": {
-          "title": "Foreign-source income",
-          "description": "Money earned and previously taxed abroad"
-        }
+      "merchandise": {
+        "title": "Merchandise or Crypto",
+        "description": "Buy and sell products, cryptocurrency trading"
+      },
+      "realEstate": {
+        "title": "Real Estate",
+        "description": "Buy apartments or rent (short & long-term)"
+      },
+      "foreign": {
+        "title": "Foreign-source income",
+        "description": "Money earned and previously taxed abroad"
+      }
       }
     },
     "step2": {
@@ -315,6 +319,16 @@
           "description": "Trading and transactions with crypto"
         }
       },
+      "optionsRealEstate": {
+        "buy": {
+          "title": "Buy Apartments",
+          "description": "Investment & living"
+        },
+        "rent": {
+          "title": "Rent",
+          "description": "Short & long-term"
+        }
+      },
       "optionsBoth": {
         "servicesMain": {
           "title": "Primarily Services",
@@ -343,6 +357,8 @@
         "rucServicesForeign": "RUC Unipersonal - Foreign-source Income",
         "rucMerchandiseLocal": "RUC Unipersonal - Local/Foreign Merchandise",
         "rucMerchandiseCrypto": "RUC Unipersonal - Cryptocurrency",
+        "rucRealEstateBuy": "RUC Unipersonal - Apartment Purchase",
+        "rucRealEstateRent": "RUC Unipersonal - Property Rental",
         "easEntity": "Legal Entity EAS (LLC)"
       },
       "specificTexts": {

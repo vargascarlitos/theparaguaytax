@@ -146,7 +146,6 @@
     "getCertificate": "Obtener Certificado",
     "startMonthly": "Comenzar Mensual",
     "chooseAnnual": "Elegir Plan Anual",
-    "seeMore": "Ver Más",
     "contactWhatsapp": "Contáctanos en WhatsApp +595 985 777252"
   },
   "team": {
@@ -257,26 +256,31 @@
       "next": "Siguiente",
       "back": "Atrás",
       "startOver": "Empezar de Nuevo",
+      "return": "Volver",
       "getStarted": "Comenzar"
     },
-    "step1": {
-      "title": "¿Qué tipo de actividad realizas?",
-      "subtitle": "Elige la opción que mejor describe tu negocio",
-      "options": {
-        "services": {
-          "title": "Servicios",
-          "description": "Servicios profesionales, consultoría, trabajo digital, etc."
-        },
-        "merchandise": {
-          "title": "Mercancía o Crypto",
-          "description": "Compra y venta de productos, trading de criptomonedas"
-        },
-        "foreign": {
-          "title": "Ingresos de fuente extranjera",
-          "description": "Dinero ganado y previamente gravado en el extranjero"
-        }
+  "step1": {
+    "title": "¿Qué tipo de actividad realizas?",
+    "subtitle": "Elige la opción que mejor describe tu negocio",
+    "options": {
+      "services": {
+        "title": "Servicios",
+        "description": "Servicios profesionales, consultoría, trabajo digital, etc."
+      },
+      "merchandise": {
+        "title": "Mercancía o Crypto",
+        "description": "Compra y venta de productos, trading de criptomonedas"
+      },
+      "realEstate": {
+        "title": "Bienes Raíces",
+        "description": "Comprar apartamentos o alquilar (corto y largo plazo)"
+      },
+      "foreign": {
+        "title": "Ingresos de fuente extranjera",
+        "description": "Dinero ganado y previamente gravado en el extranjero"
       }
-    },
+    }
+  },
     "step2": {
       "title": "¿Qué estructura legal prefieres?",
       "subtitle": "Selecciona el tipo de entidad para tu negocio",
@@ -316,6 +320,16 @@
           "description": "Trading y transacciones con crypto"
         }
       },
+      "optionsRealEstate": {
+        "buy": {
+          "title": "Comprar Apartamentos",
+          "description": "Inversión y vivienda"
+        },
+        "rent": {
+          "title": "Alquilar",
+          "description": "Corto y largo plazo"
+        }
+      },
       "optionsBoth": {
         "servicesMain": {
           "title": "Principalmente Servicios",
@@ -344,6 +358,8 @@
         "rucServicesForeign": "RUC Unipersonal - Ingresos de Fuente Extranjera",
         "rucMerchandiseLocal": "RUC Unipersonal - Mercancía Local/Extranjera",
         "rucMerchandiseCrypto": "RUC Unipersonal - Criptomonedas",
+        "rucRealEstateBuy": "RUC Unipersonal - Compra de Apartamentos",
+        "rucRealEstateRent": "RUC Unipersonal - Alquiler de Propiedades",
         "easEntity": "Entidad Jurídica EAS (LLC)"
       },
       "specificTexts": {

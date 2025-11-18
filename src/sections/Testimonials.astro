@@ -9,8 +9,11 @@ interface Props {
 const { lang } = Astro.props;
 const t = getTranslations(lang);
 
-// Importar imagen del testimonio
+// Importar imágenes de testimonios
 const hassanImage = await import('../assets/images/testimonials/hassan.png');
+const carlosVillarImage = await import('../assets/images/testimonials/carlosvillar.png');
+const godImage = await import('../assets/images/testimonials/god.png');
+const pedroSegoviaImage = await import('../assets/images/testimonials/pedrosegovia.png');
 
 // Testimonios reales (estructura para agregar más fácilmente)
 const testimonials = [
@@ -28,21 +31,48 @@ const testimonials = [
     verified: true,
     date: '2025-11-07'
   },
-  // Aquí se pueden agregar más testimonios fácilmente
-  // {
-  //   id: 'cliente2',
-  //   name: 'Nombre del Cliente',
-  //   role: 'Profesión',
-  //   location: 'Ciudad, País',
-  //   image: cliente2Image.default, // Importada dinámicamente
-  //   rating: 5,
-  //   text: {
-  //     en: "Texto en inglés",
-  //     es: "Texto en español"
-  //   },
-  //   verified: true,
-  //   date: '2024-XX-XX'
-  // }
+  {
+    id: 'carlos-villar',
+    name: 'Carlos Villar Samudio',
+    role: 'Client',
+    location: 'Paraguay',
+    image: carlosVillarImage.default,
+    rating: 5,
+    text: {
+      en: "Excellent experience with their services. No inconvenience and total peace of mind on my part (due to the trust) all these years.",
+      es: "Excelente experiencia con sus servicios. Ningún inconveniente y total despreocupación de mi parte (por la confianza) en todos estos años."
+    },
+    verified: true,
+    date: '2025-01-18' // Hace 10 meses desde nov 2025
+  },
+  {
+    id: 'god-eas',
+    name: 'GOD EAS',
+    role: 'Client',
+    location: 'Paraguay',
+    image: godImage.default,
+    rating: 5,
+    text: {
+      en: "They helped me with my accounting, I recommend them!",
+      es: "Me ayudaron con mi contabilidad, los recomiendo!"
+    },
+    verified: true,
+    date: '2025-01-18' // Hace 10 meses desde nov 2025
+  },
+  {
+    id: 'pedro-segovia',
+    name: 'Pedro Segovia',
+    role: 'Client',
+    location: 'Paraguay',
+    image: pedroSegoviaImage.default,
+    rating: 5,
+    text: {
+      en: "Excellent accounting service! For any questions they respond and provide a detailed PDF of the work after filing the taxes!",
+      es: "Excelente el servicio contable! Ante cualquier duda responden y proporcionan un PDF detallado del trabajo luego de presentar los impuestos!"
+    },
+    verified: true,
+    date: '2023-11-18' // Hace 2 años
+  }
 ];
 ---
 
