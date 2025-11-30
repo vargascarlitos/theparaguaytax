@@ -1,0 +1,122 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n/utils';
+
+const lang = 'es';
+const t = getTranslations(lang);
+---
+
+<Layout title="¿Qué pasa si mis clientes no me piden Factura?" lang={lang}>
+  <section class="relative bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Article Header -->
+      <div class="text-center mb-12">
+        <div class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
+          Impuestos
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dark mb-6 leading-tight">
+          ¿Qué pasa si mis clientes no me piden Factura?
+        </h1>
+        <div class="text-center">
+          <p class="text-gray-600 mb-2">Por <span class="font-semibold">Osvaldo Segovia</span></p>
+          <p class="text-gray-500 text-sm">agosto 21, 2024</p>
+          <div class="flex items-center justify-center gap-4 text-gray-600 mt-4">
+            <span class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              3 min de lectura
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Image -->
+      <div class="mb-12">
+        <img
+          src="/images/blog/clientes-factura.png"
+          alt="Clientes y facturas en Paraguay"
+          class="w-full h-64 md:h-96 object-cover rounded-2xl shadow-lg"
+        />
+      </div>
+
+      <!-- Article Content -->
+      <div class="prose prose-lg prose-gray max-w-none">
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          Es común encontrarse con la situación en la que tienes un negocio de venta de productos o servicios y tus clientes te indican que no necesitan factura, solo un comprobante de venta más sencillo, el famoso «ticket». Lo primero que se piensa es que esto te beneficia como dueño, ya que «no pagarás IVA por esa venta»; que desde ya esa afirmación es totalmente errónea.
+        </p>
+
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+          Sin embargo, esta situación, lejos de ser ventajosa, resulta perjudicial a largo plazo. Muchos se preguntarán por qué.
+        </p>
+
+        <h2>¿Por qué no emitir factura afecta a mi negocio?</h2>
+        <p>En primer lugar, no emitir facturas es un delito fiscal, ya que estás eludiendo tu obligación de entregar al Fisco (DNIT) el IVA correspondiente. En segundo lugar, si en el futuro deseas hacer crecer tu negocio y solicitas un préstamo bancario, el banco te pedirá tus declaraciones juradas para verificar tus ingresos. Si nunca has emitido facturas, será muy difícil demostrar tus ingresos reales, lo que puede perjudicarte legalmente y obstaculizar tus proyectos de crecimiento.</p>
+
+        <p>Lo recomendable es emitir siempre las facturas, ya sea que el cliente lo solicite o no, indicando su RUC o número de cédula.</p>
+
+        <div class="bg-gray-50 p-6 rounded-lg mt-12 border-l-4 border-primary">
+          <p class="text-sm text-gray-600 mb-2">CP Osvaldo Segovia</p>
+          <p class="text-sm text-gray-600 mb-1">+595 985 777252</p>
+          <p class="text-sm text-gray-600">dasegrouppy@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Back to Blog -->
+      <div class="mt-16 pt-8 border-t border-gray-200">
+        <a
+          href="/es"
+          class="inline-flex items-center gap-2 text-primary hover:text-primary-600 transition-colors duration-200 font-semibold"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Volver al inicio
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .prose {
+    color: #374151;
+  }
+
+  .prose h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: #1A1A1A;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .prose h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose p {
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
+  }
+
+  .prose ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose strong {
+    font-weight: 600;
+    color: #1A1A1A;
+  }
+</style>

@@ -1,0 +1,122 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n/utils';
+
+const lang = 'en';
+const t = getTranslations(lang);
+---
+
+<Layout title="What happens if my clients don't ask me for an invoice?" lang={lang}>
+  <section class="relative bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Article Header -->
+      <div class="text-center mb-12">
+        <div class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
+          Taxes
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dark mb-6 leading-tight">
+          What happens if my clients don't ask me for an invoice?
+        </h1>
+        <div class="text-center">
+          <p class="text-gray-600 mb-2">By <span class="font-semibold">Osvaldo Segovia</span></p>
+          <p class="text-gray-500 text-sm">August 21, 2024</p>
+          <div class="flex items-center justify-center gap-4 text-gray-600 mt-4">
+            <span class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              3 min read
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Image -->
+      <div class="mb-12">
+        <img
+          src="/images/blog/clientes-factura.png"
+          alt="Clients and invoices in Paraguay"
+          class="w-full h-64 md:h-96 object-cover rounded-2xl shadow-lg"
+        />
+      </div>
+
+      <!-- Article Content -->
+      <div class="prose prose-lg prose-gray max-w-none">
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          It's common to encounter situations where you have a business selling products or services and your clients tell you they don't need an invoice, just a simpler sales receipt, the famous "ticket". The first thing that comes to mind is that this benefits you as the owner, since "you won't pay VAT for that sale"; but this statement is completely wrong from the start.
+        </p>
+
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+          However, this situation, far from being advantageous, proves harmful in the long term. Many will wonder why.
+        </p>
+
+        <h2>Why not issuing invoices affects my business?</h2>
+        <p>First of all, not issuing invoices is a tax crime, since you are evading your obligation to deliver the corresponding VAT to the Treasury (DNIT). Secondly, if in the future you want to grow your business and apply for a bank loan, the bank will ask for your sworn declarations to verify your income. If you have never issued invoices, it will be very difficult to prove your real income, which can harm you legally and hinder your growth projects.</p>
+
+        <p>The recommendation is to always issue invoices, whether the client requests it or not, indicating their RUC or ID number.</p>
+
+        <div class="bg-gray-50 p-6 rounded-lg mt-12 border-l-4 border-primary">
+          <p class="text-sm text-gray-600 mb-2">CP Osvaldo Segovia</p>
+          <p class="text-sm text-gray-600 mb-1">+595 985 777252</p>
+          <p class="text-sm text-gray-600">dasegrouppy@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Back to Blog -->
+      <div class="mt-16 pt-8 border-t border-gray-200">
+        <a
+          href="/en"
+          class="inline-flex items-center gap-2 text-primary hover:text-primary-600 transition-colors duration-200 font-semibold"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to home
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .prose {
+    color: #374151;
+  }
+
+  .prose h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: #1A1A1A;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .prose h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose p {
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
+  }
+
+  .prose ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose strong {
+    font-weight: 600;
+    color: #1A1A1A;
+  }
+</style>

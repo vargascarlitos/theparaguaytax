@@ -125,12 +125,6 @@
     "bitcoinUsdt": "Bitcoin, USDT, and more",
     "contactWhatsapp": "Contact Us on WhatsApp +595 985 777252"
   },
-  "services": {
-    "residencyTitle": "Ready to Start Your Paraguayan Residency?",
-    "residencySubtitle": "Get expert assistance for your tax residency application. Fast, legal, and hassle-free.",
-    "startApplication": "Start Your Residency Application",
-    "freeConsultation": "Get a free consultation and start your application today"
-  },
   "accounting": {
     "title": "Accounting & Tax Services",
     "subtitle": "Professional accounting services to keep your Paraguayan business compliant. From RUC registration to ongoing tax submissions.",
@@ -490,15 +484,15 @@
     "videos": {
       "residency": {
         "title": "Tax Residency in Paraguay",
-        "description": "Everything you need to know about getting your tax residency."
+        "description": "3 things that it’s important to know before you move to Paraguay."
       },
       "iva": {
-        "title": "IVA Declaration Process",
-        "description": "Step-by-step guide to declare IVA in Paraguay."
+        "title": "Digital Nomad",
+        "description": "Information about taxes for digital nomads"
       },
       "banking": {
-        "title": "Banking in Paraguay",
-        "description": "How to open bank accounts without CRS restrictions."
+        "title": "Taxes in Paraguay",
+        "description": "Information about taxes in Paraguay."
       }
     }
   },
@@ -509,40 +503,25 @@
     "readTime": "{minutes} min read",
     "articles": {
       "article1": {
-        "title": "Complete Guide to Paraguayan Tax Residency",
-        "excerpt": "Everything you need to know about obtaining and maintaining your Paraguayan tax residency status.",
-        "category": "Tax Residency",
-        "readTime": 8
+        "title": "Goodbye paper? Discover how electronic invoices change the way you shop",
+        "excerpt": "Explore the future of business transactions with electronic invoicing in Paraguay.",
+        "category": "Taxes",
+        "readTime": 6,
+        "image": "/images/blog/facturas-electronicas.png"
       },
       "article2": {
-        "title": "Setting Up Your EAS Company in Paraguay",
-        "excerpt": "Step-by-step guide to establishing your business entity in Paraguay in just three days.",
-        "category": "Business Setup",
-        "readTime": 6
+        "title": "What happens if my clients don't ask me for an invoice?",
+        "excerpt": "Learn about the tax implications when your clients don't request payment receipts.",
+        "category": "Taxes",
+        "readTime": 3,
+        "image": "/images/blog/clientes-factura.png"
       },
       "article3": {
-        "title": "Understanding Paraguay's Tax System",
-        "excerpt": "Learn about IVA, IRP, IRE Simple, and IDU taxes. Know what applies to your business structure.",
-        "category": "Taxes",
-        "readTime": 10
-      },
-      "article4": {
-        "title": "Banking in Paraguay: Non-CRS Accounts",
-        "excerpt": "How to open local bank accounts and access financial privacy with your Paraguayan ID.",
-        "category": "Banking",
-        "readTime": 7
-      },
-      "article5": {
-        "title": "Living in Paraguay: Cost of Living Guide",
-        "excerpt": "Discover the affordable lifestyle, healthcare, and opportunities Paraguay offers to residents.",
-        "category": "Lifestyle",
-        "readTime": 5
-      },
-      "article6": {
-        "title": "Crypto Trading and Tax Obligations in Paraguay",
-        "excerpt": "Everything about cryptocurrency trading, VAT exemptions, and income tax for crypto businesses.",
-        "category": "Cryptocurrency",
-        "readTime": 9
+        "title": "EAS: A Quickly Formed Paraguayan Business Entity",
+        "excerpt": "Discover how to establish an Entidad por Acciones Simplificada (EAS) in record time.",
+        "category": "Business Setup",
+        "readTime": 5,
+        "image": "/images/blog/eas-business.png"
       }
     }
   }

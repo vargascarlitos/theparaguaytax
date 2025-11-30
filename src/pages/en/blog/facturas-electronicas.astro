@@ -1,0 +1,148 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n/utils';
+
+const lang = 'en';
+const t = getTranslations(lang);
+---
+
+<Layout title="Goodbye paper? Discover how electronic invoices change the way you shop" lang={lang}>
+  <section class="relative bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Article Header -->
+      <div class="text-center mb-12">
+        <div class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
+          Taxes
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dark mb-6 leading-tight">
+          Goodbye paper? Discover how electronic invoices change the way you shop
+        </h1>
+        <div class="text-center">
+          <p class="text-gray-600 mb-2">By <span class="font-semibold">Osvaldo Segovia</span></p>
+          <p class="text-gray-500 text-sm">August 21, 2024</p>
+          <div class="flex items-center justify-center gap-4 text-gray-600 mt-4">
+            <span class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              6 min read
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Image -->
+      <div class="mb-12">
+        <img
+          src="/images/blog/facturas-electronicas.png"
+          alt="Electronic invoices in Paraguay"
+          class="w-full h-64 md:h-96 object-cover rounded-2xl shadow-lg"
+        />
+      </div>
+
+      <!-- Article Content -->
+      <div class="prose prose-lg prose-gray max-w-none">
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          Have you noticed the QR code that appears on the invoices you receive at the supermarket or pharmacy? That's no coincidence! These invoices, although printed on paper, are already electronic.
+        </p>
+
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+          Electronic invoicing is revolutionizing the way we keep our commercial records. But what does this mean for you? How does it affect your daily life and how can you adapt to these changes? In this article, we explain everything you need to know.
+        </p>
+
+        <h2>What is an electronic invoice?</h2>
+        <p>An electronic invoice is a legal receipt that, although it may have a physical paper (like the ticket you receive in a store), exists mainly in digital format. This means that all purchase information is stored in an electronic database, making it easier to manage and access.</p>
+
+        <h2>Why is electronic invoicing being implemented?</h2>
+        <p>Electronic invoicing offers many benefits for both consumers and businesses:</p>
+
+        <ul>
+          <li><strong>Greater security:</strong> Reduces the risk of loss or alteration of documents.</li>
+          <li><strong>Agility:</strong> Facilitates receipt management and streamlines administrative processes.</li>
+          <li><strong>Cost reduction:</strong> Eliminates the need to print and store large amounts of paper.</li>
+          <li><strong>Greater control:</strong> Allows better tracking of purchases and sales.</li>
+          <li><strong>Contribution to sustainability:</strong> Reduces environmental impact by decreasing paper usage.</li>
+        </ul>
+
+        <h2>What happens if I no longer receive paper invoices?</h2>
+        <p>Although many companies are already issuing electronic invoices, it is still common to receive them on paper. However, this trend is changing rapidly and it is likely that physical invoices will disappear completely in the near future.</p>
+
+        <p>But don't worry, there are solutions! There are various platforms and applications, such as Marangatu and Ekuatia'i, that allow you to safely store and manage your electronic invoices. In addition, you can access your receipts through your email.</p>
+
+        <h2>How can I get my electronic invoices?</h2>
+        <p>To obtain your electronic invoices, you can:</p>
+
+        <ul>
+          <li><strong>Request email delivery:</strong> When making a purchase, ask them to send the invoice to your email address.</li>
+          <li><strong>Download from the issuer's platform:</strong> Some companies provide their customers with an online platform where they can download their invoices.</li>
+          <li><strong>Use your phone's camera:</strong> There are applications like the camera that allow you to scan QR codes on invoices and store them on your mobile device.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Electronic invoicing is a reality that has come to stay. By adapting to this new way of managing our receipts, we can enjoy the multiple benefits it offers and contribute to a more sustainable future.</p>
+
+        <div class="bg-gray-50 p-6 rounded-lg mt-12 border-l-4 border-primary">
+          <p class="text-sm text-gray-600 mb-2">CP Osvaldo Segovia</p>
+          <p class="text-sm text-gray-600 mb-1">+595 985 777252</p>
+          <p class="text-sm text-gray-600">dasegrouppy@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Back to Blog -->
+      <div class="mt-16 pt-8 border-t border-gray-200">
+        <a
+          href="/en"
+          class="inline-flex items-center gap-2 text-primary hover:text-primary-600 transition-colors duration-200 font-semibold"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to home
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .prose {
+    color: #374151;
+  }
+
+  .prose h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: #1A1A1A;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .prose h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose p {
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
+  }
+
+  .prose ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose strong {
+    font-weight: 600;
+    color: #1A1A1A;
+  }
+</style>

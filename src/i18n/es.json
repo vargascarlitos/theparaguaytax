@@ -125,12 +125,6 @@
     "bitcoinUsdt": "Bitcoin, USDT, y más",
     "contactWhatsapp": "Contáctanos en WhatsApp +595 985 777252"
   },
-  "services": {
-    "residencyTitle": "¿Listo para comenzar tu residencia paraguaya?",
-    "residencySubtitle": "Obtén asistencia experta para tu solicitud de residencia fiscal. Rápido, legal y sin complicaciones.",
-    "startApplication": "Comienza tu Solicitud de Residencia",
-    "freeConsultation": "Obtén una consulta gratuita y comienza tu solicitud hoy"
-  },
   "accounting": {
     "title": "Servicios de Contabilidad e Impuestos",
     "subtitle": "Servicios profesionales de contabilidad para mantener su empresa paraguaya en cumplimiento. Desde el registro de RUC hasta las declaraciones fiscales continuas.",
@@ -510,40 +504,25 @@
     "readTime": "{minutes} min de lectura",
     "articles": {
       "article1": {
-        "title": "Guía Completa de Residencia Fiscal Paraguaya",
-        "excerpt": "Todo lo que necesitas saber sobre obtener y mantener tu estatus de residencia fiscal paraguaya.",
-        "category": "Residencia Fiscal",
-        "readTime": 8
+        "title": "¿Adiós al papel? Descubre cómo las facturas electrónicas cambian tu forma de hacer compras",
+        "excerpt": "Explora el futuro de las transacciones comerciales con las facturas electrónicas en Paraguay.",
+        "category": "Impuestos",
+        "readTime": 6,
+        "image": "/images/blog/facturas-electronicas.png"
       },
       "article2": {
-        "title": "Configurando tu Empresa EAS en Paraguay",
-        "excerpt": "Guía paso a paso para establecer tu entidad empresarial en Paraguay en solo tres días.",
-        "category": "Configuración de Negocios",
-        "readTime": 6
+        "title": "¿Qué pasa si mis clientes no me piden Factura?",
+        "excerpt": "Conoce las implicaciones fiscales cuando tus clientes no solicitan comprobantes de pago.",
+        "category": "Impuestos",
+        "readTime": 3,
+        "image": "/images/blog/clientes-factura.png"
       },
       "article3": {
-        "title": "Entendiendo el Sistema Fiscal de Paraguay",
-        "excerpt": "Aprende sobre los impuestos IVA, IRP, IRE Simple e IDU. Conoce qué aplica a tu estructura empresarial.",
-        "category": "Impuestos",
-        "readTime": 10
-      },
-      "article4": {
-        "title": "Banca en Paraguay: Cuentas Sin CRS",
-        "excerpt": "Cómo abrir cuentas bancarias locales y acceder a privacidad financiera con tu ID paraguayo.",
-        "category": "Banca",
-        "readTime": 7
-      },
-      "article5": {
-        "title": "Vivir en Paraguay: Guía de Costo de Vida",
-        "excerpt": "Descubre el estilo de vida asequible, salud y oportunidades que Paraguay ofrece a los residentes.",
-        "category": "Estilo de Vida",
-        "readTime": 5
-      },
-      "article6": {
-        "title": "Trading de Crypto y Obligaciones Fiscales en Paraguay",
-        "excerpt": "Todo sobre trading de criptomonedas, exenciones de IVA e impuesto a la renta para negocios crypto.",
-        "category": "Criptomonedas",
-        "readTime": 9
+        "title": "EAS: A Quickly Formed Paraguayan Business Entity",
+        "excerpt": "Descubre cómo establecer una Entidad por Acciones Simplificada (EAS) en tiempo récord.",
+        "category": "Configuración de Negocios",
+        "readTime": 5,
+        "image": "/images/blog/eas-business.png"
       }
     }
   }
