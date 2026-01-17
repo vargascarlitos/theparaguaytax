@@ -134,27 +134,17 @@
     "certFeatures": ["Official certificate", "You can apply with just one day of RUC registration"],
     "ivaDesc": "Monthly IVA (VAT) tax declaration and submission service to keep your RUC (Tax ID) compliant.",
     "ivaFeatures": ["Monthly filing", "We send a monthly PDF report", "We'll notify you if you owe taxes."],
-    "specialDesc": "Complete year of IVA tax submissions. Save with our annual package and get priority processing.",
-    "specialFeatures": ["12 months coverage", "Priority processing", "Save 25% vs monthly"],
     "getStarted": "Get Started",
     "getCertificate": "Get Certificate",
     "startMonthly": "Start Monthly",
-    "chooseAnnual": "Choose Annual Plan",
     "contactWhatsapp": "Contact Us on WhatsApp +595 985 777252"
   },
   "team": {
     "title": "The Team",
     "osvaldo": "Osvaldo",
     "romina": "Romina",
-    "carlos": "Carlos",
     "beatriz": "Beatriz",
-    "brenda": "Brenda",
-    "comingSoon": "Coming Soon - Tax Mobile App",
-    "appDescription": "Simplify your tax filing with our intuitive and easy-to-use app for taxpayers.",
-    "appDetails": "Discover a fast and hassle-free way to manage your taxes, designed specifically so taxpayers can save time and avoid mistakes.",
-    "visitApp": "Visit DASE App",
-    "appStore": "App Store",
-    "googlePlay": "Google Play"
+    "brenda": "Brenda"
   },
   "process": {
     "title": "3 SIMPLE STEPS",
@@ -462,12 +452,6 @@
       "price": "25 USD",
       "title": "Monthly IVA Tax Submission",
       "payment": "Monthly Payment"
-    },
-    "specialIVA": {
-      "badge": "Special!",
-      "price": "250 USD",
-      "title": "IVA Tax Submission for One Year",
-      "payment": "One Payment"
     }
   },
   "testimonials": {

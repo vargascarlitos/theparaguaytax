@@ -134,27 +134,17 @@
     "certFeatures": ["Certificado oficial", "Puede aplicar con solo un día de registro de RUC"],
     "ivaDesc": "Servicio mensual de declaración y presentación de IVA (VAT) para mantener su RUC (ID Fiscal) en cumplimiento.",
     "ivaFeatures": ["Presentación mensual", "Enviamos un reporte PDF mensual", "Le notificaremos si debe impuestos."],
-    "specialDesc": "Año completo de presentaciones de IVA. Ahorre con nuestro paquete anual y obtenga procesamiento prioritario.",
-    "specialFeatures": ["Cobertura de 12 meses", "Procesamiento prioritario", "Ahorre 25% vs mensual"],
     "getStarted": "Comenzar",
     "getCertificate": "Obtener Certificado",
     "startMonthly": "Comenzar Mensual",
-    "chooseAnnual": "Elegir Plan Anual",
     "contactWhatsapp": "Contáctanos en WhatsApp +595 985 777252"
   },
   "team": {
     "title": "El Equipo",
     "osvaldo": "Osvaldo",
     "romina": "Romina",
-    "carlos": "Carlos",
     "beatriz": "Beatriz",
-    "brenda": "Brenda",
-    "comingSoon": "Próximamente - App Móvil Tax",
-    "appDescription": "Simplifica la liquidación de tus impuestos con nuestra app intuitiva y fácil de usar para contribuyentes.",
-    "appDetails": "Descubre una forma rápida y sin complicaciones de gestionar tus impuestos, diseñada especialmente para que los contribuyentes ahorren tiempo y eviten errores.",
-    "visitApp": "Visitar DASE App",
-    "appStore": "App Store",
-    "googlePlay": "Google Play"
+    "brenda": "Brenda"
   },
   "process": {
     "title": "3 PASOS SIMPLES",
@@ -463,12 +453,6 @@
       "price": "25 USD",
       "title": "Declaración Mensual de IVA",
       "payment": "Pago Mensual"
-    },
-    "specialIVA": {
-      "badge": "¡Especial!",
-      "price": "250 USD",
-      "title": "Declaración de IVA por Un Año",
-      "payment": "Un Pago"
     }
   },
   "testimonials": {
