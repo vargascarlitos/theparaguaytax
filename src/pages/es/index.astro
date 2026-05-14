@@ -1,14 +1,75 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Hero from '../../sections/Hero.astro';
+import HeroSlider from '../../components/HeroSlider.astro';
+import TaxWizard from '../../sections/TaxWizard.astro';
+import Accounting from '../../sections/Accounting.astro';
 import Pricing from '../../sections/Pricing.astro';
+import Testimonials from '../../sections/Testimonials.astro';
 import Team from '../../sections/Team.astro';
+import SocialMedia from '../../sections/SocialMedia.astro';
 import Process from '../../sections/Process.astro';
 import Contact from '../../sections/Contact.astro';
+import Blog from '../../sections/Blog.astro';
 import { getTranslations } from '../../i18n/utils';
+
+// Importar imágenes para el slider
+import heroSlide1 from '../../assets/images/hero-slide-1.jpg';
+import heroSlide2 from '../../assets/images/hero-slide-2.jpg';
+import heroSlide3 from '../../assets/images/hero-slide-3.jpg';
+import heroSlide4 from '../../assets/images/hero-slide-4.jpg';
+import heroSlide5 from '../../assets/images/hero-slide-5.jpg';
 
 const currentLang = 'es';
 const t = getTranslations(currentLang);
+
+// Configurar slides
+const slides = [
+  {
+    id: 'slide1',
+    image: heroSlide1,
+    title: t.slider.slide1.title,
+    subtitle: t.slider.slide1.subtitle,
+    ctaText: t.slider.slide1.ctaText,
+    ctaLink: '#pricing',
+    ctaColor: 'yellow' as const,
+  },
+  {
+    id: 'slide2',
+    image: heroSlide2,
+    title: t.slider.slide2.title,
+    subtitle: t.slider.slide2.subtitle,
+    ctaText: t.slider.slide2.ctaText,
+    ctaLink: '#pricing',
+    ctaColor: 'yellow' as const,
+  },
+  {
+    id: 'slide3',
+    image: heroSlide3,
+    title: t.slider.slide3.title,
+    subtitle: t.slider.slide3.subtitle,
+    ctaText: t.slider.slide3.ctaText,
+    ctaLink: '#accounting',
+    ctaColor: 'yellow' as const,
+  },
+  {
+    id: 'slide4',
+    image: heroSlide4,
+    title: t.slider.slide4.title,
+    subtitle: t.slider.slide4.subtitle,
+    ctaText: t.slider.slide4.ctaText,
+    ctaLink: '#pricing',
+    ctaColor: 'yellow' as const,
+  },
+  {
+    id: 'slide5',
+    image: heroSlide5,
+    title: t.slider.slide5.title,
+    subtitle: t.slider.slide5.subtitle,
+    ctaText: t.slider.slide5.ctaText,
+    ctaLink: '#pricing',
+    ctaColor: 'yellow' as const,
+  },
+];
 ---
 
 <Layout
@@ -16,9 +77,14 @@ const t = getTranslations(currentLang);
   description={t.meta.description}
   lang={currentLang}
 >
-  <Hero lang={currentLang} />
+  <HeroSlider lang={currentLang} slides={slides} autoplay={true} />
+  <TaxWizard lang={currentLang} />
+  <Accounting lang={currentLang} />
   <Pricing lang={currentLang} />
+  <Testimonials lang={currentLang} />
   <Team lang={currentLang} />
+  <SocialMedia lang={currentLang} />
   <Process lang={currentLang} />
   <Contact lang={currentLang} />
+  <Blog lang={currentLang} />
 </Layout>

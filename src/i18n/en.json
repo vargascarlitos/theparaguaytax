@@ -1,13 +1,19 @@
 {
   "meta": {
     "title": "TheParaguayTax | Tax Residency in Paraguay - Easy, Fast & Legal",
-    "description": "Get your Paraguayan tax residency — fast, legal, and effortless. Easy residency process, low taxes, good life. No bureaucracy, no Spanish, no stress."
+    "description": "Get your Paraguayan tax residency - fast, legal, and effortless. Easy residency process, low taxes, good life. No bureaucracy, no Spanish, no stress."
   },
   "nav": {
     "residency": "Residency",
     "accounting": "Accounting & Tax",
+    "pricing": "Pricing",
+    "accountingPricing": "Accounting Pricing",
+    "residencyPricing": "Residency Pricing",
+    "testimonials": "Testimonials",
     "about": "About Us",
-    "contact": "Contact Us"
+    "process": "Process",
+    "contact": "Contact Us",
+    "blog": "Blog"
   },
   "hero": {
     "title": "Create your future. Secure your Tax Residency in Paraguay.",
@@ -20,7 +26,7 @@
     },
     "lowTaxes": {
       "title": "Low Taxes",
-      "desc1": "Territorial tax system — pay only on local income",
+      "desc1": "Territorial tax system - pay only on local income",
       "desc2": "No wealth, inheritance or worldwide taxes",
       "desc3": "Stable fiscal framework",
       "desc4": "Ideal for entrepreneurs and digital nomads",
@@ -51,6 +57,7 @@
     "standard": "STANDARD ($ 999)",
     "vip": "VIP ($ 1400)",
     "hyperfast": "HYPERFAST ($ 1600)",
+    "mostPopular": "MOST POPULAR",
     "mandatory": "Mandatory",
     "extra": "Extra",
     "residency": "Residency",
@@ -81,19 +88,63 @@
     "cashUsdPyg": "CASH (USD OR PYG)",
     "wiseBank": "WISE/BANK TRANSFER",
     "crypto": "BITCOIN/CRYPTO/USDT",
-    "yes": "YES"
+    "yes": "YES",
+    "plansTitle": "Residency Management Plans",
+    "plansSubtitle": "Choose the perfect plan for your Paraguayan tax residency application and management. All plans include complete legal assistance, government fees, and dedicated support.",
+    "standardDesc": "Complete residency management",
+    "vipDesc": "Priority processing & dedicated support",
+    "hyperfastDesc": "Lightning-fast residency processing",
+    "fullResidency": "Full residency application",
+    "paraguayanId": "Paraguayan ID (Cédula)",
+    "localAddressProof": "Local address & proof",
+    "govFeesIncluded": "Government fees included",
+    "everythingStandard": "Everything in Standard",
+    "priorityProcessing": "Priority processing",
+    "dedicatedSupport": "Dedicated support",
+    "expressAppointments": "Express appointments",
+    "everythingVip": "Everything in VIP",
+    "ultraFastProcessing": "Ultra-fast processing",
+    "premiumConcierge": "Premium concierge service",
+    "prioritySupport": "24/7 priority support",
+    "processingTime": "Processing time:",
+    "tripsNeededLabel": "Trips needed:",
+    "getStarted": "Get Started",
+    "chooseVip": "Choose VIP Plan",
+    "chooseHyperfast": "Choose Hyperfast",
+    "viewDetails": "View Details",
+    "hideDetails": "Hide Details",
+    "comparisonTable": "Plan Comparison Table",
+    "included": "Included",
+    "acceptedPaymentsTitle": "Accepted Payment Methods",
+    "paymentsSubtitle": "Choose the payment method that works best for you",
+    "cash": "Cash",
+    "usdOrPyg": "USD or PYG",
+    "bankTransfer": "Bank Transfer",
+    "wiseOrBank": "Wise or direct bank transfer",
+    "cryptocurrency": "Cryptocurrency",
+    "bitcoinUsdt": "Bitcoin, USDT, and more",
+    "contactWhatsapp": "Contact Us on WhatsApp +595 985 777252"
+  },
+  "accounting": {
+    "title": "Accounting & Tax Services",
+    "subtitle": "Professional accounting services to keep your Paraguayan business compliant. From RUC registration to ongoing tax submissions.",
+    "rucDesc": "Register your Tax ID (RUC) for business operations in Paraguay. Required for all business activities.",
+    "rucFeatures": ["Complete Registration", "Just Paraguayan cedula and photo selfie needed"],
+    "certDesc": "Official tax residency certificate required for banking and international transactions.",
+    "certFeatures": ["Official certificate", "You can apply with just one day of RUC registration"],
+    "ivaDesc": "Monthly IVA (VAT) tax declaration and submission service to keep your RUC (Tax ID) compliant.",
+    "ivaFeatures": ["Monthly filing", "We send a monthly PDF report", "We'll notify you if you owe taxes."],
+    "getStarted": "Get Started",
+    "getCertificate": "Get Certificate",
+    "startMonthly": "Start Monthly",
+    "contactWhatsapp": "Contact Us on WhatsApp +595 985 777252"
   },
   "team": {
     "title": "The Team",
     "osvaldo": "Osvaldo",
-    "brenda": "Brenda",
     "romina": "Romina",
-    "comingSoon": "Coming Soon - Tax Mobile App",
-    "appDescription": "Simplify your tax filing with our intuitive and easy-to-use app for taxpayers.",
-    "appDetails": "Discover a fast and hassle-free way to manage your taxes, designed specifically so taxpayers can save time and avoid mistakes.",
-    "visitApp": "Visit DASE App",
-    "appStore": "App Store",
-    "googlePlay": "Google Play"
+    "beatriz": "Beatriz",
+    "brenda": "Brenda"
   },
   "process": {
     "title": "3 SIMPLE STEPS",
@@ -103,7 +154,7 @@
     "benefitsTitle": "WHAT CAN YOU DO WITH A PARAGUAYAN ID",
     "liveFreely": {
       "title": "Live Freely",
-      "desc1": "Get full residency rights — no time limits",
+      "desc1": "Get full residency rights - no time limits",
       "desc2": "Come and go without passport stamps",
       "desc3": "Access public healthcare and local services"
     },
@@ -128,20 +179,20 @@
   },
   "contact": {
     "title": "No Bureaucracy. No Spanish. No Stress.",
-    "subtitle": "Get your Paraguayan residency done — fast, legal, and effortless.",
+    "subtitle": "Get your Paraguayan residency done - fast, legal, and effortless.",
     "processText": "Our team takes care of everything from documents to delivery.",
     "allYouNeed": "All you need:",
     "passport": "Passport",
     "birthCert": "Apostilled birth certificate",
     "criminalRecord": "Apostilled criminal record",
-    "twoDays": "Two days in Asunción — that's it.",
+    "twoDays": "Two days in Asunción - that's it.",
     "weHandle": "We handle the process. You handle your freedom.",
     "companyName": "DASE GROUP E.A.S.",
     "ruc": "80124544-3",
     "address": "Avda. Moises 1986 - Capiatá",
     "phone": "+595 985 777252",
     "instagram": "@ParaguayTaxes",
-    "email": "dasegrouppyy@gmail.com",
+    "email": "dasegrouppy@gmail.com",
     "formTitle": "Contact Us",
     "formName": "Name",
     "formEmail": "Email",
@@ -152,7 +203,311 @@
     "formSuccess": "Message sent! We'll be in touch soon.",
     "formError": "There was an error. Please try again.",
     "whatsappButton": "Contact us on WhatsApp",
-    "whatsappMessage": "Hello%2C%20I%20am%20interested%20in%20Paraguayan%20residency"
+    "whatsappMessage": "Hello, I am interested in Paraguayan residency"
+  },
+  "slider": {
+    "slide1": {
+      "title": "Want to save money with lower taxes?",
+      "subtitle": "Apply for a Paraguayan Residency",
+      "ctaText": "Look the requirements!"
+    },
+    "slide2": {
+      "title": "Want to export services worldwide with a Paraguayan Tax ID?",
+      "subtitle": "Digital nomads could qualify for Zero Tax. See details below.",
+      "ctaText": "Apply for a Paraguayan Residency"
+    },
+    "slide3": {
+      "title": "Want to sell your crypto and declare it in Paraguay?",
+      "subtitle": "VAT (IVA) tax is 0%, and income tax (IRE) only 10%",
+      "ctaText": "Get your TAX ID (RUC) with a Paraguayan residency."
+    },
+    "slide4": {
+      "title": "We set up your EAS company in just three days.",
+      "subtitle": "Check the requirements to apply!",
+      "ctaText": "Start Your Application"
+    },
+    "slide5": {
+      "title": "Want to live a peaceful life?",
+      "subtitle": "Get full residency rights, access public healthcare, and enjoy a relaxed lifestyle.",
+      "ctaText": "Get Started Today"
+    }
+  },
+  "taxWizard": {
+    "title": "How do taxes work in Paraguay?",
+    "subtitle": "Interactive guide to discover your tax obligations based on your business structure and activity",
+    "progressLabel": "Step {current} of {total}",
+    "buttons": {
+      "next": "Next",
+      "back": "Back",
+      "startOver": "Start Over",
+      "return": "Return",
+      "getStarted": "Get Started"
+    },
+    "step1": {
+      "title": "What type of activity do you perform?",
+      "subtitle": "Choose the option that best describes your business",
+      "options": {
+        "services": {
+          "title": "Services",
+          "description": "Professional services, consulting, digital work, etc."
+        },
+      "merchandise": {
+        "title": "Merchandise or Crypto",
+        "description": "Buy and sell products, cryptocurrency trading"
+      },
+      "realEstate": {
+        "title": "Real Estate",
+        "description": "Buy apartments or rent (short & long-term)"
+      },
+      "foreign": {
+        "title": "Foreign-source income",
+        "description": "Money earned and previously taxed abroad"
+      }
+      }
+    },
+    "step2": {
+      "title": "What legal structure do you prefer?",
+      "subtitle": "Select the type of entity for your business",
+      "options": {
+        "ruc": {
+          "title": "RUC Unipersonal",
+          "description": "Individual Tax ID - Simpler and more economical"
+        },
+        "eas": {
+          "title": "Legal Entity (EAS/LLC)",
+          "description": "Company with legal status - More formalities"
+        }
+      }
+    },
+         "step3": {
+           "titleServices": "Where will you provide your services?",
+           "titleMerchandise": "What type of merchandise do you handle?",
+           "subtitle": "This determines specific tax exemptions",
+          "optionsServices": {
+            "local": {
+              "title": "Local (Paraguay)",
+              "description": "Services provided to clients within Paraguay"
+            },
+            "export": {
+              "title": "Export (Worldwide)",
+              "description": "Services to foreign clients or companies"
+            }
+          },
+      "optionsMerchandise": {
+        "localForeign": {
+          "title": "Local/Foreign Products",
+          "description": "Physical merchandise or goods"
+        },
+        "crypto": {
+          "title": "Cryptocurrency",
+          "description": "Trading and transactions with crypto"
+        }
+      },
+      "optionsRealEstate": {
+        "buy": {
+          "title": "Buy Apartments",
+          "description": "Investment & living"
+        },
+        "rent": {
+          "title": "Rent",
+          "description": "Short & long-term"
+        }
+      },
+      "optionsBoth": {
+        "servicesMain": {
+          "title": "Primarily Services",
+          "description": "Services are your main activity"
+        },
+        "merchandiseMain": {
+          "title": "Primarily Merchandise",
+          "description": "Sales are your main activity"
+        }
+      }
+    },
+    "result": {
+      "title": "Your Tax Structure in Paraguay",
+      "yourStructure": "Your Structure",
+      "applicableTaxes": "Applicable Taxes",
+      "otherObligations": "Other Obligations",
+      "specialNotes": "Special Notes",
+      "frequency": {
+        "monthly": "Monthly",
+        "annually": "Annually",
+        "onDistribution": "When distributing profits"
+      },
+      "structures": {
+        "rucServicesLocal": "RUC Unipersonal - Local Services",
+        "rucServicesExport": "RUC Unipersonal - Export Services",
+        "rucServicesForeign": "RUC Unipersonal - Foreign-source Income",
+        "rucMerchandiseLocal": "RUC Unipersonal - Local/Foreign Merchandise",
+        "rucMerchandiseCrypto": "RUC Unipersonal - Cryptocurrency",
+        "rucRealEstateBuy": "RUC Unipersonal - Apartment Purchase",
+        "rucRealEstateRent": "RUC Unipersonal - Property Rental",
+        "easEntity": "Legal Entity EAS (LLC)"
+      },
+      "specificTexts": {
+        "irpWorkingInsideParaguay": {
+          "name": "IRP (Income Tax) - Working inside Paraguay",
+          "description": "Progressive income tax working inside Paraguay",
+          "note": "If you work outside Paraguay for a foreign company, income tax (IRP) IS EXEMPT"
+        },
+        "irpWorkingOutsideParaguay": {
+          "name": "IRP (Income Tax) - Working outside Paraguay",
+          "description": "Income earned from work performed outside Paraguay for a foreign company is exempt from IRP (not taxable in Paraguay)",
+          "note": "If you work outside Paraguay for a foreign company, income tax (IRP) IS EXEMPT"
+        },
+        "foreignSourceIncome": {
+          "ivaDescription": "Foreign-source income is exempt",
+          "irpDescription": "Foreign-source income is exempt",
+          "noObligations": "No tax obligations in Paraguay for foreign-source income",
+          "note": "Income that was generated and already taxed abroad is exempt in Paraguay. When you bring that money into Paraguay, you pay 0% tax - it's considered foreign-source income under Paraguayan tax law."
+        }
+      },
+      "taxes": {
+        "iva": {
+          "name": "IVA (VAT)",
+          "rate": "10%",
+          "frequency": "Monthly",
+          "description": "Value Added Tax on sales"
+        },
+        "ivaExempt": {
+          "name": "IVA (VAT)",
+          "rate": "0% (EXEMPT)",
+          "frequency": "Monthly",
+          "description": "Exempt for exports and crypto"
+        },
+        "irp": {
+          "name": "IRP (Income Tax)",
+          "rate": "8%, 9% & 10%",
+          "frequency": "Annually",
+          "description": "Progressive income tax",
+          "details": "Progressive rates: 8% (up to 50M GS), 9% (50M-150M GS), 10% (>150M GS)",
+          "note": "If your annual income exceeds 80 million PYG, you must register for the IRP."
+        },
+        "irpExempt": {
+          "name": "IRP (Income Tax)",
+          "rate": "EXEMPT",
+          "frequency": "N/A",
+          "description": "Exempt when working for foreign companies",
+          "note": "If you work outside Paraguay for a foreign company, income tax (IRP) IS EXEMPT"
+        },
+        "ireSimple": {
+          "name": "IRE Simple (Income Tax)",
+          "rate": "10%",
+          "frequency": "Annually",
+          "description": "Simplified income tax for businesses",
+          "note": "If income exceeds 2 billion GS, financial statements (IRE) are required"
+        },
+        "iduResident": {
+          "name": "IDU (Dividend Tax) - Residents",
+          "rate": "8%",
+          "frequency": "Annually",
+          "description": "Tax when shareholders withdraw profits",
+          "note": "When each shareholder withdraws their profits. It doesn't matter if it's physical or legal."
+        },
+        "iduNonResident": {
+          "name": "IDU (Dividend Tax) - Non-Residents",
+          "rate": "15%",
+          "frequency": "Annually",
+          "description": "Tax when non-resident shareholders withdraw profits",
+          "note": "When each shareholder withdraws their profits. It doesn't matter if it's physical or legal."
+        }
+      },
+      "obligations": {
+        "electronicInvoice": "Issue Electronic Invoices (GS or USD)",
+        "monthlyVAT": "IVA declaration",
+        "annualIncome": "Annual income tax return",
+        "balanceSheet": "Annual Balance Sheet",
+        "assembly": "Annual Ordinary Assembly",
+        "dgpeyjbf": "Update DGPEYJBF",
+        "renewalMipymes": "Renewal of Cédula MiPymes",
+        "financialStatements": "Financial statements if income > 2 billion GS",
+        "purchases": "Record purchases related to business"
+      },
+      "notes": {
+        "exportExempt": "If you are working outside Paraguay and you still working for a Foreign Company the INCOME TAX (IRP) IS EXEMPT TOO.",
+        "cryptoVATExempt": "Crypto sales are exempt from VAT.",
+        "iduOnlyDistribution": "IDU: When each shareholder withdraws their profits. It doesn't matter if it's physical or legal.",
+        "easRequirements": "To Establish the EAS: It can be a single partner or more, Legal Representative must have an ID, You need a Company Seal, There is no minimum capital, Capital should not be declared",
+        "ireSwitchThreshold": "If income exceeds 2 billion GS in a fiscal year, you must pay through the General IRE (Financial statements are required)",
+        "capitalNotDeclared": "Capital should not be declared in the EAS"
+      },
+      "disclaimer": "*Disclaimer: Tax situations can vary based on individual circumstances. For personalized advice, please consult with a tax professional."
+    }
+  },
+  "services": {
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Hello, I am interested in your tax services",
+    "rucInscription": {
+      "price": "15 USD",
+      "title": "RUC Inscription (Tax ID)",
+      "payment": "One payment"
+    },
+    "taxCertificate": {
+      "price": "75 USD",
+      "title": "Paraguay Tax Certificate",
+      "payment": "One payment"
+    },
+    "monthlyIVA": {
+      "price": "25 USD",
+      "title": "Monthly IVA Tax Submission",
+      "payment": "Monthly Payment"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real experiences from real people who chose Paraguay",
+    "ctaTitle": "Join Our Growing Community",
+    "ctaText": "Ready to start your Paraguayan tax residency journey? Join hundreds of satisfied clients who have simplified their lives.",
+    "ctaButton": "Start Your Journey"
+  },
+  "socialMedia": {
+    "title": "Follow Us on Social Media",
+    "subtitle": "Discover practical tips about taxes, tax residency, and life in Paraguay through our short videos.",
+    "followUs": "Follow us for more tips and updates!",
+    "videos": {
+      "residency": {
+        "title": "Tax Residency in Paraguay",
+        "description": "3 things that it’s important to know before you move to Paraguay."
+      },
+      "iva": {
+        "title": "Digital Nomad",
+        "description": "Information about taxes for digital nomads"
+      },
+      "banking": {
+        "title": "Taxes in Paraguay",
+        "description": "Information about taxes in Paraguay."
+      }
+    }
+  },
+  "blog": {
+    "title": "Latest Articles",
+    "subtitle": "Stay informed about tax residency, business setup, and life in Paraguay",
+    "readMore": "Read More",
+    "readTime": "{minutes} min read",
+    "articles": {
+      "article1": {
+        "title": "Goodbye paper? Discover how electronic invoices change the way you shop",
+        "excerpt": "Explore the future of business transactions with electronic invoicing in Paraguay.",
+        "category": "Taxes",
+        "readTime": 6,
+        "image": "/images/blog/facturas-electronicas.png"
+      },
+      "article2": {
+        "title": "What happens if my clients don't ask me for an invoice?",
+        "excerpt": "Learn about the tax implications when your clients don't request payment receipts.",
+        "category": "Taxes",
+        "readTime": 3,
+        "image": "/images/blog/clientes-factura.png"
+      },
+      "article3": {
+        "title": "EAS: A Quickly Formed Paraguayan Business Entity",
+        "excerpt": "Discover how to establish an Entidad por Acciones Simplificada (EAS) in record time.",
+        "category": "Business Setup",
+        "readTime": 5,
+        "image": "/images/blog/eas-business.png"
+      }
+    }
   }
 }
 

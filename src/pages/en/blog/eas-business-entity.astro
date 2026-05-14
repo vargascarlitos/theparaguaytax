@@ -1,0 +1,152 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n/utils';
+
+const lang = 'en';
+const t = getTranslations(lang);
+---
+
+<Layout title="EAS: A Quickly Formed Paraguayan Business Entity" lang={lang}>
+  <section class="relative bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Article Header -->
+      <div class="text-center mb-12">
+        <div class="inline-block px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold mb-6">
+          Business Setup
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dark mb-6 leading-tight">
+          EAS: A Quickly Formed Paraguayan Business Entity
+        </h1>
+        <div class="text-center">
+          <p class="text-gray-600 mb-2">By <span class="font-semibold">Osvaldo Segovia</span></p>
+          <p class="text-gray-500 text-sm">August 16, 2024</p>
+          <div class="flex items-center justify-center gap-4 text-gray-600 mt-4">
+            <span class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              5 min read
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Image -->
+      <div class="mb-12">
+        <img
+          src="/images/blog/eas-business.png"
+          alt="EAS Business Entity in Paraguay"
+          class="w-full h-64 md:h-96 object-cover rounded-2xl shadow-lg"
+        />
+      </div>
+
+      <!-- Article Content -->
+      <div class="prose prose-lg prose-gray max-w-none">
+        <h2>What is an EAS?</h2>
+        <p>It's a commercial business entity whose main characteristic is its fast constitution. With this, you can have a company ready to operate in Paraguay with other shareholders. It can also be formed as a sole proprietorship (with only one partner).</p>
+
+        <p><strong>E.A.S. means «Simplified Joint Stock Company». (Empresas por Acciones Simplificadas)</strong></p>
+
+        <h2>Is it easy to form?</h2>
+        <p>Yes, you can have the company ready to operate in a week, as long as you have all the documents up to date. Mainly the Paraguayan ID. Regarding the Articles of Incorporation, there is a «predetermined version» that is free, which does not require the signature of a lawyer or notary for its validity.</p>
+
+        <h2>What are the benefits of an EAS?</h2>
+        <p>With an EAS, you save the bureaucracy of registering or reporting to the main Paraguayan government entities. Therefore, when you incorporate, you already have:</p>
+
+        <ul>
+          <li><strong>RUC (Tax ID)</strong></li>
+          <li><strong>Bank account (Banco Nacional de Fomento)</strong></li>
+          <li><strong>IPS (Social Security) and MTESS (Labor Ministry)</strong></li>
+          <li><strong>ID Mipymes</strong></li>
+          <li><strong>RIEL and REPSE</strong></li>
+          <li><strong>DGPEJBF</strong></li>
+        </ul>
+
+        <h2>Can it win bids?</h2>
+        <p>Yes, EASs can bid to win tenders in the Republic of Paraguay, as long as they comply with the guidelines of the competitions.</p>
+
+        <h2>Does it have annual assemblies and presentations?</h2>
+        <p>Yes, the EAS is like any other company. For example, it must hold an annual General Meeting where the management of the previous year is approved with its respective Balance Sheet and Financial Statements, among other matters. It must also comply with the tax obligations of the Tax Office (DNIT) and other entities such as MTESS, IPS, and DGPEJBF.</p>
+
+        <h2>Minimum capital?</h2>
+        <p>No, a minimum capital is not required for the formation of the EAS, but a reasonable capital is suggested. For example, if you are going to form a large livestock company, it is not reasonable for your capital to be only 500,000 Guaranies (less than 100 USD).</p>
+
+        <h2>Is a corporation SRL or Sociedad Anónima better?</h2>
+        <p>It's not that one is better or worse, but the EAS was simply born as a rapidly formed business entity to avoid cumbersome government procedures. It carries the same legal weight as other corporate structures.</p>
+
+        <h2>Does it separate personal capital?</h2>
+        <p>Yes, a main characteristic of most companies is that «it stands on its own», meaning that it has its own bank, obligations, and responsibilities. If the EAS takes out a loan, the loan is from the EAS. In case of a problem, the personal assets of its shareholders will not be affected.</p>
+
+        <h2>Is it easy to get a Paraguayan ID?</h2>
+        <p>Yes, getting a Paraguayan ID is easy.</p>
+
+        <h2>Taxes in Paraguay</h2>
+        <p>The Annual Income Tax is 10%, the monthly IVA (VAT) is 10%, and the tax on profit withdrawal by shareholders is 8%. If products are exported from Paraguay under the proper conditions, a credit refund can be requested.</p>
+
+        <p>For more information, please contact us. Email or WhatsApp.</p>
+
+        <div class="bg-gray-50 p-6 rounded-lg mt-12 border-l-4 border-primary">
+          <p class="text-sm text-gray-600 mb-2">C.P Osvaldo Segovia</p>
+          <p class="text-sm text-gray-600 mb-1">+595 985 777 252</p>
+          <p class="text-sm text-gray-600">dasegrouppy@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Back to Blog -->
+      <div class="mt-16 pt-8 border-t border-gray-200">
+        <a
+          href="/en"
+          class="inline-flex items-center gap-2 text-primary hover:text-primary-600 transition-colors duration-200 font-semibold"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to home
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .prose {
+    color: #374151;
+  }
+
+  .prose h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: #1A1A1A;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .prose h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose p {
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
+  }
+
+  .prose ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose strong {
+    font-weight: 600;
+    color: #1A1A1A;
+  }
+</style>

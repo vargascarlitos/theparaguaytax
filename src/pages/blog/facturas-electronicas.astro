@@ -1,0 +1,202 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations } from '../../i18n/utils';
+
+const lang = Astro.url.pathname.includes('/es/') ? 'es' : 'en';
+const t = getTranslations(lang);
+---
+
+<Layout title={lang === 'es' ? "¿Adiós al papel? Descubre cómo las facturas electrónicas cambian tu forma de hacer compras" : "Goodbye paper? Discover how electronic invoices change the way you shop"} lang={lang}>
+  <section class="relative bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Article Header -->
+      <div class="text-center mb-12">
+        <div class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
+          {lang === 'es' ? 'Impuestos' : 'Taxes'}
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dark mb-6 leading-tight">
+          {lang === 'es'
+            ? '¿Adiós al papel? Descubre cómo las facturas electrónicas cambian tu forma de hacer compras'
+            : 'Goodbye paper? Discover how electronic invoices change the way you shop'
+          }
+        </h1>
+        <div class="text-center">
+          <p class="text-gray-600 mb-2">{lang === 'es' ? 'Por' : 'By'} <span class="font-semibold">Osvaldo Segovia</span></p>
+          <p class="text-gray-500 text-sm">{lang === 'es' ? 'agosto 21, 2024' : 'August 21, 2024'}</p>
+          <div class="flex items-center justify-center gap-4 text-gray-600 mt-4">
+            <span class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {lang === 'es' ? '6 min de lectura' : '6 min read'}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Image -->
+      <div class="mb-12">
+        <img
+          src="/images/blog/facturas-electronicas.png"
+          alt="Facturas electrónicas en Paraguay"
+          class="w-full h-64 md:h-96 object-cover rounded-2xl shadow-lg"
+        />
+      </div>
+
+      <!-- Article Content -->
+      <div class="prose prose-lg prose-gray max-w-none">
+        {lang === 'es' ? (
+          <>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+              ¿Te fijaste en el código QR que aparece en las facturas que te entregan en el supermercado o la farmacia? ¡Eso no es casualidad! Estas facturas, aunque estén impresas en papel, ya son electrónicas.
+            </p>
+
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+              La facturación electrónica está revolucionando la forma en que llevamos nuestros registros comerciales. Pero, ¿qué significa esto para vos? ¿Cómo afecta tu día a día y cómo podes adaptarte a estos cambios? En este artículo te explicamos todo lo que necesitas saber.
+            </p>
+
+            <h2>¿Qué es una factura electrónica?</h2>
+            <p>Una factura electrónica es un comprobante legal que, aunque puede tener una papel físico (como el ticket que recibes en un comercio), existe principalmente en formato digital. Esto significa que toda la información de la compra se almacena en una base de datos electrónica, lo que facilita su gestión y acceso.</p>
+
+            <h2>¿Por qué se está implementando la facturación electrónica?</h2>
+            <p>La facturación electrónica ofrece muchos beneficios, tanto para los consumidores como para las empresas:</p>
+
+            <ul>
+              <li><strong>Mayor seguridad:</strong> Reduce el riesgo de pérdida o alteración de los documentos.</li>
+              <li><strong>Agilidad:</strong> Facilita la gestión de los comprobantes y agiliza los procesos administrativos.</li>
+              <li><strong>Reducción de costos:</strong> Elimina la necesidad de imprimir y almacenar grandes cantidades de papel.</li>
+              <li><strong>Mayor control:</strong> Permite un mejor seguimiento de las compras y ventas.</li>
+              <li><strong>Contribución a la sostenibilidad:</strong> Reduce el impacto ambiental al disminuir el uso de papel.</li>
+            </ul>
+
+            <h2>¿Qué pasa si ya no me entregan facturas en papel?</h2>
+            <p>Si bien muchas empresas ya están emitiendo facturas electrónicas, aún es común recibirlas en papel. Sin embargo, esta tendencia está cambiando rápidamente y es probable que en un futuro cercano las facturas físicas desaparezcan por completo.</p>
+
+            <p>Pero no te preocupes, ¡hay soluciones! Existen diversas plataformas y aplicaciones, como Marangatu y Ekuatia'i, que te permiten almacenar y gestionar tus facturas electrónicas de forma segura. Además, puedes acceder a tus comprobantes a través de tu correo electrónico.</p>
+
+            <h2>¿Cómo puedo obtener mis facturas electrónicas?</h2>
+            <p>Para obtener tus facturas electrónicas, puedes:</p>
+
+            <ul>
+              <li><strong>Solicitar el envío por correo electrónico:</strong> Al realizar una compra, solicitá que te envíen la factura a tu dirección de correo electrónico.</li>
+              <li><strong>Descargarla desde la plataforma del emisor:</strong> Algunas empresas ponen a disposición de sus clientes una plataforma en línea donde pueden descargar sus facturas.</li>
+              <li><strong>Utilizar la cámara del teléfono:</strong> Existen aplicaciones como la cámara que te permiten escanear los códigos QR de las facturas y almacenarlas en tu dispositivo móvil.</li>
+            </ul>
+
+            <h2>Conclusión</h2>
+            <p>La facturación electrónica es una realidad que llegó para quedarse. Al adaptarnos a esta nueva forma de gestionar nuestros comprobantes, podremos disfrutar de los múltiples beneficios que ofrece y contribuir a un futuro más sostenible.</p>
+
+            <div class="bg-gray-50 p-6 rounded-lg mt-12 border-l-4 border-primary">
+              <p class="text-sm text-gray-600 mb-2">CP Osvaldo Segovia</p>
+              <p class="text-sm text-gray-600 mb-1">+595 985 777252</p>
+              <p class="text-sm text-gray-600">dasegrouppy@gmail.com</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+              Have you noticed the QR code that appears on the invoices you receive at the supermarket or pharmacy? That's no coincidence! These invoices, although printed on paper, are already electronic.
+            </p>
+
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+              Electronic invoicing is revolutionizing the way we keep our commercial records. But what does this mean for you? How does it affect your daily life and how can you adapt to these changes? In this article, we explain everything you need to know.
+            </p>
+
+            <h2>What is an electronic invoice?</h2>
+            <p>An electronic invoice is a legal receipt that, although it may have a physical paper (like the ticket you receive in a store), exists mainly in digital format. This means that all purchase information is stored in an electronic database, making it easier to manage and access.</p>
+
+            <h2>Why is electronic invoicing being implemented?</h2>
+            <p>Electronic invoicing offers many benefits for both consumers and businesses:</p>
+
+            <ul>
+              <li><strong>Greater security:</strong> Reduces the risk of loss or alteration of documents.</li>
+              <li><strong>Agility:</strong> Facilitates receipt management and streamlines administrative processes.</li>
+              <li><strong>Cost reduction:</strong> Eliminates the need to print and store large amounts of paper.</li>
+              <li><strong>Greater control:</strong> Allows better tracking of purchases and sales.</li>
+              <li><strong>Contribution to sustainability:</strong> Reduces environmental impact by decreasing paper usage.</li>
+            </ul>
+
+            <h2>What happens if I no longer receive paper invoices?</h2>
+            <p>Although many companies are already issuing electronic invoices, it is still common to receive them on paper. However, this trend is changing rapidly and it is likely that physical invoices will disappear completely in the near future.</p>
+
+            <p>But don't worry, there are solutions! There are various platforms and applications, such as Marangatu and Ekuatia'i, that allow you to safely store and manage your electronic invoices. In addition, you can access your receipts through your email.</p>
+
+            <h2>How can I get my electronic invoices?</h2>
+            <p>To obtain your electronic invoices, you can:</p>
+
+            <ul>
+              <li><strong>Request email delivery:</strong> When making a purchase, ask them to send the invoice to your email address.</li>
+              <li><strong>Download from the issuer's platform:</strong> Some companies provide their customers with an online platform where they can download their invoices.</li>
+              <li><strong>Use your phone's camera:</strong> There are applications like the camera that allow you to scan QR codes on invoices and store them on your mobile device.</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>Electronic invoicing is a reality that has come to stay. By adapting to this new way of managing our receipts, we can enjoy the multiple benefits it offers and contribute to a more sustainable future.</p>
+
+            <div class="bg-gray-50 p-6 rounded-lg mt-12 border-l-4 border-primary">
+              <p class="text-sm text-gray-600 mb-2">CP Osvaldo Segovia</p>
+              <p class="text-sm text-gray-600 mb-1">+595 985 777252</p>
+              <p class="text-sm text-gray-600">dasegrouppy@gmail.com</p>
+            </div>
+          </>
+        )}
+      </div>
+
+      <!-- Back to Blog -->
+      <div class="mt-16 pt-8 border-t border-gray-200">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-primary hover:text-primary-600 transition-colors duration-200 font-semibold"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Volver al inicio
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .prose {
+    color: #374151;
+  }
+
+  .prose h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: #1A1A1A;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .prose h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose p {
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
+  }
+
+  .prose ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose strong {
+    font-weight: 600;
+    color: #1A1A1A;
+  }
+</style>

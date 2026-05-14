@@ -1,0 +1,365 @@
+---
+import { Image } from 'astro:assets';
+import { getTranslations } from '../i18n/utils';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  lang: 'en' | 'es';
+  slides: Slide[];
+  autoplay?: boolean;
+  autoplayInterval?: number;
+}
+
+interface Slide {
+  id: string;
+  image: ImageMetadata;
+  title: string;
+  subtitle?: string;
+  ctaText: string;
+  ctaLink: string;
+  ctaColor?: 'yellow' | 'primary' | 'secondary';
+}
+
+const { lang, slides, autoplay = true, autoplayInterval = 5000 } = Astro.props;
+const t = getTranslations(lang);
+
+const sliderId = `hero-slider-${Math.random().toString(36).slice(2, 11)}`;
+---
+
+<section class="hero-slider relative w-full max-w-full h-[650px] sm:h-[750px] lg:h-[800px] xl:h-[850px] overflow-hidden" id={sliderId}>
+  <div class="slider-container relative w-full h-full">
+    {slides.map((slide, index) => (
+      <div
+        class={`slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${
+          index === 0 ? 'opacity-100' : 'opacity-0'
+        }`}
+        data-slide-index={index}
+        data-slide-id={slide.id}
+      >
+        <!-- Background Image -->
+        <div class="absolute inset-0 w-full h-full">
+          <Image
+            src={slide.image}
+            alt={slide.title}
+            width={1920}
+            height={1080}
+            class="w-full h-full object-cover"
+            loading={index === 0 ? 'eager' : 'lazy'}
+            fetchpriority={index === 0 ? 'high' : 'low'}
+            format="webp"
+            quality={85}
+          />
+        </div>
+
+        <!-- Light Overlay for better text readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 h-full flex items-end justify-start">
+          <div class="px-4 sm:px-6 lg:px-8 xl:px-12 w-full pb-16 sm:pb-20 lg:pb-24 max-w-full">
+            <div class="max-w-2xl">
+              <!-- Title with Transparent Background -->
+              <div class="mb-4 sm:mb-6">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold text-white leading-tight drop-shadow-2xl px-3 sm:px-4 py-2 bg-black/60 backdrop-blur-sm rounded-xl break-words">
+                  {slide.title}
+                </h2>
+              </div>
+
+              <!-- Subtitle with Transparent Background -->
+              {slide.subtitle && (
+                <div class="mb-8 sm:mb-12 lg:mb-16 xl:mb-20">
+                  <p class="text-base sm:text-lg lg:text-xl xl:text-2xl text-white/95 leading-relaxed drop-shadow-xl px-3 sm:px-4 py-2 bg-black/50 backdrop-blur-sm rounded-xl break-words">
+                    {slide.subtitle}
+                  </p>
+                </div>
+              )}
+
+              <!-- CTA Button -->
+              <a
+                href={slide.ctaLink}
+                class={`inline-block px-4 sm:px-6 lg:px-8 xl:px-10 py-2 sm:py-3 lg:py-4 xl:py-5 rounded-xl font-bold text-sm sm:text-base lg:text-lg xl:text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl backdrop-blur-sm ${
+                  slide.ctaColor === 'primary'
+                    ? 'bg-primary/90 text-white hover:bg-primary border border-primary/60 shadow-primary/20'
+                    : slide.ctaColor === 'secondary'
+                    ? 'bg-secondary/90 text-white hover:bg-secondary border border-secondary/60 shadow-secondary/20'
+                    : 'bg-yellow-400/95 text-dark hover:bg-yellow-500 border border-yellow-400/80 shadow-yellow-400/30'
+                }`}
+              >
+                {slide.ctaText}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Navigation Arrows -->
+  {slides.length > 1 && (
+    <>
+      <button
+        class="slider-nav-btn slider-nav-prev absolute left-6 sm:left-8 top-1/2 -translate-y-1/2 z-20 rounded-full p-2 sm:p-3 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 opacity-60 hover:opacity-100 hidden sm:flex"
+        aria-label="Previous slide"
+        data-action="prev"
+      >
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <button
+        class="slider-nav-btn slider-nav-next absolute right-6 sm:right-8 top-1/2 -translate-y-1/2 z-20 rounded-full p-2 sm:p-3 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 opacity-60 hover:opacity-100 hidden sm:flex"
+        aria-label="Next slide"
+        data-action="next"
+      >
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </>
+  )}
+
+         <!-- Dots Indicator -->
+         {slides.length > 1 && (
+           <div class="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2 sm:gap-3">
+             {slides.map((_, index) => (
+               <button
+                 class={`slider-dot w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 ${
+                   index === 0 ? 'bg-white w-6 sm:w-8' : 'bg-white/40 hover:bg-white/70'
+                 }`}
+                 aria-label={`Go to slide ${index + 1}`}
+                 data-slide-index={index}
+               ></button>
+             ))}
+           </div>
+         )}
+</section>
+
+<script define:vars={{ sliderId, autoplay, autoplayInterval, slides }}>
+  (function() {
+    const slider = document.getElementById(sliderId);
+    if (!slider) return;
+
+    const slides = slider.querySelectorAll('.slide');
+    const dots = slider.querySelectorAll('.slider-dot');
+    const prevBtn = slider.querySelector('[data-action="prev"]');
+    const nextBtn = slider.querySelector('[data-action="next"]');
+    
+    let currentIndex = 0;
+    let autoplayTimer = null;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function showSlide(index) {
+      // Ensure index is within bounds
+      const newIndex = ((index % slides.length) + slides.length) % slides.length;
+      
+      // Hide all slides
+      slides.forEach((slide, i) => {
+        if (i === newIndex) {
+          slide.classList.remove('opacity-0');
+          slide.classList.add('opacity-100');
+        } else {
+          slide.classList.remove('opacity-100');
+          slide.classList.add('opacity-0');
+        }
+      });
+
+      // Update dots
+      dots.forEach((dot, i) => {
+        if (i === newIndex) {
+          dot.classList.add('bg-white', 'w-6', 'sm:w-8');
+          dot.classList.remove('bg-white/50', 'w-2', 'h-2', 'sm:w-3', 'sm:h-3');
+        } else {
+          dot.classList.remove('bg-white', 'w-6', 'sm:w-8');
+          dot.classList.add('bg-white/50', 'w-2', 'h-2', 'sm:w-3', 'sm:h-3');
+        }
+      });
+
+      currentIndex = newIndex;
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    function startAutoplay() {
+      if (!autoplay) return;
+      
+      stopAutoplay();
+      autoplayTimer = window.setInterval(() => {
+        nextSlide();
+      }, autoplayInterval);
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer !== null) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    // Navigation buttons
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoplay();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startAutoplay();
+      });
+    }
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        startAutoplay();
+      });
+    });
+
+    // Keyboard navigation
+    slider.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        prevSlide();
+        startAutoplay();
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+        startAutoplay();
+      }
+    });
+
+    // Touch/swipe support
+    slider.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    slider.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swipe left - next slide
+          nextSlide();
+        } else {
+          // Swipe right - previous slide
+          prevSlide();
+        }
+        startAutoplay();
+      }
+    }
+
+    // Pause autoplay on hover
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+
+    // Focus management for accessibility
+    slider.setAttribute('tabindex', '0');
+    slider.setAttribute('role', 'region');
+    slider.setAttribute('aria-label', 'Hero slider');
+
+    // Start autoplay
+    startAutoplay();
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', stopAutoplay);
+  })();
+</script>
+
+<style>
+  .hero-slider {
+    position: relative;
+  }
+
+  .slider-container {
+    position: relative;
+  }
+
+  .slide {
+    will-change: opacity;
+  }
+
+  .slider-nav-btn {
+    opacity: 0.6;
+    transition: all 0.3s ease;
+  }
+
+  .hero-slider:hover .slider-nav-btn {
+    opacity: 1;
+  }
+
+  .slider-dot {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .slider-dot:hover {
+    transform: scale(1.3);
+  }
+
+  .slider-dot:active {
+    transform: scale(1.1);
+  }
+
+  /* Ensure slides are properly layered */
+  .slide[data-slide-index] {
+    z-index: 1;
+  }
+
+  .slide.opacity-100 {
+    z-index: 2;
+  }
+
+  /* Accessibility: Focus visible */
+  .slider-nav-btn:focus-visible,
+  .slider-dot:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    .hero-slider {
+      height: 700px;
+      /* Ensure no horizontal overflow */
+      overflow-x: hidden;
+      width: 100vw;
+      max-width: 100vw;
+    }
+
+    .slider-container {
+      width: 100vw;
+      max-width: 100vw;
+    }
+
+    .slide {
+      width: 100vw;
+      max-width: 100vw;
+    }
+
+    /* Navigation buttons are hidden on mobile, using swipe/tap instead */
+    .slider-nav-btn {
+      display: none !important;
+    }
+
+    .slider-nav-btn svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+</style>
+
