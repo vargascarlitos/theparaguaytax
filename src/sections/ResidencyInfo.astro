@@ -1,0 +1,96 @@
+---
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = getTranslations(lang);
+
+// Day-to-step mapping (assumption): Day 1 = Arrival + Notary, Day 2 = Immigration, Day 3 = Our Office + Leaving.
+const stepIcons = {
+  arrival: 'M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1',
+  notary: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+  immigration: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+  office: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+  leaving: 'M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1',
+};
+
+const steps = [
+  { label: t.residencyTimeline.steps[0], day: t.residencyTimeline.days[0], icon: stepIcons.arrival },
+  { label: t.residencyTimeline.steps[1], day: t.residencyTimeline.days[0], icon: stepIcons.notary },
+  { label: t.residencyTimeline.steps[2], day: t.residencyTimeline.days[1], icon: stepIcons.immigration },
+  { label: t.residencyTimeline.steps[3], day: t.residencyTimeline.days[2], icon: stepIcons.office },
+  { label: t.residencyTimeline.steps[4], day: t.residencyTimeline.days[2], icon: stepIcons.leaving },
+];
+---
+
+<section id="residency-info" class="relative bg-white py-16 sm:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Important Information -->
+    <div class="max-w-4xl mx-auto bg-gradient-to-br from-gray-50 to-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-10 mb-16">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark mb-8 text-center">
+        {t.importantInfo.title}
+      </h2>
+      <ul class="space-y-4">
+        {t.importantInfo.items.map((item) => (
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="text-gray-700 leading-relaxed">{item}</span>
+          </li>
+        ))}
+      </ul>
+      <div class="mt-6 pt-6 border-t border-gray-200">
+        <p class="text-gray-700 leading-relaxed">
+          {t.importantInfo.eligibilityText}{' '}
+          <a
+            href={t.importantInfo.eligibilityUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-secondary font-semibold underline hover:text-primary transition-colors"
+          >
+            {t.importantInfo.eligibilityLink}
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Stay Seven Business Days Timeline -->
+    <div class="text-center mb-10">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark mb-3">
+        {t.residencyTimeline.title}
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        {t.residencyTimeline.subtitle}
+      </p>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:items-stretch md:justify-center gap-4 md:gap-2 max-w-5xl mx-auto">
+      {steps.map((step, index) => (
+        <>
+          <div class="flex-1 bg-white rounded-2xl shadow-lg border border-gray-100 p-5 text-center flex flex-col items-center">
+            <span class="inline-block bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-3">
+              {step.day}
+            </span>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={step.icon} />
+              </svg>
+            </div>
+            <p class="font-semibold text-dark text-sm leading-snug">{step.label}</p>
+          </div>
+          {index < steps.length - 1 && (
+            <div class="flex items-center justify-center text-primary">
+              <svg class="w-6 h-6 rotate-90 md:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </div>
+          )}
+        </>
+      ))}
+    </div>
+  </div>
+</section>

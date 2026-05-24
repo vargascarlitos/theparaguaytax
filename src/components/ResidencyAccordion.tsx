@@ -16,10 +16,14 @@ interface Props {
     whatIncluded: string;
     residency: string;
     cedula: string;
-    superfast: string;
-    govFees: string;
-    localAddress: string;
-    proofAddress: string;
+    translationsIncluded: string;
+    rucInscriptionExtra: string;
+    rucTaxCert: string;
+    rentalContractPostal: string;
+    airportTransfers: string;
+    officeTransfers: string;
+    shipmentId: string;
+    natureTrip: string;
     waitingTime: string;
     tripsNeeded: string;
     yes: string;
@@ -30,6 +34,9 @@ interface Props {
     getStarted: string;
     chooseVip: string;
     chooseHyperfast: string;
+    standardPreview: string[];
+    vipPreview: string[];
+    hyperfastPreview: string[];
   };
   whatsappUrl: string;
 }
@@ -44,13 +51,17 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
   };
 
   const tableItems = [
-    { label: t.residency, standard: t.yes, vip: t.yes, hyperfast: t.yes },
     { label: t.cedula, standard: t.yes, vip: t.yes, hyperfast: t.yes },
-    { label: t.superfast, standard: t.yes, vip: t.yes, hyperfast: t.yes },
-    { label: t.govFees, standard: t.yes, vip: t.yes, hyperfast: t.yes },
-    { label: t.localAddress, standard: t.yes, vip: t.yes, hyperfast: t.yes },
-    { label: t.proofAddress, standard: t.yes, vip: t.yes, hyperfast: t.yes },
-    { label: t.waitingTime, standard: `6 ${t.months}`, vip: `4 ${t.months}`, hyperfast: `2 ${t.months}` },
+    { label: t.residency, standard: t.yes, vip: t.yes, hyperfast: t.yes },
+    { label: t.translationsIncluded, standard: t.yes, vip: t.yes, hyperfast: t.yes },
+    { label: t.rucInscriptionExtra, standard: '', vip: t.yes, hyperfast: t.yes },
+    { label: t.rucTaxCert, standard: '', vip: t.yes, hyperfast: t.yes },
+    { label: t.rentalContractPostal, standard: '', vip: t.yes, hyperfast: t.yes },
+    { label: t.airportTransfers, standard: '', vip: '', hyperfast: t.yes },
+    { label: t.officeTransfers, standard: '', vip: '', hyperfast: t.yes },
+    { label: t.shipmentId, standard: '', vip: '', hyperfast: t.yes },
+    { label: t.natureTrip, standard: '', vip: '', hyperfast: t.yes },
+    { label: t.waitingTime, standard: `2 ${t.months}`, vip: `2 ${t.months}`, hyperfast: `2 ${t.months}` },
     { label: t.tripsNeeded, standard: `2 ${t.shortTrips}`, vip: `1 ${t.shortTrip}`, hyperfast: `1 ${t.shortTrip}` },
   ];
 
@@ -58,32 +69,35 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
     {
       id: 'standard' as const,
       name: t.standard.split('(')[0].trim(),
-      price: '$999',
-      timeAndTrips: `6 ${t.months} / 2 ${t.shortTrips}`,
+      price: '$1800',
+      timeAndTrips: `2 ${t.months} / 2 ${t.shortTrips}`,
       description: t.standardDesc,
       color: 'gray',
       ctaText: t.getStarted,
       popular: false,
+      preview: t.standardPreview,
     },
     {
       id: 'vip' as const,
       name: t.vip.split('(')[0].trim(),
-      price: '$1400',
-      timeAndTrips: `4 ${t.months} / 1 ${t.shortTrip}`,
+      price: '$2500',
+      timeAndTrips: `2 ${t.months} / 1 ${t.shortTrip}`,
       description: t.vipDesc,
       color: 'primary',
       ctaText: t.chooseVip,
       popular: true,
+      preview: t.vipPreview,
     },
     {
       id: 'hyperfast' as const,
       name: t.hyperfast.split('(')[0].trim(),
-      price: '$1600',
+      price: '$3500',
       timeAndTrips: `2 ${t.months} / 1 ${t.shortTrip}`,
       description: t.hyperfastDesc,
       color: 'accent',
       ctaText: t.chooseHyperfast,
       popular: false,
+      preview: t.hyperfastPreview,
     },
   ];
 
@@ -122,6 +136,18 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
                 <p className="text-gray-600">{plan.description}</p>
               </div>
 
+              {/* Preview Items */}
+              <ul className="space-y-3 mb-6">
+                {plan.preview.map((item, index) => (
+                  <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
+                    <svg className={`w-5 h-5 flex-shrink-0 mt-0.5 ${priceColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
               {/* Toggle Button */}
               <button
                 onClick={() => togglePlan(plan.id)}
@@ -144,7 +170,7 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
               <div
                 id={`details-${plan.id}`}
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  isExpanded ? 'max-h-[800px] opacity-100 mb-4' : 'max-h-0 opacity-0'
+                  isExpanded ? 'max-h-[1400px] opacity-100 mb-4' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className="bg-gray-50 rounded-xl p-4 space-y-3">

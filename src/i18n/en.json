@@ -54,18 +54,22 @@
     "prices": "999 USD // 1400 USD // 1600 USD",
     "priceCorrection": "*CORRIJO LOS PRECIOS DE LOS PLANES",
     "whatIncluded": "WHAT IS INCLUDED?",
-    "standard": "STANDARD ($ 999)",
-    "vip": "VIP ($ 1400)",
-    "hyperfast": "HYPERFAST ($ 1600)",
+    "standard": "STANDARD ($ 1800)",
+    "vip": "VIP ($ 2500)",
+    "hyperfast": "HYPERFAST ($ 3500)",
     "mostPopular": "MOST POPULAR",
     "mandatory": "Mandatory",
     "extra": "Extra",
-    "residency": "Residency",
-    "cedula": "Cedula (Paraguayan ID)",
-    "superfast": "Super Fast Application (~2 hours)",
-    "govFees": "Govt Fees and Related costs",
-    "localAddress": "Local Address",
-    "proofAddress": "Proof of Address signed by National Police",
+    "residency": "Paraguayan Residency",
+    "cedula": "Cédula (Paraguayan ID)",
+    "translationsIncluded": "Sworn certified translations included",
+    "rucInscriptionExtra": "RUC Inscription (+1 month extra)",
+    "rucTaxCert": "RUC Tax Residency Certificate",
+    "rentalContractPostal": "Rental Contract (+ Postal Service)",
+    "airportTransfers": "Airport transfers",
+    "officeTransfers": "Transfer to every office",
+    "shipmentId": "Shipment of your residency and ID card if needed",
+    "natureTrip": "1 Trip in Paraguay Nature (Asado Experience)",
     "waitingTime": "Total waiting time (from day 1 until getting ID)",
     "months": "MONTHS",
     "month": "MONTH",
@@ -94,6 +98,15 @@
     "standardDesc": "Complete residency management",
     "vipDesc": "Priority processing & dedicated support",
     "hyperfastDesc": "Lightning-fast residency processing",
+    "standardPreview1": "Cédula (Paraguayan ID) & Paraguayan Residency",
+    "standardPreview2": "Sworn certified translations included",
+    "standardPreview3": "Complete residency management",
+    "vipPreview1": "Priority processing & dedicated support",
+    "vipPreview2": "RUC Inscription + Tax Residency Certificate",
+    "vipPreview3": "Rental Contract (+ Postal Service)",
+    "hyperfastPreview1": "Everything in VIP, even faster",
+    "hyperfastPreview2": "Airport & office transfers + ID shipment",
+    "hyperfastPreview3": "1 Trip in Paraguay Nature (Asado Experience)",
     "fullResidency": "Full residency application",
     "paraguayanId": "Paraguayan ID (Cédula)",
     "localAddressProof": "Local address & proof",
@@ -125,18 +138,77 @@
     "bitcoinUsdt": "Bitcoin, USDT, and more",
     "contactWhatsapp": "Contact Us on WhatsApp +595 985 777252"
   },
+  "premium": {
+    "badge": "HYPERFAST EXCLUSIVE",
+    "title": "Road Trip Experience: Estación Puerto Olivares",
+    "subtitle": "Discover Paraguay beyond paperwork.",
+    "body": "As part of the Hyperfast Residency package, you'll enjoy an exclusive one-day guided road trip to Estación Puerto Olivares, one of Paraguay's hidden natural gems.",
+    "featuresTitle": "What the experience includes",
+    "cta": "Ask about the Hyperfast plan",
+    "highlights": {
+      "tour": {
+        "title": "Guided One-Day Trip",
+        "description": "A full day exploring Estación Puerto Olivares with a local guide who knows every corner."
+      },
+      "asado": {
+        "title": "Asado Experience",
+        "description": "Share an authentic Paraguayan asado surrounded by nature and great company."
+      },
+      "nature": {
+        "title": "Nature Trail & Rivers",
+        "description": "Walk the trail around the property and take in the Manduvirá and Paraguay Rivers."
+      },
+      "included": {
+        "title": "Included with Hyperfast",
+        "description": "This exclusive road trip comes free of charge with the Hyperfast Residency package."
+      }
+    },
+    "gallery": {
+      "prev": "Previous image",
+      "next": "Next image",
+      "caption": "A taste of what awaits you in Paraguay.",
+      "asuncion": "Asunción cityscape",
+      "landscape": "Paraguayan landscape",
+      "asado": "Traditional Paraguayan asado",
+      "culture": "Local culture",
+      "terere": "Tereré, our national drink",
+      "food": "Paraguayan gastronomy",
+      "road": "Paraguay's open roads",
+      "sunset": "Paraguayan sunset"
+    }
+  },
+  "importantInfo": {
+    "title": "Important Information Before Applying",
+    "items": [
+      "You need to stay in Paraguay for at least one week to complete the residency process. During your stay in Asunción, we will meet in three different locations for official formalities.",
+      "Required documents: Passport, extra ID, Birth Certificate, Clean Criminal Record (all apostilled; the criminal record must be issued within the last 6 months and ideally valid for at least 3 more months).",
+      "Once you obtain your Paraguayan RUC (Tax ID), we will teach you how to legally issue invoices to your clients.",
+      "Please note: we provide guidance, but we do not issue invoices on your behalf.",
+      "Due to high demand, RUC inscription is currently taking approximately one additional month beyond the residency process.",
+      "Visit Paraguay once per year to maintain your Temporary Residency.",
+      "We are professional accountants graduated from the National University of Asunción (UNA), one of Paraguay's top institutions, and we specialize in tax strategies, including official Binding Consultations that may provide significant financial advantages."
+    ],
+    "eligibilityText": "Want to know if you are eligible? Check Paraguay's official visa exemption list to confirm whether your country allows visa-free entry:",
+    "eligibilityLink": "Check the visa exemption list",
+    "eligibilityUrl": "https://migraciones.gov.py/informacion-sobre-visas/"
+  },
+  "residencyTimeline": {
+    "title": "Stay Seven Business Days in Paraguay",
+    "subtitle": "Here is what your in-person process looks like, step by step.",
+    "steps": [
+      "Arrival in Paraguay",
+      "Notary Public Office",
+      "Immigration Office",
+      "Our Office",
+      "Leaving Paraguay"
+    ],
+    "days": ["First Day", "Second Day", "Third Day"]
+  },
   "accounting": {
     "title": "Accounting & Tax Services",
     "subtitle": "Professional accounting services to keep your Paraguayan business compliant. From RUC registration to ongoing tax submissions.",
-    "rucDesc": "Register your Tax ID (RUC) for business operations in Paraguay. Required for all business activities.",
-    "rucFeatures": ["Complete Registration", "Just Paraguayan cedula and photo selfie needed"],
-    "certDesc": "Official tax residency certificate required for banking and international transactions.",
-    "certFeatures": ["Official certificate", "You can apply with just one day of RUC registration"],
-    "ivaDesc": "Monthly IVA (VAT) tax declaration and submission service to keep your RUC (Tax ID) compliant.",
-    "ivaFeatures": ["Monthly filing", "We send a monthly PDF report", "We'll notify you if you owe taxes."],
-    "getStarted": "Get Started",
-    "getCertificate": "Get Certificate",
-    "startMonthly": "Start Monthly",
+    "footnote1": "*Done online",
+    "footnote2": "**Has monthly and annual obligations",
     "contactWhatsapp": "Contact Us on WhatsApp +595 985 777252"
   },
   "team": {
@@ -144,7 +216,8 @@
     "osvaldo": "Osvaldo",
     "romina": "Romina",
     "beatriz": "Beatriz",
-    "brenda": "Brenda"
+    "brenda": "Brenda",
+    "luna": "Luna"
   },
   "process": {
     "title": "3 SIMPLE STEPS",
@@ -185,12 +258,14 @@
     "passport": "Passport",
     "birthCert": "Apostilled birth certificate",
     "criminalRecord": "Apostilled criminal record",
-    "twoDays": "Two days in Asunción - that's it.",
+    "twoDays": "One week - that's it.",
     "weHandle": "We handle the process. You handle your freedom.",
     "companyName": "DASE GROUP E.A.S.",
     "ruc": "80124544-3",
-    "address": "Avda. Moises 1986 - Capiatá",
+    "address": "Avda. Moises 1978 esq 16 de Agosto - Capiatá (Work Office)",
+    "address2": "Coronel Bogado 1237 - San Lorenzo (Legal Address)",
     "phone": "+595 985 777252",
+    "phone2": "+595 984 631067",
     "instagram": "@ParaguayTaxes",
     "email": "dasegrouppy@gmail.com",
     "formTitle": "Contact Us",
@@ -438,20 +513,53 @@
   "services": {
     "whatsapp": "WhatsApp",
     "whatsappMessage": "Hello, I am interested in your tax services",
+    "monthlyIVA": {
+      "price": "35 USD",
+      "title": "Monthly IVA Tax Submission",
+      "payment": "Monthly",
+      "desc": "Monthly IVA (VAT) declaration and submission to keep your RUC (Tax ID) compliant.",
+      "features": ["Monthly filing", "Monthly PDF report", "We notify you if you owe taxes"],
+      "cta": "Start Monthly"
+    },
     "rucInscription": {
-      "price": "15 USD",
+      "price": "25 USD // 225 USD*",
       "title": "RUC Inscription (Tax ID)",
-      "payment": "One payment"
+      "payment": "One payment",
+      "desc": "Register your Tax ID (RUC), required for all business activities in Paraguay.",
+      "features": ["Complete registration", "Just Paraguayan cédula and selfie needed"],
+      "cta": "Get Started"
+    },
+    "ireSimple": {
+      "price": "50 USD",
+      "title": "IRE Simple",
+      "payment": "One payment",
+      "desc": "Simplified corporate income tax (IRE Simple) filing for small businesses.",
+      "features": ["Annual filing", "Simplified regime"],
+      "cta": "Get Started"
     },
     "taxCertificate": {
-      "price": "75 USD",
-      "title": "Paraguay Tax Certificate",
-      "payment": "One payment"
+      "price": "100 USD",
+      "title": "RUC Tax Residency Certificate",
+      "payment": "One payment",
+      "desc": "Official tax residency certificate required for banking and international transactions.",
+      "features": ["Official certificate", "Apply with just one day of RUC registration"],
+      "cta": "Get Certificate"
     },
-    "monthlyIVA": {
-      "price": "25 USD",
-      "title": "Monthly IVA Tax Submission",
-      "payment": "Monthly Payment"
+    "rentalContract": {
+      "price": "100 USD",
+      "title": "Rental Contract (+ Postal Service)",
+      "payment": "One payment",
+      "desc": "Registered rental contract with postal service to prove your local address.",
+      "features": ["Registered contract", "Postal service included"],
+      "cta": "Get Started"
+    },
+    "easSetup": {
+      "price": "1000 USD",
+      "title": "EAS Legal Entity Setup**",
+      "payment": "One payment",
+      "desc": "Full setup of an E.A.S. legal entity to operate your business in Paraguay.",
+      "features": ["Complete entity setup", "Ready to operate"],
+      "cta": "Get Started"
     }
   },
   "testimonials": {

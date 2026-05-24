@@ -9,6 +9,23 @@ const { lang } = Astro.props;
 const t = getTranslations(lang);
 
 const whatsappUrl = `https://wa.me/595985777252?text=${encodeURIComponent(t.contact.whatsappMessage)}`;
+
+const iconPaths = {
+  doc: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+  check: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+  calendar: 'M8 7V3a2 2 0 012-2h2a2 2 0 012 2v4m-6 4v10a2 2 0 002 2h8a2 2 0 002-2V11M9 11h6',
+  home: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
+  office: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+};
+
+const services = [
+  { svc: t.services.monthlyIVA, icon: iconPaths.calendar, iconBg: 'from-purple-500 to-purple-600', btn: 'bg-purple-500 hover:bg-purple-600' },
+  { svc: t.services.rucInscription, icon: iconPaths.doc, iconBg: 'from-blue-500 to-blue-600', btn: 'bg-blue-500 hover:bg-blue-600' },
+  { svc: t.services.ireSimple, icon: iconPaths.check, iconBg: 'from-green-500 to-green-600', btn: 'bg-green-500 hover:bg-green-600' },
+  { svc: t.services.taxCertificate, icon: iconPaths.check, iconBg: 'from-teal-500 to-teal-600', btn: 'bg-teal-500 hover:bg-teal-600' },
+  { svc: t.services.rentalContract, icon: iconPaths.home, iconBg: 'from-amber-500 to-amber-600', btn: 'bg-amber-500 hover:bg-amber-600' },
+  { svc: t.services.easSetup, icon: iconPaths.office, iconBg: 'from-red-500 to-red-600', btn: 'bg-red-500 hover:bg-red-600' },
+];
 ---
 
 <section id="accounting-services" class="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20 sm:py-24 lg:py-28">
@@ -24,162 +41,61 @@ const whatsappUrl = `https://wa.me/595985777252?text=${encodeURIComponent(t.cont
     </div>
 
     <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 mb-16">
-      <!-- Service 1: RUC Inscription -->
-      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300 group flex flex-col min-h-[500px]">
-        <div class="p-8 flex-1 flex flex-col">
-          <!-- Icon -->
-          <div class="flex justify-center mb-6">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-          </div>
-
-          <!-- Price -->
-          <div class="text-center mb-4">
-            <div class="text-4xl font-extrabold text-primary mb-1">{t.services.rucInscription.price}</div>
-            <div class="text-sm text-gray-600 uppercase tracking-wide">{t.services.rucInscription.payment}</div>
-          </div>
-
-          <!-- Title -->
-          <h3 class="text-xl font-bold text-dark text-center mb-4">
-            {t.services.rucInscription.title}
-          </h3>
-
-          <!-- Description -->
-          <p class="text-gray-600 text-center text-sm leading-relaxed mb-6">
-            {t.accounting.rucDesc}
-          </p>
-
-          <!-- Features -->
-          <div class="space-y-2 mb-6">
-            {t.accounting.rucFeatures.map(feature => (
-              <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 mb-6">
+      {services.map(({ svc, icon, iconBg, btn }) => (
+        <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300 group flex flex-col min-h-[500px]">
+          <div class="p-8 flex-1 flex flex-col">
+            <!-- Icon -->
+            <div class="flex justify-center mb-6">
+              <div class={`w-16 h-16 rounded-2xl bg-gradient-to-br ${iconBg} flex items-center justify-center shadow-lg`}>
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon} />
                 </svg>
-                <span class="text-sm text-gray-700">{feature}</span>
               </div>
-            ))}
-          </div>
-
-          <!-- CTA Button -->
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl mb-4"
-          >
-            {t.accounting.getStarted}
-          </a>
-        </div>
-      </div>
-
-      <!-- Service 2: Tax Certificate -->
-      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300 group flex flex-col min-h-[500px]">
-        <div class="p-8 flex-1 flex flex-col">
-          <!-- Icon -->
-          <div class="flex justify-center mb-6">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
             </div>
-          </div>
 
-          <!-- Price -->
-          <div class="text-center mb-4">
-            <div class="text-4xl font-extrabold text-primary mb-1">{t.services.taxCertificate.price}</div>
-            <div class="text-sm text-gray-600 uppercase tracking-wide">{t.services.taxCertificate.payment}</div>
-          </div>
-
-          <!-- Title -->
-          <h3 class="text-xl font-bold text-dark text-center mb-4">
-            {t.services.taxCertificate.title}
-          </h3>
-
-          <!-- Description -->
-          <p class="text-gray-600 text-center text-sm leading-relaxed mb-6">
-            {t.accounting.certDesc}
-          </p>
-
-          <!-- Features -->
-          <div class="space-y-2 mb-6">
-            {t.accounting.certFeatures.map(feature => (
-              <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-sm text-gray-700">{feature}</span>
-              </div>
-            ))}
-          </div>
-
-          <!-- CTA Button -->
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl mb-4"
-          >
-            {t.accounting.getCertificate}
-          </a>
-        </div>
-      </div>
-
-      <!-- Service 3: Monthly IVA -->
-      <div class="relative bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-300 group flex flex-col min-h-[500px]">
-        <div class="p-8 flex-1 flex flex-col">
-          <!-- Icon -->
-          <div class="flex justify-center mb-6">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h2a2 2 0 012 2v4m-6 4v10a2 2 0 002 2h8a2 2 0 002-2V11M9 11h6" />
-              </svg>
+            <!-- Price -->
+            <div class="text-center mb-4">
+              <div class="text-3xl lg:text-4xl font-extrabold text-primary mb-1">{svc.price}</div>
+              <div class="text-sm text-gray-600 uppercase tracking-wide">{svc.payment}</div>
             </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-dark text-center mb-4">{svc.title}</h3>
+
+            <!-- Description -->
+            <p class="text-gray-600 text-center text-sm leading-relaxed mb-6">{svc.desc}</p>
+
+            <!-- Features -->
+            <div class="space-y-2 mb-6">
+              {svc.features.map(feature => (
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="text-sm text-gray-700">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <!-- CTA Button -->
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`block w-full ${btn} text-white font-bold py-3 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl mt-auto`}
+            >
+              {svc.cta}
+            </a>
           </div>
-
-          <!-- Price -->
-          <div class="text-center mb-4">
-            <div class="text-4xl font-extrabold text-primary mb-1">{t.services.monthlyIVA.price}</div>
-            <div class="text-sm text-gray-600 uppercase tracking-wide">{t.services.monthlyIVA.payment}</div>
-          </div>
-
-          <!-- Title -->
-          <h3 class="text-xl font-bold text-dark text-center mb-4">
-            {t.services.monthlyIVA.title}
-          </h3>
-
-          <!-- Description -->
-          <p class="text-gray-600 text-center text-sm leading-relaxed mb-6">
-            {t.accounting.ivaDesc}
-          </p>
-
-          <!-- Features -->
-          <div class="space-y-2 mb-6">
-            {t.accounting.ivaFeatures.map(feature => (
-              <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-sm text-gray-700">{feature}</span>
-              </div>
-            ))}
-          </div>
-
-          <!-- CTA Button -->
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors duration-300 shadow-lg hover:shadow-xl mb-4"
-          >
-            {t.accounting.startMonthly}
-          </a>
         </div>
-      </div>
+      ))}
+    </div>
+
+    <!-- Footnotes -->
+    <div class="text-center text-sm text-gray-500 mb-16 space-y-1">
+      <p>{t.accounting.footnote1}</p>
+      <p>{t.accounting.footnote2}</p>
     </div>
 
     <!-- WhatsApp CTA -->

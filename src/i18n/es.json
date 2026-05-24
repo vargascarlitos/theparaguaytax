@@ -54,18 +54,22 @@
     "prices": "999 USD // 1400 USD // 1600 USD",
     "priceCorrection": "*CORRIJO LOS PRECIOS DE LOS PLANES",
     "whatIncluded": "¿QUÉ INCLUYE?",
-    "standard": "STANDARD ($ 999)",
-    "vip": "VIP ($ 1400)",
-    "hyperfast": "HYPERFAST ($ 1600)",
+    "standard": "STANDARD ($ 1800)",
+    "vip": "VIP ($ 2500)",
+    "hyperfast": "HYPERFAST ($ 3500)",
     "mostPopular": "MÁS POPULAR",
     "mandatory": "Obligatorio",
     "extra": "Extra",
-    "residency": "Residencia",
+    "residency": "Residencia Paraguaya",
     "cedula": "Cédula (ID Paraguayo)",
-    "superfast": "Aplicación Super Rápida (~2 horas)",
-    "govFees": "Tarifas Gubernamentales y costos relacionados",
-    "localAddress": "Domicilio Local",
-    "proofAddress": "Prueba de domicilio firmada por Policía Nacional",
+    "translationsIncluded": "Traducciones juradas certificadas incluidas",
+    "rucInscriptionExtra": "Inscripción RUC (+1 mes extra)",
+    "rucTaxCert": "Certificado de Residencia Fiscal RUC",
+    "rentalContractPostal": "Contrato de Alquiler (+ Servicio de Correo)",
+    "airportTransfers": "Traslados al aeropuerto",
+    "officeTransfers": "Traslado a cada oficina",
+    "shipmentId": "Envío de tu residencia y cédula si es necesario",
+    "natureTrip": "1 Viaje a la Naturaleza Paraguaya (Experiencia Asado)",
     "waitingTime": "Tiempo total de espera (desde día 1 hasta obtener ID)",
     "months": "MESES",
     "month": "MES",
@@ -94,6 +98,15 @@
     "standardDesc": "Gestión completa de residencia",
     "vipDesc": "Procesamiento prioritario y soporte dedicado",
     "hyperfastDesc": "Procesamiento relámpago de residencia",
+    "standardPreview1": "Cédula (ID Paraguayo) y Residencia Paraguaya",
+    "standardPreview2": "Traducciones juradas certificadas incluidas",
+    "standardPreview3": "Gestión completa de residencia",
+    "vipPreview1": "Procesamiento prioritario y soporte dedicado",
+    "vipPreview2": "Inscripción RUC + Certificado de Residencia Fiscal",
+    "vipPreview3": "Contrato de Alquiler (+ Servicio de Correo)",
+    "hyperfastPreview1": "Todo lo de VIP, aún más rápido",
+    "hyperfastPreview2": "Traslados al aeropuerto y oficinas + envío de cédula",
+    "hyperfastPreview3": "1 Viaje a la Naturaleza Paraguaya (Experiencia Asado)",
     "fullResidency": "Solicitud completa de residencia",
     "paraguayanId": "ID Paraguayo (Cédula)",
     "localAddressProof": "Dirección local y prueba",
@@ -125,18 +138,77 @@
     "bitcoinUsdt": "Bitcoin, USDT, y más",
     "contactWhatsapp": "Contáctanos en WhatsApp +595 985 777252"
   },
+  "premium": {
+    "badge": "EXCLUSIVO HYPERFAST",
+    "title": "Experiencia Road Trip: Estación Puerto Olivares",
+    "subtitle": "Descubre Paraguay más allá de los trámites.",
+    "body": "Como parte del paquete de Residencia Hyperfast, disfrutarás de un exclusivo road trip guiado de un día a Estación Puerto Olivares, una de las joyas naturales escondidas de Paraguay.",
+    "featuresTitle": "Qué incluye la experiencia",
+    "cta": "Consultar por el plan Hyperfast",
+    "highlights": {
+      "tour": {
+        "title": "Paseo Guiado de un Día",
+        "description": "Un día completo explorando Estación Puerto Olivares con un guía local que conoce cada rincón."
+      },
+      "asado": {
+        "title": "Experiencia de Asado",
+        "description": "Comparte un auténtico asado paraguayo rodeado de naturaleza y buena compañía."
+      },
+      "nature": {
+        "title": "Sendero y Ríos",
+        "description": "Recorre el sendero de la propiedad y admira los ríos Manduvirá y Paraguay."
+      },
+      "included": {
+        "title": "Incluido con Hyperfast",
+        "description": "Este road trip exclusivo viene sin costo con el paquete de Residencia Hyperfast."
+      }
+    },
+    "gallery": {
+      "prev": "Imagen anterior",
+      "next": "Siguiente imagen",
+      "caption": "Una probadita de lo que te espera en Paraguay.",
+      "asuncion": "Paisaje urbano de Asunción",
+      "landscape": "Paisaje paraguayo",
+      "asado": "Asado paraguayo tradicional",
+      "culture": "Cultura local",
+      "terere": "Tereré, nuestra bebida nacional",
+      "food": "Gastronomía paraguaya",
+      "road": "Carreteras de Paraguay",
+      "sunset": "Atardecer paraguayo"
+    }
+  },
+  "importantInfo": {
+    "title": "Información Importante Antes de Aplicar",
+    "items": [
+      "Necesitas quedarte en Paraguay al menos una semana para completar el proceso de residencia. Durante tu estadía en Asunción, nos reuniremos en tres lugares diferentes para los trámites oficiales.",
+      "Documentos requeridos: Pasaporte, documento de identidad adicional, Partida de Nacimiento, Antecedentes Penales Limpios (todos apostillados; los antecedentes penales deben emitirse dentro de los últimos 6 meses e idealmente válidos por al menos 3 meses más).",
+      "Una vez que obtengas tu RUC paraguayo (ID Fiscal), te enseñaremos cómo emitir facturas legalmente a tus clientes.",
+      "Ten en cuenta: brindamos orientación, pero no emitimos facturas en tu nombre.",
+      "Debido a la alta demanda, la inscripción del RUC actualmente toma aproximadamente un mes adicional más allá del proceso de residencia.",
+      "Visita Paraguay una vez al año para mantener tu Residencia Temporal.",
+      "Somos contadores profesionales graduados de la Universidad Nacional de Asunción (UNA), una de las principales instituciones de Paraguay, y nos especializamos en estrategias fiscales, incluyendo Consultas Vinculantes oficiales que pueden brindar ventajas financieras significativas."
+    ],
+    "eligibilityText": "¿Quieres saber si eres elegible? Consulta la lista oficial de exención de visa de Paraguay para confirmar si tu país permite el ingreso sin visa:",
+    "eligibilityLink": "Ver la lista de exención de visa",
+    "eligibilityUrl": "https://migraciones.gov.py/informacion-sobre-visas/"
+  },
+  "residencyTimeline": {
+    "title": "Quédate Siete Días Hábiles en Paraguay",
+    "subtitle": "Así se ve tu proceso presencial, paso a paso.",
+    "steps": [
+      "Llegada a Paraguay",
+      "Escribanía Pública",
+      "Oficina de Migraciones",
+      "Nuestra Oficina",
+      "Salida de Paraguay"
+    ],
+    "days": ["Primer Día", "Segundo Día", "Tercer Día"]
+  },
   "accounting": {
     "title": "Servicios de Contabilidad e Impuestos",
     "subtitle": "Servicios profesionales de contabilidad para mantener su empresa paraguaya en cumplimiento. Desde el registro de RUC hasta las declaraciones fiscales continuas.",
-    "rucDesc": "Registre su ID Fiscal (RUC) para operaciones comerciales en Paraguay. Requerido para todas las actividades comerciales.",
-    "rucFeatures": ["Registro completo", "Solo se necesita cédula paraguaya y selfie con foto"],
-    "certDesc": "Certificado oficial de residencia fiscal requerido para banca y transacciones internacionales.",
-    "certFeatures": ["Certificado oficial", "Puede aplicar con solo un día de registro de RUC"],
-    "ivaDesc": "Servicio mensual de declaración y presentación de IVA (VAT) para mantener su RUC (ID Fiscal) en cumplimiento.",
-    "ivaFeatures": ["Presentación mensual", "Enviamos un reporte PDF mensual", "Le notificaremos si debe impuestos."],
-    "getStarted": "Comenzar",
-    "getCertificate": "Obtener Certificado",
-    "startMonthly": "Comenzar Mensual",
+    "footnote1": "*Se realiza en línea",
+    "footnote2": "**Tiene obligaciones mensuales y anuales",
     "contactWhatsapp": "Contáctanos en WhatsApp +595 985 777252"
   },
   "team": {
@@ -144,7 +216,8 @@
     "osvaldo": "Osvaldo",
     "romina": "Romina",
     "beatriz": "Beatriz",
-    "brenda": "Brenda"
+    "brenda": "Brenda",
+    "luna": "Luna"
   },
   "process": {
     "title": "3 PASOS SIMPLES",
@@ -185,12 +258,14 @@
     "passport": "Pasaporte",
     "birthCert": "Partida de nacimiento apostillada",
     "criminalRecord": "Antecedentes penales apostillados",
-    "twoDays": "Dos días en Asunción - eso es todo.",
+    "twoDays": "Una semana - eso es todo.",
     "weHandle": "Nosotros manejamos el proceso. Tú manejas tu libertad.",
     "companyName": "DASE GROUP E.A.S.",
     "ruc": "80124544-3",
-    "address": "Avda. Moises 1986 - Capiatá",
+    "address": "Avda. Moises 1978 esq 16 de Agosto - Capiatá (Oficina de Trabajo)",
+    "address2": "Coronel Bogado 1237 - San Lorenzo (Domicilio Legal)",
     "phone": "+595 985 777252",
+    "phone2": "+595 984 631067",
     "instagram": "@ParaguayTaxes",
     "email": "dasegrouppy@gmail.com",
     "formTitle": "Contáctanos",
@@ -439,20 +514,53 @@
   "services": {
     "whatsapp": "WhatsApp",
     "whatsappMessage": "Hola, estoy interesado en tus servicios fiscales",
+    "monthlyIVA": {
+      "price": "35 USD",
+      "title": "Declaración Mensual de IVA",
+      "payment": "Mensual",
+      "desc": "Declaración y presentación mensual del IVA para mantener tu RUC (ID Fiscal) en cumplimiento.",
+      "features": ["Presentación mensual", "Reporte PDF mensual", "Te avisamos si debes impuestos"],
+      "cta": "Comenzar Mensual"
+    },
     "rucInscription": {
-      "price": "15 USD",
+      "price": "25 USD // 225 USD*",
       "title": "Inscripción RUC (ID Fiscal)",
-      "payment": "Un pago"
+      "payment": "Un pago",
+      "desc": "Registra tu ID Fiscal (RUC), requerido para todas las actividades comerciales en Paraguay.",
+      "features": ["Registro completo", "Solo se necesita cédula paraguaya y selfie"],
+      "cta": "Comenzar"
+    },
+    "ireSimple": {
+      "price": "50 USD",
+      "title": "IRE Simple",
+      "payment": "Un pago",
+      "desc": "Presentación del impuesto a la renta empresarial simplificado (IRE Simple) para pequeñas empresas.",
+      "features": ["Presentación anual", "Régimen simplificado"],
+      "cta": "Comenzar"
     },
     "taxCertificate": {
-      "price": "75 USD",
-      "title": "Certificado Fiscal de Paraguay",
-      "payment": "Un pago"
+      "price": "100 USD",
+      "title": "Certificado de Residencia Fiscal RUC",
+      "payment": "Un pago",
+      "desc": "Certificado oficial de residencia fiscal requerido para banca y transacciones internacionales.",
+      "features": ["Certificado oficial", "Puedes aplicar con solo un día de registro de RUC"],
+      "cta": "Obtener Certificado"
     },
-    "monthlyIVA": {
-      "price": "25 USD",
-      "title": "Declaración Mensual de IVA",
-      "payment": "Pago Mensual"
+    "rentalContract": {
+      "price": "100 USD",
+      "title": "Contrato de Alquiler (+ Servicio de Correo)",
+      "payment": "Un pago",
+      "desc": "Contrato de alquiler registrado con servicio de correo para comprobar tu domicilio local.",
+      "features": ["Contrato registrado", "Servicio de correo incluido"],
+      "cta": "Comenzar"
+    },
+    "easSetup": {
+      "price": "1000 USD",
+      "title": "Constitución de Entidad Legal EAS**",
+      "payment": "Un pago",
+      "desc": "Constitución completa de una entidad legal E.A.S. para operar tu negocio en Paraguay.",
+      "features": ["Constitución completa de la entidad", "Lista para operar"],
+      "cta": "Comenzar"
     }
   },
   "testimonials": {

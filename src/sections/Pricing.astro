@@ -1,6 +1,8 @@
 ---
 import { getTranslations } from '../i18n/utils';
 import ResidencyAccordion from '../components/ResidencyAccordion';
+import PremiumPlan from './PremiumPlan.astro';
+import ResidencyInfo from './ResidencyInfo.astro';
 
 interface Props {
   lang: 'en' | 'es';
@@ -42,10 +44,14 @@ const whatsappUrl = `https://wa.me/595985777252?text=${t.contact.whatsappMessage
         whatIncluded: t.pricing.whatIncluded,
         residency: t.pricing.residency,
         cedula: t.pricing.cedula,
-        superfast: t.pricing.superfast,
-        govFees: t.pricing.govFees,
-        localAddress: t.pricing.localAddress,
-        proofAddress: t.pricing.proofAddress,
+        translationsIncluded: t.pricing.translationsIncluded,
+        rucInscriptionExtra: t.pricing.rucInscriptionExtra,
+        rucTaxCert: t.pricing.rucTaxCert,
+        rentalContractPostal: t.pricing.rentalContractPostal,
+        airportTransfers: t.pricing.airportTransfers,
+        officeTransfers: t.pricing.officeTransfers,
+        shipmentId: t.pricing.shipmentId,
+        natureTrip: t.pricing.natureTrip,
         waitingTime: t.pricing.waitingTime,
         tripsNeeded: t.pricing.tripsNeeded,
         yes: t.pricing.yes,
@@ -56,10 +62,19 @@ const whatsappUrl = `https://wa.me/595985777252?text=${t.contact.whatsappMessage
         getStarted: t.pricing.getStarted,
         chooseVip: t.pricing.chooseVip,
         chooseHyperfast: t.pricing.chooseHyperfast,
+        standardPreview: [t.pricing.standardPreview1, t.pricing.standardPreview2, t.pricing.standardPreview3],
+        vipPreview: [t.pricing.vipPreview1, t.pricing.vipPreview2, t.pricing.vipPreview3],
+        hyperfastPreview: [t.pricing.hyperfastPreview1, t.pricing.hyperfastPreview2, t.pricing.hyperfastPreview3],
       }}
       whatsappUrl={whatsappUrl}
     />
+  </div>
+</section>
 
+<ResidencyInfo lang={lang} />
+
+<section class="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-20 sm:pb-24 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- WhatsApp CTA -->
     <div class="text-center mb-16">
       <a
@@ -74,7 +89,13 @@ const whatsappUrl = `https://wa.me/595985777252?text=${t.contact.whatsappMessage
         {t.pricing.contactWhatsapp}
       </a>
     </div>
+  </div>
+</section>
 
+<PremiumPlan lang={lang} />
+
+<section id="payment-methods" class="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 py-20 sm:py-24 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Payment Methods -->
     <div class="bg-white rounded-3xl shadow-xl p-8 lg:p-12">
       <div class="text-center mb-8">
