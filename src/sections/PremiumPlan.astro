@@ -1,15 +1,16 @@
 ---
+import { getImage } from 'astro:assets';
 import { getTranslations } from '../i18n/utils';
 import PremiumGallery from '../components/PremiumGallery';
 
-import heroAsuncion from '../assets/images/hero-asuncion.png';
-import heroAsado from '../assets/images/hero-asado.png';
-import heroTerere from '../assets/images/hero-terere.png';
-import contactCulture from '../assets/images/contact-culture.png';
-import contactFood from '../assets/images/contact-food.png';
-import contactSunset from '../assets/images/contact-sunset.png';
-import processLandscape from '../assets/images/process-landscape.png';
-import processRoad from '../assets/images/process-road.png';
+import asadoGrill from '../assets/images/premium/asado-grill.png';
+import sunsetLake from '../assets/images/premium/sunset-lake.png';
+import licensePlates from '../assets/images/premium/license-plates.png';
+import church from '../assets/images/premium/church.png';
+import kayak from '../assets/images/premium/kayak.png';
+import floatingDock from '../assets/images/premium/floating-dock.png';
+import sunsetTrees from '../assets/images/premium/sunset-trees.png';
+import waterLilies from '../assets/images/premium/water-lilies.png';
 
 interface Props {
   lang: 'en' | 'es';
@@ -20,16 +21,37 @@ const t = getTranslations(lang);
 
 const whatsappUrl = `https://wa.me/595985777252?text=${encodeURIComponent(t.contact.whatsappMessage)}`;
 
-// TODO: replace these placeholder images with real Estación Puerto Olivares road-trip photos when provided by the client.
+const optimize = (src: ImageMetadata) => getImage({ src, width: 1200, format: 'webp', quality: 80 });
+
+const [
+  asadoGrillOpt,
+  sunsetLakeOpt,
+  licensePlatesOpt,
+  churchOpt,
+  kayakOpt,
+  floatingDockOpt,
+  sunsetTreesOpt,
+  waterLiliesOpt,
+] = await Promise.all([
+  optimize(asadoGrill),
+  optimize(sunsetLake),
+  optimize(licensePlates),
+  optimize(church),
+  optimize(kayak),
+  optimize(floatingDock),
+  optimize(sunsetTrees),
+  optimize(waterLilies),
+]);
+
 const galleryImages = [
-  { src: heroAsuncion.src, alt: t.premium.gallery.asuncion },
-  { src: processLandscape.src, alt: t.premium.gallery.landscape },
-  { src: heroAsado.src, alt: t.premium.gallery.asado },
-  { src: contactCulture.src, alt: t.premium.gallery.culture },
-  { src: heroTerere.src, alt: t.premium.gallery.terere },
-  { src: contactFood.src, alt: t.premium.gallery.food },
-  { src: processRoad.src, alt: t.premium.gallery.road },
-  { src: contactSunset.src, alt: t.premium.gallery.sunset },
+  { src: asadoGrillOpt.src, alt: t.premium.gallery.asado },
+  { src: sunsetLakeOpt.src, alt: t.premium.gallery.sunsetLake },
+  { src: licensePlatesOpt.src, alt: t.premium.gallery.plates },
+  { src: churchOpt.src, alt: t.premium.gallery.church },
+  { src: kayakOpt.src, alt: t.premium.gallery.kayak },
+  { src: floatingDockOpt.src, alt: t.premium.gallery.dock },
+  { src: sunsetTreesOpt.src, alt: t.premium.gallery.sunsetTrees },
+  { src: waterLiliesOpt.src, alt: t.premium.gallery.lilies },
 ];
 
 const features = [
