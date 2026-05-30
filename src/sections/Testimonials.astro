@@ -17,6 +17,7 @@ const pedroSegoviaImage = await import('../assets/images/testimonials/pedrosegov
 const charlesCuropiroImage = await import('../assets/images/testimonials/charlescuropiro.png');
 const johannaColmanImage = await import('../assets/images/testimonials/johannacolman.png');
 const kateTombsImage = await import('../assets/images/testimonials/katetombs.jpeg');
+const maxGijsbersImage = await import('../assets/images/testimonials/maxgijsbers.jpeg');
 
 // Testimonios reales (estructura para agregar más fácilmente)
 const testimonials = [
@@ -117,6 +118,20 @@ const testimonials = [
     },
     verified: true,
     date: '2026-03-20'
+  },
+  {
+    id: 'max-gijsbers',
+    name: 'Max Gijsbers',
+    role: 'Client',
+    location: 'Eindhoven, Netherlands 🇳🇱',
+    image: maxGijsbersImage.default,
+    rating: 5,
+    text: {
+      en: "I had a great time at the ranch. The owner is very nice, and the area has some beautiful nature. It's the perfect place to get away from the city. I would definitely go again!",
+      es: "La pasé muy bien en el rancho. El dueño es muy amable y la zona tiene una naturaleza hermosa. Es el lugar perfecto para escaparse de la ciudad. ¡Definitivamente volvería!"
+    },
+    verified: true,
+    date: '2026-02-10'
   }
 ];
 ---
