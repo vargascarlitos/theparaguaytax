@@ -98,15 +98,6 @@
     "standardDesc": "Gestión completa de residencia",
     "vipDesc": "Procesamiento prioritario y soporte dedicado",
     "hyperfastDesc": "Procesamiento relámpago de residencia",
-    "standardPreview1": "Cédula (ID Paraguayo) y Residencia Paraguaya",
-    "standardPreview2": "Traducciones juradas certificadas incluidas",
-    "standardPreview3": "Gestión completa de residencia",
-    "vipPreview1": "Procesamiento prioritario y soporte dedicado",
-    "vipPreview2": "Inscripción RUC + Certificado de Residencia Fiscal",
-    "vipPreview3": "Contrato de Alquiler (+ Servicio de Correo)",
-    "hyperfastPreview1": "Todo lo de VIP, aún más rápido",
-    "hyperfastPreview2": "Traslados al aeropuerto y oficinas + envío de cédula",
-    "hyperfastPreview3": "1 Viaje a la Naturaleza Paraguaya (Experiencia Asado)",
     "fullResidency": "Solicitud completa de residencia",
     "paraguayanId": "ID Paraguayo (Cédula)",
     "localAddressProof": "Dirección local y prueba",
@@ -124,8 +115,6 @@
     "getStarted": "Comenzar",
     "chooseVip": "Elegir Plan VIP",
     "chooseHyperfast": "Elegir Hiperveloz",
-    "viewDetails": "Ver Detalles",
-    "hideDetails": "Ocultar Detalles",
     "comparisonTable": "Tabla Comparativa de Planes",
     "included": "Incluido",
     "acceptedPaymentsTitle": "Métodos de Pago Aceptados",
@@ -193,8 +182,8 @@
     "eligibilityUrl": "https://migraciones.gov.py/informacion-sobre-visas/"
   },
   "residencyTimeline": {
-    "title": "Quédate Siete Días Hábiles en Paraguay",
-    "subtitle": "Así se ve tu proceso presencial, paso a paso.",
+    "title": "Quédate 7 Días en Paraguay",
+    "subtitle": "Durante tu semana en Paraguay solo 3 días son para trámites presenciales — pueden caer cualquier día de la semana.",
     "steps": [
       "Llegada a Paraguay",
       "Escribanía Pública",
@@ -207,7 +196,7 @@
   "accounting": {
     "title": "Servicios de Contabilidad e Impuestos",
     "subtitle": "Servicios profesionales de contabilidad para mantener su empresa paraguaya en cumplimiento. Desde el registro de RUC hasta las declaraciones fiscales continuas.",
-    "footnote1": "*Se realiza en línea",
+    "footnote1": "*25 USD trámite presencial · 225 USD trámite 100% online",
     "footnote2": "**Tiene obligaciones mensuales y anuales",
     "contactWhatsapp": "Contáctanos en WhatsApp +595 985 777252"
   },
@@ -526,7 +515,7 @@
       "price": "25 USD // 225 USD*",
       "title": "Inscripción RUC (ID Fiscal)",
       "payment": "Un pago",
-      "desc": "Registra tu ID Fiscal (RUC), requerido para todas las actividades comerciales en Paraguay.",
+      "desc": "Registra tu ID Fiscal (RUC), requerido para todas las actividades comerciales en Paraguay. 25 USD si vienes presencialmente, 225 USD por el trámite 100% online.",
       "features": ["Registro completo", "Solo se necesita cédula paraguaya y selfie"],
       "cta": "Comenzar"
     },
@@ -557,8 +546,8 @@
     "easSetup": {
       "price": "1000 USD",
       "title": "Constitución de Entidad Legal EAS**",
-      "payment": "Un pago",
-      "desc": "Constitución completa de una entidad legal E.A.S. para operar tu negocio en Paraguay.",
+      "payment": "Pago único",
+      "desc": "Pago único por la constitución legal de tu entidad E.A.S. en Paraguay. Las obligaciones tributarias mensuales y anuales se facturan aparte una vez que la empresa esté operativa.",
       "features": ["Constitución completa de la entidad", "Lista para operar"],
       "cta": "Comenzar"
     }

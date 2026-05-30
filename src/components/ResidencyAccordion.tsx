@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 interface Props {
   lang: 'en' | 'es';
   translations: {
@@ -10,8 +8,6 @@ interface Props {
     standardDesc: string;
     vipDesc: string;
     hyperfastDesc: string;
-    viewDetails: string;
-    hideDetails: string;
     comparisonTable: string;
     whatIncluded: string;
     residency: string;
@@ -34,22 +30,11 @@ interface Props {
     getStarted: string;
     chooseVip: string;
     chooseHyperfast: string;
-    standardPreview: string[];
-    vipPreview: string[];
-    hyperfastPreview: string[];
   };
   whatsappUrl: string;
 }
 
-type PlanType = 'standard' | 'vip' | 'hyperfast' | null;
-
 export default function ResidencyAccordion({ translations: t, whatsappUrl }: Props) {
-  const [expandedPlan, setExpandedPlan] = useState<PlanType>(null);
-
-  const togglePlan = (plan: PlanType) => {
-    setExpandedPlan(expandedPlan === plan ? null : plan);
-  };
-
   const tableItems = [
     { label: t.cedula, standard: t.yes, vip: t.yes, hyperfast: t.yes },
     { label: t.residency, standard: t.yes, vip: t.yes, hyperfast: t.yes },
@@ -75,7 +60,6 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
       color: 'gray',
       ctaText: t.getStarted,
       popular: false,
-      preview: t.standardPreview,
     },
     {
       id: 'vip' as const,
@@ -86,7 +70,6 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
       color: 'primary',
       ctaText: t.chooseVip,
       popular: true,
-      preview: t.vipPreview,
     },
     {
       id: 'hyperfast' as const,
@@ -97,18 +80,15 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
       color: 'accent',
       ctaText: t.chooseHyperfast,
       popular: false,
-      preview: t.hyperfastPreview,
     },
   ];
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 xl:gap-8 mb-16">
       {plans.map((plan) => {
-        const isExpanded = expandedPlan === plan.id;
         const borderColor = plan.color === 'primary' ? 'border-[#E64A2E]' : plan.color === 'accent' ? 'border-[#D52B1E]' : 'border-gray-200';
         const bgColor = plan.color === 'primary' ? 'bg-[#E64A2E]' : plan.color === 'accent' ? 'bg-[#D52B1E]' : 'bg-gray-100';
         const hoverBgColor = plan.color === 'primary' ? 'hover:bg-[#D43B1F]' : plan.color === 'accent' ? 'hover:bg-[#AA2218]' : 'hover:bg-gray-200';
-        const textColor = plan.color === 'primary' || plan.color === 'accent' ? 'text-white' : 'text-gray-800';
         const priceColor = plan.color === 'primary' ? 'text-[#E64A2E]' : plan.color === 'accent' ? 'text-[#D52B1E]' : 'text-[#E64A2E]';
 
         return (
@@ -118,7 +98,6 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
               plan.color === 'primary' ? 'shadow-2xl' : ''
             }`}
           >
-            {/* Popular Badge */}
             {plan.popular && (
               <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 z-10">
                 <div className="bg-gradient-to-r from-[#E64A2E] to-[#D43B1F] text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg border-2 border-white">
@@ -128,7 +107,6 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
             )}
 
             <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>
-              {/* Plan Header */}
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-[#1A1A1A] mb-2">{plan.name}</h3>
                 <div className={`text-5xl font-extrabold ${priceColor} mb-1`}>{plan.price}</div>
@@ -136,71 +114,32 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
                 <p className="text-gray-600">{plan.description}</p>
               </div>
 
-              {/* Preview Items */}
-              <ul className="space-y-3 mb-6">
-                {plan.preview.map((item, index) => (
-                  <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
-                    <svg className={`w-5 h-5 flex-shrink-0 mt-0.5 ${priceColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="bg-gray-50 rounded-xl p-4 space-y-3 mb-6">
+                <h4 className="font-bold text-sm text-gray-700 mb-3 uppercase tracking-wide">
+                  {t.whatIncluded}
+                </h4>
+                {tableItems.map((item, index) => {
+                  const value = item[plan.id];
+                  const isYes = value === t.yes;
 
-              {/* Toggle Button */}
-              <button
-                onClick={() => togglePlan(plan.id)}
-                className={`w-full ${bgColor} ${hoverBgColor} ${textColor} font-bold py-4 px-6 rounded-xl text-center transition-all duration-300 mb-4 flex items-center justify-center gap-2 shadow-md hover:shadow-lg`}
-                aria-expanded={isExpanded}
-                aria-controls={`details-${plan.id}`}
-              >
-                <span>{isExpanded ? t.hideDetails : t.viewDetails}</span>
-                <svg
-                  className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              {/* Expandable Details */}
-              <div
-                id={`details-${plan.id}`}
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  isExpanded ? 'max-h-[1400px] opacity-100 mb-4' : 'max-h-0 opacity-0'
-                }`}
-              >
-                <div className="bg-gray-50 rounded-xl p-4 space-y-3">
-                  <h4 className="font-bold text-sm text-gray-700 mb-3 uppercase tracking-wide">
-                    {t.whatIncluded}
-                  </h4>
-                  {tableItems.map((item, index) => {
-                    const value = item[plan.id];
-                    const isYes = value === t.yes;
-                    
-                    return (
-                      <div key={index} className="flex items-start justify-between text-sm border-b border-gray-200 pb-2 last:border-0 last:pb-0">
-                        <span className="font-medium text-gray-700 flex-1 pr-2">{item.label}</span>
-                        <span className={`flex items-center gap-1 font-bold whitespace-nowrap ${
-                          isYes ? 'text-green-600' : priceColor
-                        }`}>
-                          {isYes && (
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                          )}
-                          {value}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
+                  return (
+                    <div key={index} className="flex items-start justify-between text-sm border-b border-gray-200 pb-2 last:border-0 last:pb-0">
+                      <span className="font-medium text-gray-700 flex-1 pr-2">{item.label}</span>
+                      <span className={`flex items-center gap-1 font-bold whitespace-nowrap ${
+                        isYes ? 'text-green-600' : value ? priceColor : 'text-gray-300'
+                      }`}>
+                        {isYes && (
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
+                        {value || '—'}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
 
-              {/* CTA Button */}
               <a
                 href={whatsappUrl}
                 target="_blank"
@@ -220,4 +159,3 @@ export default function ResidencyAccordion({ translations: t, whatsappUrl }: Pro
     </div>
   );
 }
-

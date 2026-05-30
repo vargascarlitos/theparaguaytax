@@ -98,15 +98,6 @@
     "standardDesc": "Complete residency management",
     "vipDesc": "Priority processing & dedicated support",
     "hyperfastDesc": "Lightning-fast residency processing",
-    "standardPreview1": "Cédula (Paraguayan ID) & Paraguayan Residency",
-    "standardPreview2": "Sworn certified translations included",
-    "standardPreview3": "Complete residency management",
-    "vipPreview1": "Priority processing & dedicated support",
-    "vipPreview2": "RUC Inscription + Tax Residency Certificate",
-    "vipPreview3": "Rental Contract (+ Postal Service)",
-    "hyperfastPreview1": "Everything in VIP, even faster",
-    "hyperfastPreview2": "Airport & office transfers + ID shipment",
-    "hyperfastPreview3": "1 Trip in Paraguay Nature (Asado Experience)",
     "fullResidency": "Full residency application",
     "paraguayanId": "Paraguayan ID (Cédula)",
     "localAddressProof": "Local address & proof",
@@ -124,8 +115,6 @@
     "getStarted": "Get Started",
     "chooseVip": "Choose VIP Plan",
     "chooseHyperfast": "Choose Hyperfast",
-    "viewDetails": "View Details",
-    "hideDetails": "Hide Details",
     "comparisonTable": "Plan Comparison Table",
     "included": "Included",
     "acceptedPaymentsTitle": "Accepted Payment Methods",
@@ -193,8 +182,8 @@
     "eligibilityUrl": "https://migraciones.gov.py/informacion-sobre-visas/"
   },
   "residencyTimeline": {
-    "title": "Stay Seven Business Days in Paraguay",
-    "subtitle": "Here is what your in-person process looks like, step by step.",
+    "title": "Stay 7 Days in Paraguay",
+    "subtitle": "During your week in Paraguay, only 3 of those days are needed for in-person appointments — they can fall on any day of the week.",
     "steps": [
       "Arrival in Paraguay",
       "Notary Public Office",
@@ -207,7 +196,7 @@
   "accounting": {
     "title": "Accounting & Tax Services",
     "subtitle": "Professional accounting services to keep your Paraguayan business compliant. From RUC registration to ongoing tax submissions.",
-    "footnote1": "*Done online",
+    "footnote1": "*25 USD in-person submission · 225 USD fully online process",
     "footnote2": "**Has monthly and annual obligations",
     "contactWhatsapp": "Contact Us on WhatsApp +595 985 777252"
   },
@@ -525,7 +514,7 @@
       "price": "25 USD // 225 USD*",
       "title": "RUC Inscription (Tax ID)",
       "payment": "One payment",
-      "desc": "Register your Tax ID (RUC), required for all business activities in Paraguay.",
+      "desc": "Register your Tax ID (RUC), required for all business activities in Paraguay. 25 USD if you come in person, 225 USD for the fully online process.",
       "features": ["Complete registration", "Just Paraguayan cédula and selfie needed"],
       "cta": "Get Started"
     },
@@ -556,8 +545,8 @@
     "easSetup": {
       "price": "1000 USD",
       "title": "EAS Legal Entity Setup**",
-      "payment": "One payment",
-      "desc": "Full setup of an E.A.S. legal entity to operate your business in Paraguay.",
+      "payment": "One-time setup",
+      "desc": "One-time fee to legally constitute your E.A.S. entity in Paraguay. Monthly and annual tax obligations are billed separately once the company is active.",
       "features": ["Complete entity setup", "Ready to operate"],
       "cta": "Get Started"
     }
