@@ -14,6 +14,9 @@ const hassanImage = await import('../assets/images/testimonials/hassan.png');
 const carlosVillarImage = await import('../assets/images/testimonials/carlosvillar.png');
 const godImage = await import('../assets/images/testimonials/god.png');
 const pedroSegoviaImage = await import('../assets/images/testimonials/pedrosegovia.png');
+const charlesCuropiroImage = await import('../assets/images/testimonials/charlescuropiro.png');
+const johannaColmanImage = await import('../assets/images/testimonials/johannacolman.png');
+const kateTombsImage = await import('../assets/images/testimonials/katetombs.jpeg');
 
 // Testimonios reales (estructura para agregar más fácilmente)
 const testimonials = [
@@ -78,7 +81,7 @@ const testimonials = [
     name: 'Charles Curopiro',
     role: 'Client',
     location: 'Brasil',
-    image: null, // TODO: add avatar to src/assets/images/testimonials/ when provided
+    image: charlesCuropiroImage.default,
     rating: 5,
     text: {
       en: "Very good and smooth residency service. Grateful to the whole team.",
@@ -92,7 +95,7 @@ const testimonials = [
     name: 'Johanna Colmán',
     role: 'Client',
     location: 'Asunción, Ykua Satĩ',
-    image: null, // TODO: add avatar to src/assets/images/testimonials/ when provided
+    image: johannaColmanImage.default,
     rating: 5,
     text: {
       en: "The first accounting firm that truly cares about keeping its clients' documentation up to date and in order. They give you a PDF every month to review your expenses and income. Excellent service, commitment and professionalism.",
@@ -106,7 +109,7 @@ const testimonials = [
     name: 'Kate Tombs',
     role: 'Client',
     location: 'New Jersey, USA',
-    image: null, // TODO: add avatar to src/assets/images/testimonials/ when provided
+    image: kateTombsImage.default,
     rating: 5,
     text: {
       en: "We had an amazing time at Estación Puerto Olivares! Turi and family are incredibly kind and hospitable. Would highly recommend walking the trail (5K) around the property to see the Manduvirá and Paraguay Rivers and the restored historic church. And doing a boat tour on the Manduvirá is a must! Can't wait to go back!",
